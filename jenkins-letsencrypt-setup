@@ -1,0 +1,11 @@
+#!/bin/sh
+apt-get install certbot
+/usr/bin/letsencrypt certonly --standalone -d ci.commonwl.org 
+openssl pkcs12 -export -in /etc/letsencrypt/live/ci.commonwl.org/fullchain.pem \
+  -inkey /etc/letsencrypt/live/ci.commonwl.org/privkey.pem -out /etc/letsencrypt/live/pkcs12 -name ci.commonwl.org 
+keytool -importkeystore -deststorepass `cat /root/jenkins-ssl-pass` -destkeypass `cat /root/jenkins-ssl-pass` \
+  -destkeystore /etc/letsencrypt/live/ci.commonwl.org/keystore -srckeystore /etc/letsencrypt/live/pkcs12 -srcstoretype PKCS12 -srcstorepass `cat /root/jenkins-ssl-pass` -alias ci.commonwl.org
+chown -R jenkins: /etc/letsencrypt/
+echo 'JENKINS_ARGS=${JENKINS_ARGS} --httpsKeyStore=/etc/letsencrypt/live/ci.commonwl.org/keystore \
+  --httpsKeyStorePassword=`cat /root/jenkins-ssl-pass`' >> /etc/default/jenkins
+service jenkins restart
