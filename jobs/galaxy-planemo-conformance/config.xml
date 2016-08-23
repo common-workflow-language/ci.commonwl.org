@@ -1,0 +1,69 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>&lt;p&gt;Planemo is a set of command-line utilities to assist in building and publishing Galaxy tools.&#xd;
+It has experimental support for running CWL tools inside a&#xd;
+&lt;a href=&quot;http://galaxyproject.org/&quot;&gt;Galaxy Project&lt;/a&gt; server.&lt;/p&gt;&#xd;
+&#xd;
+&lt;a href=&quot;https://github.com/galaxyproject/planemo&quot;&gt;&#xd;
+https://github.com/galaxyproject/planemo&lt;/a&gt;</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.15.0">
+      <doNotScan>false</doNotScan>
+    </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.18.2">
+      <projectUrl>https://github.com/galaxyproject/planemo/</projectUrl>
+      <displayName></displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.4.4">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/galaxyproject/planemo.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.18.2">
+      <spec></spec>
+    </com.cloudbees.jenkins.GitHubPushTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cloneorpull() {
+        if test -d $1 ; then
+                (cd $1 &amp;&amp; git pull)
+        else
+                git clone $2
+        fi
+}
+venv() {
+        if ! test -d $1 ; then
+                virtualenv $1
+        fi
+        . $1/bin/activate
+}
+cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
+venv planemo-venv
+(. planemo-venv/bin/activate &amp;&amp; pip install -U setuptools pip &amp;&amp; pip install -r requirements.txt &amp;&amp; bash scripts/test_conformance_cwl.bash)
+docker volume ls -qf dangling=true | xargs -r docker volume rm</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

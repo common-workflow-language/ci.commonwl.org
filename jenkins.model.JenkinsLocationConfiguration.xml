@@ -1,0 +1,5 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<jenkins.model.JenkinsLocationConfiguration>
+  <adminAddress>michael.crusoe@gmail.com</adminAddress>
+  <jenkinsUrl>https://ci.commonwl.org/</jenkinsUrl>
+</jenkins.model.JenkinsLocationConfiguration>

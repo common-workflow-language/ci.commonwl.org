@@ -1,0 +1,83 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>&lt;p&gt;The Arvados core is a platform for production data science with very large data sets. It is made up of two major systems and a number of related services and components including APIs, SDKs, and visual tools.&lt;/p&gt;&#xd;
+&#xd;
+&lt;a href=&quot;https://arvados.org/&quot;&gt;https://arvados.org/&lt;/a&gt;&#xd;
+&#xd;
+</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.17.0">
+      <doNotScan>false</doNotScan>
+    </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.21.0">
+      <projectUrl>https://github.com/curoverse/arvados/</projectUrl>
+      <displayName></displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.25">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.5.3">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/curoverse/arvados.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <org.jenkinsci.plugins.registry.notification.DockerHubTrigger plugin="dockerhub-notification@2.2.0">
+      <spec></spec>
+      <options class="vector">
+        <org.jenkinsci.plugins.registry.notification.opt.impl.TriggerOnSpecifiedImageNames>
+          <repoNames>
+            <string>arvados/arvbox-demo</string>
+          </repoNames>
+        </org.jenkinsci.plugins.registry.notification.opt.impl.TriggerOnSpecifiedImageNames>
+      </options>
+    </org.jenkinsci.plugins.registry.notification.DockerHubTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>whoami
+cloneorpull() {
+        if test -d $1 ; then
+                (cd $1 &amp;&amp; git pull)
+        else
+                git clone $2
+        fi
+}
+venv() {
+        if ! test -d $1 ; then
+                virtualenv $1
+        fi
+        . $1/bin/activate
+}
+docker volume ls -qf dangling=true | grep -v metadata.db | xargs -r docker volume rm || true
+cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
+docker pull arvados/arvbox-demo:latest
+(PATH=$PATH:$PWD/tools/arvbox/bin &amp;&amp; sdk/cwl/test_with_arvbox.sh --config localdemo RUNNER=/tmp/cwltest/arv-cwl-containers)
+docker volume ls -qf dangling=true | grep -v metadata.db | xargs -r docker volume rm || true
+
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers/>
+  <buildWrappers/>
+</project>

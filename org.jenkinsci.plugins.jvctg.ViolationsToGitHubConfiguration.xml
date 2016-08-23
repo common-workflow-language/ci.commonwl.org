@@ -1,0 +1,9 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<org.jenkinsci.plugins.jvctg.ViolationsToGitHubConfiguration plugin="violation-comments-to-github@1.11">
+  <gitHubUrl></gitHubUrl>
+  <oAuth2Token></oAuth2Token>
+  <password></password>
+  <repositoryOwner></repositoryOwner>
+  <username></username>
+  <usernamePasswordCredentialsId></usernamePasswordCredentialsId>
+</org.jenkinsci.plugins.jvctg.ViolationsToGitHubConfiguration>
