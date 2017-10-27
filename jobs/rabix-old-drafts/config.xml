@@ -1,0 +1,110 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.0">
+      <doNotScan>false</doNotScan>
+    </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.27.0">
+      <projectUrl>https://github.com/rabix/bunny/</projectUrl>
+      <displayName></displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.25">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.3.2">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/rabix/bunny</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <jenkins.triggers.ReverseBuildTrigger>
+      <spec></spec>
+      <upstreamProjects>cwl-website</upstreamProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </jenkins.triggers.ReverseBuildTrigger>
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.27.0">
+      <spec></spec>
+    </com.cloudbees.jenkins.GitHubPushTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cloneorpull() {
+        if test -d $1 ; then
+                (cd $1 &amp;&amp; git pull)
+        else
+                git clone $2
+        fi
+}
+venv() {
+        if ! test -d $1 ; then
+                virtualenv $1
+        fi
+        . $1/bin/activate
+}
+cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
+#cloneorpull common-workflow-language https://github.com/rabix/common-workflow-language.git
+cloneorpull cwltest https://github.com/common-workflow-language/cwltest.git
+venv cwltool-venv
+#(. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install &quot;cwltest&gt;=1.0.20160825151655&quot;)
+(. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install -U setuptools wheel pip)
+(. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install &quot;cwltest&gt;=1.0.20161111155652&quot;)
+
+mvn clean install -P all
+tar xzf rabix-cli/target/rabix-cli-1.0.0-rc6-SNAPSHOT-release.tar.gz
+set +e
+LC_ALL=C
+LANG=C
+(. cwltool-venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml RUNNER=../rabix-cli-1.0.0-rc6-SNAPSHOT/rabix DRAFT=draft-2) || /bin/true
+set -e
+
+set +e
+LC_ALL=C
+LANG=C
+(. cwltool-venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml RUNNER=../rabix-cli-1.0.0-rc6-SNAPSHOT/rabix DRAFT=draft-3) || /bin/true
+set -e
+
+
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.20">
+      <testResults>common-workflow-language/**/result.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <healthScaleFactor>1.0</healthScaleFactor>
+      <allowEmptyResults>false</allowEmptyResults>
+    </hudson.tasks.junit.JUnitResultArchiver>
+    <hudson.tasks.Mailer plugin="mailer@1.20">
+      <recipients>luka.stojanovic@sbgenomics.com janko.simonovic@sbgenomics.com</recipients>
+      <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
+      <sendToIndividuals>false</sendToIndividuals>
+    </hudson.tasks.Mailer>
+  </publishers>
+  <buildWrappers/>
+</project>

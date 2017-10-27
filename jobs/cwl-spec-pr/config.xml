@@ -1,0 +1,214 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<matrix-project plugin="matrix-project@1.12">
+  <actions/>
+  <description></description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>sha1</name>
+          <description>commit id from the CWL specification repo that you want to build or refname (eg: &quot;origin/pr/9/head&quot;)
+</description>
+          <defaultValue>master</defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.0">
+      <doNotScan>false</doNotScan>
+    </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.28.0">
+      <projectUrl>https://github.com/common-workflow-language/common-workflow-language/</projectUrl>
+      <displayName></displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.25">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.6.0">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <refspec>+refs/pull/*:refs/remotes/origin/pr/*</refspec>
+        <url>https://github.com/common-workflow-language/common-workflow-language.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>${sha1}</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions>
+      <hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+        <relativeTargetDir>common-workflow-language</relativeTargetDir>
+      </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+    </extensions>
+  </scm>
+  <canRoam>true</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <org.jenkinsci.plugins.ghprb.GhprbTrigger plugin="ghprb@1.39.0">
+      <spec>H/5 * * * *</spec>
+      <configVersion>3</configVersion>
+      <adminlist>mr-c tetron</adminlist>
+      <allowMembersOfWhitelistedOrgsAsAdmin>false</allowMembersOfWhitelistedOrgsAsAdmin>
+      <orgslist>common-workflow-language</orgslist>
+      <cron>H/5 * * * *</cron>
+      <buildDescTemplate></buildDescTemplate>
+      <onlyTriggerPhrase>false</onlyTriggerPhrase>
+      <useGitHubHooks>true</useGitHubHooks>
+      <permitAll>false</permitAll>
+      <whitelist> zrilak undu</whitelist>
+      <autoCloseFailedPullRequests>false</autoCloseFailedPullRequests>
+      <displayBuildErrorsOnDownstreamBuilds>false</displayBuildErrorsOnDownstreamBuilds>
+      <whiteListTargetBranches>
+        <org.jenkinsci.plugins.ghprb.GhprbBranch>
+          <branch></branch>
+        </org.jenkinsci.plugins.ghprb.GhprbBranch>
+      </whiteListTargetBranches>
+      <blackListTargetBranches>
+        <org.jenkinsci.plugins.ghprb.GhprbBranch>
+          <branch></branch>
+        </org.jenkinsci.plugins.ghprb.GhprbBranch>
+      </blackListTargetBranches>
+      <gitHubAuthId>8cc5f67c-f92b-4dd3-b8e6-7997839e42ca</gitHubAuthId>
+      <triggerPhrase></triggerPhrase>
+      <skipBuildPhrase>.*\[skip\W+ci\].*</skipBuildPhrase>
+      <blackListCommitAuthor></blackListCommitAuthor>
+      <blackListLabels></blackListLabels>
+      <whiteListLabels></whiteListLabels>
+      <includedRegions></includedRegions>
+      <excludedRegions></excludedRegions>
+      <extensions>
+        <org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus>
+          <commitStatusContext>conformance-testing</commitStatusContext>
+          <triggeredStatus></triggeredStatus>
+          <startedStatus></startedStatus>
+          <statusUrl></statusUrl>
+          <addTestResults>false</addTestResults>
+          <completedStatus>
+            <org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+              <message>Warning: an error occurred while testing the existing CWL implementations using the conformance tests in this pull request.</message>
+              <result>ERROR</result>
+            </org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+            <org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+              <message>Warning: While testing the existing CWL implementations using the conformance tests in this pull request one or more of the tests failed.</message>
+              <result>FAILURE</result>
+            </org.jenkinsci.plugins.ghprb.extensions.comments.GhprbBuildResultMessage>
+          </completedStatus>
+        </org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus>
+      </extensions>
+    </org.jenkinsci.plugins.ghprb.GhprbTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <axes>
+    <hudson.matrix.TextAxis>
+      <name>implementation</name>
+      <values>
+        <string>arvados</string>
+        <string>cwltool</string>
+        <string>rabix</string>
+      </values>
+    </hudson.matrix.TextAxis>
+    <hudson.matrix.TextAxis>
+      <name>version</name>
+      <values>
+        <string>v1.0</string>
+        <string>v1.1.0-dev1</string>
+      </values>
+    </hudson.matrix.TextAxis>
+  </axes>
+  <combinationFilter>!(implementation==&quot;arvados&quot; &amp;&amp; version != &quot;v1.0&quot;) &amp;&amp; !(implementation==&quot;rabix&quot; &amp;&amp; version==&quot;v1.1.0-dev1&quot;) &amp;&amp; !(implementation==&quot;cwltool&quot; &amp;&amp; version == &quot;draft-2&quot;)</combinationFilter>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>#!/bin/bash
+export LC_ALL=en_US.UTF-8
+cloneorpull() {
+        if test -d $1 ; then
+                (cd $1 &amp;&amp; git pull)
+        else
+                git clone $2
+        fi
+}
+venv() {
+        if ! test -d $1 ; then
+                virtualenv $1
+        fi
+        . $1/bin/activate
+}
+if [[ &quot;${implementation}&quot; == *arvados* ]]
+then
+	cloneorpull arvados https://github.com/curoverse/arvados.git
+	docker volume ls -qf dangling=true | grep -v metadata.db | xargs -r docker volume rm || true
+    docker pull arvados/arvbox-demo:latest
+	export PATH=$PATH:$PWD/tools/arvbox/bin
+	export ARVBOX_CONTAINER=cwltest
+    arvados/sdk/cwl/test_with_arvbox.sh --config localdemo --leave-running --junit-xml=/tmp/junit.xml \
+    	RUNNER=/tmp/cwltest/arv-cwl-jobs
+    CODE=$?
+	docker exec $ARVBOX_CONTAINER cat /tmp/junit.xml &gt; junit.xml
+	arvbox reset -f
+	docker volume ls -qf dangling=true | grep -v metadata.db | xargs -r docker volume rm || true
+	docker rmi $(docker images -a --no-trunc | grep &quot;^arvados/arvbox-demo&quot; | grep -v &quot;latest&quot; | sed &apos;s/  */ /g&apos; \
+    	| cut -d&apos; &apos; -f3) || true
+	exit $CODE
+elif [[ &quot;${implementation}&quot; == *cwltool* ]]
+then
+    cloneorpull cwltool https://github.com/common-workflow-language/cwltool.git
+    venv cwltool-venv
+    (. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install -U setuptools wheel pip)
+	(. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install ./cwltool/)
+	(. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install &quot;cwltest&gt;=1.0.20161111155652&quot;)
+	(. cwltool-venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; \
+    	./run_test.sh --junit-xml=result.xml RUNNER=cwltool DRAFT=$version EXTRA=--enable-dev -j2)
+elif [[ &quot;${implementation}&quot; == *rabix* ]]
+then
+	cloneorpull bunny https://github.com/rabix/bunny.git
+    venv cwltest-venv
+    (. cwltest-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install -U setuptools wheel pip)
+    (. cwltest-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install &quot;cwltest&gt;=1.0.20161111155652&quot;)
+    cd bunny
+    mvn clean package -P cwl
+    tar xzf rabix-cli/target/rabix-cli-*-release.tar.gz
+    set +e
+    LC_ALL=C
+    LANG=C
+    (. ../cwltest-venv/bin/activate &amp;&amp; export DOCKER_HOST=&quot;unix:///var/run/docker.sock&quot; \
+    	&amp;&amp; cd ../common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml RUNNER=../bunny/rabix-cli-*/rabix DRAFT=$version -j2)
+    set -e
+fi</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.21">
+      <testResults>**/junit.xml,common-workflow-language/**/result.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <healthScaleFactor>1.0</healthScaleFactor>
+      <allowEmptyResults>false</allowEmptyResults>
+    </hudson.tasks.junit.JUnitResultArchiver>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.19">
+      <strategy class="hudson.plugins.build_timeout.impl.ElasticTimeOutStrategy">
+        <timeoutPercentage>150</timeoutPercentage>
+        <numberOfBuilds>5</numberOfBuilds>
+        <failSafeTimeoutDuration>true</failSafeTimeoutDuration>
+        <timeoutMinutesElasticDefault>120</timeoutMinutesElasticDefault>
+      </strategy>
+      <operationList>
+        <hudson.plugins.build__timeout.operations.AbortOperation/>
+        <hudson.plugins.build__timeout.operations.WriteDescriptionOperation>
+          <description>Conformance tests took longer than {0}</description>
+        </hudson.plugins.build__timeout.operations.WriteDescriptionOperation>
+      </operationList>
+    </hudson.plugins.build__timeout.BuildTimeoutWrapper>
+  </buildWrappers>
+  <executionStrategy class="hudson.matrix.DefaultMatrixExecutionStrategyImpl">
+    <runSequentially>false</runSequentially>
+  </executionStrategy>
+</matrix-project>

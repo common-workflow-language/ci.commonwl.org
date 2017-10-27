@@ -1,0 +1,115 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>Run on Mac OS X slave:&#xd;
+&lt;p&gt;cwltool is the reference implementation of the &lt;a href=&quot;http://www.commonwl.org&quot;&gt;Common Workflow Language&lt;/a&gt; standards.&lt;/p&gt;&#xd;
+&lt;a href=&quot;https://github.com/common-workflow-language/cwltool&quot;&gt;https://github.com/common-workflow-language/cwltool&lt;/a&gt;</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.0">
+      <doNotScan>false</doNotScan>
+    </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.27.0">
+      <projectUrl>https://github.com/common-workflow-language/cwltool/</projectUrl>
+      <displayName></displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.25">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.3.2">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/common-workflow-language/cwltool.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/master</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <assignedNode>osx</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>true</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <jenkins.triggers.ReverseBuildTrigger>
+      <spec></spec>
+      <upstreamProjects>cwl-website</upstreamProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </jenkins.triggers.ReverseBuildTrigger>
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.27.0">
+      <spec></spec>
+    </com.cloudbees.jenkins.GitHubPushTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>cloneorpull() {
+        if test -d $1 ; then
+                (cd $1 &amp;&amp; git pull)
+        else
+                git clone $2
+        fi
+}
+venv() {
+        if ! test -d $1 ; then
+                virtualenv $1
+        fi
+        . $1/bin/activate
+}
+
+createdocker() { 
+  docker-machine ls
+  docker-machine kill default
+  docker-machine rm -f default
+  docker-machine create --driver virtualbox default
+}
+startdocker() {
+  docker-machine env &gt;/dev/null || docker-machine restart || createdocker
+  eval $(docker-machine env default)
+  docker-machine active
+}
+# Ensure Docker&apos;s Virtual Machine is up running first,
+# restart VM if it seems broken
+startdocker
+
+cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
+venv cwltool-venv
+(. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install -U setuptools wheel pip)
+(. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ python setup.py install)
+(. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install &quot;cwltest&gt;=1.0.20160825151655&quot;)
+(. cwltool-venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml RUNNER=cwltool DRAFT=draft-2)
+(. cwltool-venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml RUNNER=cwltool DRAFT=draft-3)
+(. cwltool-venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml RUNNER=cwltool)
+(. cwltool-venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml RUNNER=cwltool DRAFT=v1.1.0-dev1 EXTRA=--enable-dev)
+(. cwltool-venv/bin/activate &amp;&amp; ./build-cwl-docker.sh &amp;&amp; docker push commonworkflowlanguage/cwltool_module &amp;&amp; docker push commonworkflowlanguage/cwltool)</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.20">
+      <testResults>common-workflow-language/**/result.xml</testResults>
+      <keepLongStdio>true</keepLongStdio>
+      <healthScaleFactor>1.0</healthScaleFactor>
+      <allowEmptyResults>false</allowEmptyResults>
+    </hudson.tasks.junit.JUnitResultArchiver>
+    <hudson.tasks.Mailer plugin="mailer@1.20">
+      <recipients>tetron@interreality.org</recipients>
+      <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
+      <sendToIndividuals>true</sendToIndividuals>
+    </hudson.tasks.Mailer>
+  </publishers>
+  <buildWrappers/>
+</project>

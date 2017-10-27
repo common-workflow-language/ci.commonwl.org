@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<user>
+  <fullName>Niels Drost</fullName>
+  <properties>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>aIt/UJdmR1hY7Yu37xPzEcKpmY/KgWnYV4/CEao371y56uwanpWBlQPMICwoKI+p</apiToken>
+    </jenkins.security.ApiTokenProperty>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.8">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.model.MyViewsProperty>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>Alle</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+        </hudson.model.AllView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>false</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.18">
+      <emailAddress>n.drost@esciencecenter.nl</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+  </properties>
+</user>

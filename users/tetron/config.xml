@@ -1,0 +1,32 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<user>
+  <fullName>Peter Amstutz</fullName>
+  <properties>
+    <jenkins.security.ApiTokenProperty>
+      <apiToken>C1QOkXz2JiwGL2n0vta6RBQ7QWncvgywu9S5dZ2/9Nq56uwanpWBlQPMICwoKI+p</apiToken>
+    </jenkins.security.ApiTokenProperty>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@1.27">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.model.MyViewsProperty>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>All</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+        </hudson.model.AllView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>false</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.16">
+      <emailAddress>tetron@interreality.org</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+  </properties>
+</user>
