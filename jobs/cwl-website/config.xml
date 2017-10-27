@@ -4,10 +4,10 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.16.0">
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.17.2">
       <doNotScan>false</doNotScan>
     </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.20.0">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.23.0">
       <projectUrl>https://github.com/common-workflow-language/common-workflow-language/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
@@ -16,7 +16,7 @@
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.5.3">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.0.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -29,9 +29,6 @@
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-    <browser class="hudson.plugins.git.browser.AssemblaWeb">
-      <url></url>
-    </browser>
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
@@ -40,7 +37,7 @@
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.20.0">
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.23.0">
       <spec></spec>
     </com.cloudbees.jenkins.GitHubPushTrigger>
   </triggers>
@@ -55,18 +52,29 @@
 }
 rm -Rf common-workflow-language.github.io
 git clone http://${jenkins_cwl_website}@github.com/common-workflow-language/common-workflow-language.github.io.git
-(cd common-workflow-language.github.io; git config user.email &quot;michael.crusoe+jenkins@gmail.com&quot;; git config user.name &quot;CWL Jenkins build bot&quot;)
+(cd common-workflow-language.github.io; git config user.email &quot;cwl-bot@users.noreply.github.com&quot;; git config user.name &quot;CWL Jenkins build bot&quot;)
 venv cwl-venv
+(. cwl-venv/bin/activate &amp;&amp; pip install setuptools==18.5 )
 (. cwl-venv/bin/activate &amp;&amp; pip install cwltool &amp;&amp; \
-cwltool --outdir=$PWD/common-workflow-language.github.io --no-container site/cwlsite.cwl site/cwlsite-job.json )
+cwltool --outdir=$PWD/common-workflow-language.github.io site/cwlsite.cwl site/cwlsite-job.yaml )
 (cd common-workflow-language.github.io &amp;&amp; \
  git add --all &amp;&amp; \
  git diff-index --quiet HEAD || git commit -m &quot;CWL Jenkins Build bot&quot; &amp;&amp; \
- git push http://${jenkins_cwl_website}@github.com/common-workflow-language/common-workflow-language.github.io.git
+ git push http://${jenkins_cwl_website}:x-oauth-basic@github.com/common-workflow-language/common-workflow-language.github.io.git
 )
 </command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
-  <buildWrappers/>
+  <buildWrappers>
+    <com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper/>
+    <org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper plugin="credentials-binding@1.10">
+      <bindings>
+        <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
+          <credentialsId>jenkins_cwl_website</credentialsId>
+          <variable>jenkins_cwl_website</variable>
+        </org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
+      </bindings>
+    </org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper>
+  </buildWrappers>
 </project>

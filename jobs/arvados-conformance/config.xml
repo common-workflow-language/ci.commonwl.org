@@ -8,10 +8,10 @@
 </description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.17.0">
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.0">
       <doNotScan>false</doNotScan>
     </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.21.0">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.28.0">
       <projectUrl>https://github.com/curoverse/arvados/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
@@ -20,7 +20,7 @@
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@2.5.3">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.5.1">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -41,12 +41,22 @@
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
+    <jenkins.triggers.ReverseBuildTrigger>
+      <spec></spec>
+      <upstreamProjects>cwl-website</upstreamProjects>
+      <threshold>
+        <name>SUCCESS</name>
+        <ordinal>0</ordinal>
+        <color>BLUE</color>
+        <completeBuild>true</completeBuild>
+      </threshold>
+    </jenkins.triggers.ReverseBuildTrigger>
     <org.jenkinsci.plugins.registry.notification.DockerHubTrigger plugin="dockerhub-notification@2.2.0">
       <spec></spec>
       <options class="vector">
         <org.jenkinsci.plugins.registry.notification.opt.impl.TriggerOnSpecifiedImageNames>
           <repoNames>
-            <string>arvados/arvbox-demo</string>
+            <string>arvados/jobs</string>
           </repoNames>
         </org.jenkinsci.plugins.registry.notification.opt.impl.TriggerOnSpecifiedImageNames>
       </options>
@@ -69,15 +79,46 @@ venv() {
         fi
         . $1/bin/activate
 }
-docker volume ls -qf dangling=true | grep -v metadata.db | xargs -r docker volume rm || true
+#docker volume ls -qf dangling=true | grep -v metadata.db | xargs -r docker volume rm || true
 cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
 docker pull arvados/arvbox-demo:latest
-(PATH=$PATH:$PWD/tools/arvbox/bin &amp;&amp; sdk/cwl/test_with_arvbox.sh --config localdemo RUNNER=/tmp/cwltest/arv-cwl-containers)
-docker volume ls -qf dangling=true | grep -v metadata.db | xargs -r docker volume rm || true
+export PATH=$PATH:$PWD/tools/arvbox/bin
+export ARVBOX_CONTAINER=cwltest
+set +e
+sdk/cwl/test_with_arvbox.sh --config localdemo --leave-running --junit-xml=/tmp/junit.xml RUNNER=/tmp/cwltest/arv-cwl-containers
+CODE=$?
+docker exec $ARVBOX_CONTAINER cat /tmp/junit.xml &gt; junit.xml
+arvbox reset -f
+#docker volume ls -qf dangling=true | grep -v metadata.db | xargs -r docker volume rm || true
+#docker rmi $(docker images -a --no-trunc | grep &quot;^arvados/arvbox-demo&quot; | grep -v &quot;latest&quot; | sed &apos;s/  */ /g&apos; | cut -d&apos; &apos; -f3) || true
 
-</command>
+# Instead of exiting with $CODE, test if junit.xml 
+# file exists and is size &gt; 0
+test -s junit.xml</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
-  <buildWrappers/>
+  <publishers>
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.21">
+      <testResults>junit.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <healthScaleFactor>1.0</healthScaleFactor>
+      <allowEmptyResults>false</allowEmptyResults>
+    </hudson.tasks.junit.JUnitResultArchiver>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.build__timeout.BuildTimeoutWrapper plugin="build-timeout@1.18">
+      <strategy class="hudson.plugins.build_timeout.impl.ElasticTimeOutStrategy">
+        <timeoutPercentage>150</timeoutPercentage>
+        <numberOfBuilds>5</numberOfBuilds>
+        <failSafeTimeoutDuration>true</failSafeTimeoutDuration>
+        <timeoutMinutesElasticDefault>120</timeoutMinutesElasticDefault>
+      </strategy>
+      <operationList>
+        <hudson.plugins.build__timeout.operations.WriteDescriptionOperation>
+          <description>Build aborted, took longer than {0} minutes.</description>
+        </hudson.plugins.build__timeout.operations.WriteDescriptionOperation>
+        <hudson.plugins.build__timeout.operations.AbortOperation/>
+      </operationList>
+    </hudson.plugins.build__timeout.BuildTimeoutWrapper>
+  </buildWrappers>
 </project>

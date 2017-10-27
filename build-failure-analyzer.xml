@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<com.sonyericsson.jenkins.plugins.bfa.PluginImpl plugin="build-failure-analyzer@1.16.0">
+<com.sonyericsson.jenkins.plugins.bfa.PluginImpl plugin="build-failure-analyzer@1.19.0">
   <noCausesMessage>No problems were identified. If you know why this problem occurred, please add a suitable Cause for it.</noCausesMessage>
   <globalEnabled>true</globalEnabled>
   <doNotAnalyzeAbortedJob>false</doNotAnalyzeAbortedJob>
@@ -8,8 +8,9 @@
     <causes/>
   </knowledgeBase>
   <nrOfScanThreads>3</nrOfScanThreads>
+  <maxLogSize>0</maxLogSize>
   <graphsEnabled>false</graphsEnabled>
-  <testResultParsingEnabled>false</testResultParsingEnabled>
+  <testResultParsingEnabled>true</testResultParsingEnabled>
   <testResultCategories></testResultCategories>
   <sodVariables>
     <minimumSodWorkerThreads>1</minimumSodWorkerThreads>
