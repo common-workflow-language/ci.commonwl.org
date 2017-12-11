@@ -36,7 +36,7 @@
     <githubWebUri>https://github.com</githubWebUri>
     <githubApiUri>https://api.github.com</githubApiUri>
     <clientID>7db5afd5d440fee1aed4</clientID>
-    <clientSecret>{AQAAABAAAAAw7pQdHU0/mkwYQTMR8xBsxEP8eswKhWTdlS9PnN1B74agQQV7DNWomsLfzpCLi5Ce6uVbBFASt6KLEMuYD7wwfw==}</clientSecret>
+    <clientSecret>{AQAAABAAAAAwWhTKhrrHVuojPiuLR2B4hIe3vZkBYUzZFaYCGC0gQDvYoqzxTdOBmIoT86x5yTS2SjWkHFqywioKFuQTcd318Q==}</clientSecret>
     <oauthScopes>read:org,user:email</oauthScopes>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
@@ -110,6 +110,9 @@
   <primaryView>CWL conformance tests</primaryView>
   <slaveAgentPort>0</slaveAgentPort>
   <label></label>
+  <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
+    <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
+  </crumbIssuer>
   <nodeProperties/>
   <globalNodeProperties>
     <hudson.slaves.EnvironmentVariablesNodeProperty>
