@@ -70,7 +70,14 @@
       <command>bash jenkins.bash</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.23">
+      <testResults>**/results*xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <healthScaleFactor>1.0</healthScaleFactor>
+      <allowEmptyResults>false</allowEmptyResults>
+    </hudson.tasks.junit.JUnitResultArchiver>
+  </publishers>
   <buildWrappers/>
   <executionStrategy class="hudson.matrix.DefaultMatrixExecutionStrategyImpl">
     <runSequentially>false</runSequentially>
