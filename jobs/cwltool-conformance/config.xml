@@ -72,7 +72,7 @@
   </builders>
   <publishers>
     <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.23">
-      <testResults>**/results*xml</testResults>
+      <testResults>**/result*xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <healthScaleFactor>1.0</healthScaleFactor>
       <allowEmptyResults>false</allowEmptyResults>
