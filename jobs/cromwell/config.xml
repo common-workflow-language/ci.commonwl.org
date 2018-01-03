@@ -8,7 +8,7 @@
       <doNotScan>false</doNotScan>
     </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.28.1">
-      <projectUrl>https://github.com/rabix/bunny/</projectUrl>
+      <projectUrl>https://github.com/broadinstitute/cromwell/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.27">
@@ -20,12 +20,12 @@
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/rabix/bunny</url>
+        <url>https://github.com/broadinstitute/cromwell.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/master</name>
+        <name>*/develop</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -67,33 +67,28 @@ venv() {
         . $1/bin/activate
 }
 cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
-#cloneorpull common-workflow-language https://github.com/rabix/common-workflow-language.git
-#cloneorpull cwltest https://github.com/common-workflow-language/cwltest.git
-venv cwltool-venv
-#(. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install &quot;cwltest&gt;=1.0.20160825151655&quot;)
-(. cwltool-venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
-(. cwltool-venv/bin/activate &amp;&amp; pip install -U &quot;cwltest&gt;=1.0.20170809112706&quot;)
+venv venv
+(. venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
+(. venv/bin/activate &amp;&amp; pip install -U &quot;cwltest&gt;=1.0.20170809112706&quot;)
+sbt assembly
+CROMWELL_JAR=$(find &quot;$(pwd)/target/scala-2.12&quot; -name &quot;cromwell-*.jar&quot;)
+shutdownCromwell() {
+    if [ -z &quot;${CROMWELL_PID}&quot; ]; then
+        kill ${CROMWELL_PID}
+    fi
+}
+trap &quot;shutdownCromwell&quot; EXIT
 
-#mvn clean package -P draft-2
-#tar xzf rabix-backend-local/target/rabix-backend-local-0.6.1-SNAPSHOT-id3.tar.gz 
-#set +e
-#(. cwltool-venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml RUNNER=../rabix DRAFT=draft-2) || /bin/true
-#set -e
+CURRENT_DIR=$(pwd)
+cd common-workflow-language/v1.0/v1.0
+java -Dsystem.new-workflow-poll-rate=1 \
+	-Dbackend.providers.Local.config.script-epilogue=&quot;sleep 5 &amp;&amp; sync&quot; \
+    -jar ${CROMWELL_JAR} server &amp;
+CROMWELL_PID=$$
 
-#mvn clean package -P draft-3
-#tar xzf rabix-backend-local/target/rabix-backend-local-0.6.1-SNAPSHOT-id3.tar.gz 
-#set +e
-#(. cwltool-venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml RUNNER=../rabix DRAFT=draft-3) || /bin/true
-#set -e
-
-mvn clean package -P cwl
-tar xzf rabix-cli/target/rabix-cli-*-release.tar.gz
-set +e
-LC_ALL=C
-LANG=C
-(. cwltool-venv/bin/activate &amp;&amp; export DOCKER_HOST=&quot;unix:///var/run/docker.sock&quot; \
-  &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml \
-  RUNNER=../rabix-cli-*/rabix) || /bin/true
+cd $CURRENT_DIR
+(. venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml \
+  RUNNER=../src/bin/centaur-cwl-runner.bash) || /bin/true
 set -e</command>
     </hudson.tasks.Shell>
   </builders>
@@ -104,11 +99,6 @@ set -e</command>
       <healthScaleFactor>1.0</healthScaleFactor>
       <allowEmptyResults>false</allowEmptyResults>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.tasks.Mailer plugin="mailer@1.20">
-      <recipients>ivan.batic@sbgenomics.com, milos.ljubinkovic@sbgenomics.com</recipients>
-      <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
-      <sendToIndividuals>false</sendToIndividuals>
-    </hudson.tasks.Mailer>
   </publishers>
   <buildWrappers/>
 </project>
