@@ -88,7 +88,7 @@ CROMWELL_PID=$$
 
 cd $CURRENT_DIR
 (. venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml \
-  RUNNER=../src/bin/centaur-cwl-runner.bash) || /bin/true
+  RUNNER=../centaurCwlRunner/src/bin/centaur-cwl-runner.bash) || /bin/true
 set -e</command>
     </hudson.tasks.Shell>
   </builders>
