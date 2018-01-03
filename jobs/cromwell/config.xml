@@ -69,7 +69,7 @@ venv() {
 cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
 venv venv
 (. venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
-(. venv/bin/activate &amp;&amp; pip install -U &quot;cwltest&gt;=1.0.20170809112706&quot;)
+(. venv/bin/activate &amp;&amp; pip install -U &quot;cwltest&gt;=1.0.20170809112706&quot; cwltool)
 sbt assembly
 CROMWELL_JAR=$(find &quot;$(pwd)/target/scala-2.12&quot; -name &quot;cromwell-*.jar&quot;)
 shutdownCromwell() {
@@ -85,6 +85,8 @@ java -Dsystem.new-workflow-poll-rate=1 \
 	-Dbackend.providers.Local.config.script-epilogue=&quot;sleep 5 &amp;&amp; sync&quot; \
     -jar ${CROMWELL_JAR} server &amp;
 CROMWELL_PID=$$
+
+sleep 5
 
 cd $CURRENT_DIR
 (. venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml \
