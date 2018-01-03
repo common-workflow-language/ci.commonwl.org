@@ -4,7 +4,7 @@
     <string>jenkins.security.s2m.MasterKillSwitchWarning</string>
     <string>hudsonHomeIsFull</string>
   </disabledAdministrativeMonitors>
-  <version>2.89.1</version>
+  <version>2.89.2</version>
   <numExecutors>3</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
@@ -89,6 +89,7 @@
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>airflow-conformance</string>
         <string>arvados-conformance</string>
+        <string>cromwell</string>
         <string>cwltool-conformance</string>
         <string>galaxy-planemo-conformance</string>
         <string>rabix-conformance</string>
