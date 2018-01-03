@@ -86,7 +86,7 @@ java -Dsystem.new-workflow-poll-rate=1 \
     -jar ${CROMWELL_JAR} server &amp;
 CROMWELL_PID=$$
 
-sleep 5
+sleep 10
 
 cd $CURRENT_DIR
 (. venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml \
