@@ -51,9 +51,10 @@
         <completeBuild>true</completeBuild>
       </threshold>
     </jenkins.triggers.ReverseBuildTrigger>
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.28.1">
-      <spec></spec>
-    </com.cloudbees.jenkins.GitHubPushTrigger>
+    <hudson.triggers.SCMTrigger>
+      <spec>@daily</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
+    </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders>
@@ -95,7 +96,7 @@ test -s common-workflow-language/v1.0/result.xml</command>
       <healthScaleFactor>1.0</healthScaleFactor>
       <allowEmptyResults>false</allowEmptyResults>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.plugins.performance.PerformancePublisher plugin="performance@3.3">
+    <hudson.plugins.performance.PerformancePublisher plugin="performance@3.4">
       <errorFailedThreshold>0</errorFailedThreshold>
       <errorUnstableThreshold>0</errorUnstableThreshold>
       <errorUnstableResponseTimeThreshold></errorUnstableResponseTimeThreshold>
@@ -119,6 +120,7 @@ test -s common-workflow-language/v1.0/result.xml</command>
       <ignoreUnstableBuilds>false</ignoreUnstableBuilds>
       <persistConstraintLog>false</persistConstraintLog>
       <sourceDataFiles>common-workflow-language/v1.0/result.xml</sourceDataFiles>
+      <junitOutput></junitOutput>
     </hudson.plugins.performance.PerformancePublisher>
     <hudson.tasks.Mailer plugin="mailer@1.20">
       <recipients>mrc@commonwl.org, ejacox@ucsc.edu </recipients>
