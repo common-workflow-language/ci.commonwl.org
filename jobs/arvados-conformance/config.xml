@@ -75,7 +75,7 @@ venv() {
 }
 #docker volume ls -qf dangling=true | grep -v metadata.db | xargs -r docker volume rm || true
 cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
-docker pull arvados/arvbox-demo:latest
+#docker pull arvados/arvbox-demo:latest
 export PATH=$PATH:$PWD/tools/arvbox/bin
 export ARVBOX_CONTAINER=cwltest
 set +e
