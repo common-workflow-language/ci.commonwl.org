@@ -20,7 +20,7 @@
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.6.4">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.7.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -29,7 +29,7 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/12940-arvbox-runit</name>
+        <name>*/master</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -75,7 +75,7 @@ venv() {
 }
 #docker volume ls -qf dangling=true | grep -v metadata.db | xargs -r docker volume rm || true
 cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
-#docker pull arvados/arvbox-demo:latest
+docker pull arvados/arvbox-demo:latest
 export PATH=$PATH:$PWD/tools/arvbox/bin
 export ARVBOX_CONTAINER=cwltest
 set +e
