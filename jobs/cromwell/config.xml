@@ -57,7 +57,7 @@
     <hudson.tasks.Shell>
       <command>cloneorpull() {
         if test -d $1 ; then
-        		rm -rf $1
+        		rm -r $1 || /bin/true
         fi
         git clone $2
 }
