@@ -68,7 +68,7 @@ venv() {
         . $1/bin/activate
 }
 # hack for root owned files leaking from Cromwell
-docker run --volume common-workflow-language:/cwl debian:latest rm -Rf /cwl/v1.0
+docker run --mount type=bind,source=$PWD/common-workflow-language,destination=/cwl debian:latest rm -Rf /cwl/v1.0
 cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
 venv venv
 (. venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
