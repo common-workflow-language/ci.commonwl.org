@@ -4,16 +4,6 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.model.ParametersDefinitionProperty>
-      <parameterDefinitions>
-        <hudson.model.StringParameterDefinition>
-          <name>sha1</name>
-          <description>commit id from the CWL specification repo that you want to build or refname (eg: &quot;origin/pr/9/head&quot;)
-</description>
-          <defaultValue>master</defaultValue>
-        </hudson.model.StringParameterDefinition>
-      </parameterDefinitions>
-    </hudson.model.ParametersDefinitionProperty>
     <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.0">
       <doNotScan>false</doNotScan>
     </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
@@ -25,8 +15,18 @@
       <autoRebuild>false</autoRebuild>
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>sha1</name>
+          <description>commit id from the CWL specification repo that you want to build or refname (eg: &quot;origin/pr/9/head&quot;)
+</description>
+          <defaultValue>master</defaultValue>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.6.4">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.7.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -113,6 +113,7 @@
         <string>arvados</string>
         <string>cwltool</string>
         <string>rabix</string>
+        <string>cromwell</string>
       </values>
     </hudson.matrix.TextAxis>
     <hudson.matrix.TextAxis>
@@ -181,11 +182,42 @@ then
     (. ../cwltest-venv/bin/activate &amp;&amp; export DOCKER_HOST=&quot;unix:///var/run/docker.sock&quot; \
     	&amp;&amp; cd ../common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml RUNNER=../bunny/rabix-cli-*/rabix DRAFT=$version -j2)
     set -e
+elif [[ &quot;${implementation}&quot; == *cromwell* ]]
+then
+	docker run --mount type=bind,source=$PWD/common-workflow-language,destination=/cwl debian:latest rm -Rf /cwl/v1.0
+    cloneorpull cromwell https://github.com/broadinstitute/cromwell.git
+	venv cromwell_venv
+	(. cromwell_venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
+	(. cromwell_venv/bin/activate &amp;&amp; pip install -U &quot;cwltest&gt;=1.0.20170809112706&quot; cwltool)
+    cd cromwell
+	sbt clean assembly
+	CROMWELL_JAR=$(find &quot;$(pwd)/target/scala-2.12&quot; -name &quot;cromwell-*.jar&quot;)
+	shutdownCromwell() {
+    if [ -z &quot;${CROMWELL_PID}&quot; ]; then
+        kill ${CROMWELL_PID}
+    fi
+	}
+	trap &quot;shutdownCromwell&quot; EXIT
+	
+	CURRENT_DIR=$(pwd)
+	cd ../common-workflow-language/v1.0/v1.0
+	java -Dsystem.new-workflow-poll-rate=1 \
+		-Dbackend.providers.Local.config.script-epilogue=&quot;sleep 5 &amp;&amp; sync&quot; \
+    	-jar ${CROMWELL_JAR} server &amp;
+	CROMWELL_PID=$$
+	
+	sleep 10
+	
+	cd $CURRENT_DIR
+	(. cromwell_venv/bin/activate &amp;&amp; cd ../common-workflow-language &amp;&amp; \
+    	./run_test.sh --junit-xml=result.xml \
+    	RUNNER=../cromwell/centaurCwlRunner/src/bin/centaur-cwl-runner.bash) || /bin/true
+	set -e
 fi</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.22.2">
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.23">
       <testResults>**/junit.xml,**/common-workflow-language/**/result.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <healthScaleFactor>1.0</healthScaleFactor>
