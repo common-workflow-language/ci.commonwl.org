@@ -184,7 +184,7 @@ then
     set -e
 elif [[ &quot;${implementation}&quot; == *cromwell* ]]
 then
-	docker run --mount type=bind,source=$PWD/common-workflow-language,destination=/cwl debian:latest rm -Rf /cwl/v1.0
+	docker run --mount type=bind,source=$PWD/v1.0,destination=/cwl debian:latest rm -Rf /cwl/
     cloneorpull cromwell https://github.com/broadinstitute/cromwell.git
 	venv cromwell_venv
 	(. cromwell_venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
@@ -200,7 +200,7 @@ then
 	trap &quot;shutdownCromwell&quot; EXIT
 	
 	CURRENT_DIR=$(pwd)
-	cd ../common-workflow-language/v1.0/v1.0
+	cd ../v1.0/v1.0
 	java -Dsystem.new-workflow-poll-rate=1 \
 		-Dbackend.providers.Local.config.script-epilogue=&quot;sleep 5 &amp;&amp; sync&quot; \
     	-jar ${CROMWELL_JAR} server &amp;
@@ -209,9 +209,9 @@ then
 	sleep 10
 	
 	cd $CURRENT_DIR
-	(. cromwell_venv/bin/activate &amp;&amp; cd ../common-workflow-language &amp;&amp; \
+	(. ../cromwell_venv/bin/activate &amp;&amp; cd .. &amp;&amp; \
     	./run_test.sh --junit-xml=result.xml \
-    	RUNNER=../cromwell/centaurCwlRunner/src/bin/centaur-cwl-runner.bash) || /bin/true
+    	RUNNER=cromwell/centaurCwlRunner/src/bin/centaur-cwl-runner.bash) || /bin/true
 	set -e
 fi</command>
     </hudson.tasks.Shell>
