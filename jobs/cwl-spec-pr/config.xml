@@ -124,7 +124,7 @@
       </values>
     </hudson.matrix.TextAxis>
   </axes>
-  <combinationFilter>!(implementation==&quot;arvados&quot; &amp;&amp; version != &quot;v1.0&quot;) &amp;&amp; !(implementation==&quot;rabix&quot; &amp;&amp; version==&quot;v1.1.0-dev1&quot;) &amp;&amp; !(implementation==&quot;cwltool&quot; &amp;&amp; version == &quot;draft-2&quot;)</combinationFilter>
+  <combinationFilter>!(implementation==&quot;arvados&quot; &amp;&amp; version != &quot;v1.0&quot;) &amp;&amp; !(implementation==&quot;rabix&quot; &amp;&amp; version==&quot;v1.1.0-dev1&quot;) &amp;&amp; !(implementation==&quot;cwltool&quot; &amp;&amp; version == &quot;draft-2&quot;) &amp;&amp; !(implementation==&quot;cromwell&quot; &amp;&amp; version==&quot;v1.1.0-dev1&quot;)</combinationFilter>
   <builders>
     <hudson.tasks.Shell>
       <command>#!/bin/bash
