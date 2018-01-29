@@ -32,7 +32,7 @@
       <emailAddress>misha.kotliar@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwgf5k18uszYAz1jdRxZ6Hy2CVnZCCiQZC+6B3/Fip6ckUvZv2XhJlXjpoLK4sNUsMiGUeeIcdPQxltGKTsetS9Q==}</accessToken>
+      <accessToken>{AQAAABAAAAAwT6N8BA1SvNK9R9iLxqCuEO2JON1m394B36FAnm+kecNd3WueeH++kFOrzWF0FqS8N+PaETCExCh/6CS17hwBtw==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
