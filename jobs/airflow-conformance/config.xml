@@ -4,10 +4,10 @@
   <description>&lt;a href=&quot;https://github.com/Barski-lab/cwl-airflow/&quot;&gt;Airflow, CWL support via BioWardrobe Team, CCHMC&lt;/a&gt;</description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.0">
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.2">
       <doNotScan>false</doNotScan>
     </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.28.1">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.0">
       <projectUrl>https://github.com/Barski-lab/cwl-airflow/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
@@ -16,7 +16,7 @@
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.6.4">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.7.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -75,7 +75,7 @@ venv cwltool-venv
 (. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install -U .)
 (. cwltool-venv/bin/activate &amp;&amp; export AIRFLOW_HOME=${PWD}/airflow &amp;&amp; rm -Rf ${AIRFLOW_HOME} &amp;&amp; airflow initdb)
 (. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install &quot;cwltest&gt;=1.0.20160825151655&quot;)
-(. cwltool-venv/bin/activate &amp;&amp; export AIRFLOW_HOME=${PWD}/airflow &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml RUNNER=cwl-airflow-runner)
+(. cwltool-venv/bin/activate &amp;&amp; export AIRFLOW_HOME=${PWD}/airflow &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml RUNNER=cwl-airflow-runner EXTRA=run)
 exit 0</command>
     </hudson.tasks.Shell>
   </builders>
