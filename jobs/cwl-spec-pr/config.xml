@@ -4,17 +4,6 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.0">
-      <doNotScan>false</doNotScan>
-    </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.28.1">
-      <projectUrl>https://github.com/common-workflow-language/common-workflow-language/</projectUrl>
-      <displayName></displayName>
-    </com.coravy.hudson.plugins.github.GithubProjectProperty>
-    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.27">
-      <autoRebuild>false</autoRebuild>
-      <rebuildDisabled>false</rebuildDisabled>
-    </com.sonyericsson.rebuild.RebuildSettings>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <hudson.model.StringParameterDefinition>
@@ -25,6 +14,17 @@
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.2">
+      <doNotScan>false</doNotScan>
+    </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.0">
+      <projectUrl>https://github.com/common-workflow-language/common-workflow-language/</projectUrl>
+      <displayName></displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.27">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@3.7.0">
     <configVersion>2</configVersion>
@@ -52,7 +52,7 @@
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
-    <org.jenkinsci.plugins.ghprb.GhprbTrigger plugin="ghprb@1.39.0">
+    <org.jenkinsci.plugins.ghprb.GhprbTrigger plugin="ghprb@1.40.0">
       <spec>H/5 * * * *</spec>
       <configVersion>3</configVersion>
       <adminlist>mr-c tetron</adminlist>
@@ -184,7 +184,11 @@ then
     set -e
 elif [[ &quot;${implementation}&quot; == *cromwell* ]]
 then
-	docker run --mount type=bind,source=$PWD/v1.0,destination=/cwl debian:latest rm -Rf /cwl/
+    if [ -d &quot;$PWD/v1.0&quot; ];
+    then
+    	docker run --mount type=bind,source=$PWD/v1.0,destination=/cwl debian:latest rm -Rf /cwl/
+        git reset --hard
+    fi
     cloneorpull cromwell https://github.com/broadinstitute/cromwell.git
 	venv cromwell_venv
 	(. cromwell_venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
