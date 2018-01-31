@@ -8,10 +8,10 @@
 </description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.0">
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.2">
       <doNotScan>false</doNotScan>
     </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.28.1">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.0">
       <projectUrl>https://github.com/curoverse/arvados/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
@@ -51,6 +51,16 @@
         <completeBuild>true</completeBuild>
       </threshold>
     </jenkins.triggers.ReverseBuildTrigger>
+    <org.jenkinsci.plugins.registry.notification.DockerHubTrigger plugin="dockerhub-notification@2.2.1">
+      <spec></spec>
+      <options class="vector">
+        <org.jenkinsci.plugins.registry.notification.opt.impl.TriggerOnSpecifiedImageNames>
+          <repoNames>
+            <string>arvados/arvbox-demo</string>
+          </repoNames>
+        </org.jenkinsci.plugins.registry.notification.opt.impl.TriggerOnSpecifiedImageNames>
+      </options>
+    </org.jenkinsci.plugins.registry.notification.DockerHubTrigger>
     <hudson.triggers.SCMTrigger>
       <spec>@daily</spec>
       <ignorePostCommitHooks>false</ignorePostCommitHooks>
