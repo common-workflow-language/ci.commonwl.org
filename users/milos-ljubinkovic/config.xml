@@ -5,7 +5,7 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>{AQAAABAAAAAwVF4+NZ+X0pj00KyoQXwk98eEHKkJ1efLyVuTfdV/Uy8++T/o4ennCMpZ4q4E8ivwA6tFqfVmAAPoJwTVM5VQ/Q==}</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.14">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.16">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.model.MyViewsProperty>
@@ -19,7 +19,7 @@
         </hudson.model.AllView>
       </views>
     </hudson.model.MyViewsProperty>
-    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.0">
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.2.0">
       <providerId>default</providerId>
     </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
     <hudson.model.PaneStatusProperties>
@@ -31,5 +31,8 @@
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.20">
       <emailAddress>milos.ljubinkovic@sbgenomics.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
+    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
+      <accessToken>{AQAAABAAAAAwCwJkNBPe//GmmeJUI0YoZUluwHDHSRXWoQcomNc29uunf30kr/WzLmzlPKD0SPsLgVFHyJ8Px3tQity9957nPQ==}</accessToken>
+    </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
