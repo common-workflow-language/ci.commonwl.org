@@ -75,12 +75,12 @@ venv() {
 }
 cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
 venv planemo-venv
-(. planemo-venv/bin/activate &amp;&amp; pip install -U setuptools pip &amp;&amp; pip install -r requirements.txt &amp;&amp; pip install cwltest &amp;&amp; bash scripts/test_conformance_cwl.bash)
+(. planemo-venv/bin/activate &amp;&amp; pip install -U setuptools pip &amp;&amp; pip install -r requirements.txt &amp;&amp; pip install -U cwltest &amp;&amp; bash scripts/test_conformance_cwl.bash)
 docker volume ls -qf dangling=true | xargs -r docker volume rm</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.23">
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.24">
       <testResults>**/result*xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <healthScaleFactor>1.0</healthScaleFactor>
