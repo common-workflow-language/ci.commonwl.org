@@ -93,7 +93,7 @@
       </extensions>
     </org.jenkinsci.plugins.ghprb.GhprbTrigger>
   </triggers>
-  <concurrentBuild>false</concurrentBuild>
+  <concurrentBuild>true</concurrentBuild>
   <axes>
     <hudson.matrix.TextAxis>
       <name>version</name>
@@ -108,7 +108,7 @@
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.23">
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.24">
       <testResults>**/result*.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <healthScaleFactor>1.0</healthScaleFactor>
