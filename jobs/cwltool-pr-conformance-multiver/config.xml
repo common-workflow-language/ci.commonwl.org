@@ -61,7 +61,7 @@
       <onlyTriggerPhrase>false</onlyTriggerPhrase>
       <useGitHubHooks>true</useGitHubHooks>
       <permitAll>false</permitAll>
-      <whitelist> kmhernan prismofeverything alexbarrera samuell hmenager chapmanb jeremiahsavage kellrott psafont gijzelaerr kapilkd13 michael-kotliar lijiayong ctb jxtx tiborsimko</whitelist>
+      <whitelist> kmhernan prismofeverything alexbarrera samuell hmenager chapmanb jeremiahsavage kellrott psafont gijzelaerr kapilkd13 michael-kotliar lijiayong ctb jxtx tiborsimko ThomasHickman</whitelist>
       <autoCloseFailedPullRequests>false</autoCloseFailedPullRequests>
       <displayBuildErrorsOnDownstreamBuilds>false</displayBuildErrorsOnDownstreamBuilds>
       <whiteListTargetBranches>
