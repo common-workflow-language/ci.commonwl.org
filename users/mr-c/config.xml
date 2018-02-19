@@ -32,7 +32,7 @@
       <providerId>default</providerId>
     </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwt3GxAEum+C4utG7pziZxXsCqp5t6Ymkz0q6CAdfQSgE26VbjTxhkvtvuv0/KM1uwScDydMtEEbA4Crw4GnV2RA==}</accessToken>
+      <accessToken>{AQAAABAAAAAwRf3c2cLIQnQDqMkR8CVZZ6VV8PwOr4C2r9vTGd/SoZE6xHKFpMBG6lp5UQ0k6jxBHN0Taeiki0rYPibE+D2A9Q==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
