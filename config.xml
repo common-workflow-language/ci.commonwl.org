@@ -9,7 +9,7 @@
     <isSetupComplete>true</isSetupComplete>
     <name>RESTART</name>
   </installState>
-  <numExecutors>3</numExecutors>
+  <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
   <useSecurity>true</useSecurity>
   <authorizationStrategy class="org.jenkinsci.plugins.GithubAuthorizationStrategy" plugin="github-oauth@0.29">
