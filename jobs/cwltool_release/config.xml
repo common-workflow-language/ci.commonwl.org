@@ -3,7 +3,9 @@
   <actions/>
   <description>&lt;p&gt;cwltool is the reference runner for the &lt;a href=&quot;http://www.commonwl.org&quot;&gt;Common Workflow Language&lt;/a&gt; standards.&lt;/p&gt;&#xd;
 &#xd;
-&lt;a href=&quot;https://github.com/common-workflow-language/cwltool&quot;&gt;https://github.com/common-workflow-language/cwltool&lt;/a&gt;</description>
+&lt;a href=&quot;https://github.com/common-workflow-language/cwltool&quot;&gt;https://github.com/common-workflow-language/cwltool&lt;/a&gt;&#xd;
+&#xd;
+This tests the completeness of MANIFEST.in and that the tests run after installation.  Currently disabled as TravisCI runs this as part of every pull request.</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.2">
