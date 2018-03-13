@@ -16,7 +16,7 @@
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.7.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.8.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -77,7 +77,7 @@ venv venv
 (. venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
 (. venv/bin/activate &amp;&amp; pip install -U &quot;cwltest&gt;=1.0.20170809112706&quot; cwltool)
 sbt clean assembly
-CROMWELL_JAR=$(find &quot;$(pwd)/target/scala-2.12&quot; -name &quot;cromwell-*.jar&quot;)
+CROMWELL_JAR=$(find &quot;$(pwd)/server/target/scala-2.12&quot; -name &quot;cromwell-*.jar&quot;)
 shutdownCromwell() {
     if [ -z &quot;${CROMWELL_PID}&quot; ]; then
         kill ${CROMWELL_PID}
@@ -101,7 +101,7 @@ set -e</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.23">
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.24">
       <testResults>**/result.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <healthScaleFactor>1.0</healthScaleFactor>
