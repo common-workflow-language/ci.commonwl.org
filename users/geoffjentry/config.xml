@@ -31,5 +31,8 @@
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.20">
       <emailAddress>geoffjentry@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
+    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
+      <accessToken>{AQAAABAAAAAw1XEYzh8yjNp+7rWNtM50iVlYRtXGJR+FJkT/BFLiTEuDIBU+aNVY1Kl7vfkPDwd+qdF7IRHP3mm3yCh87HOgKQ==}</accessToken>
+    </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
