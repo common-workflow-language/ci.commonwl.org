@@ -1,6 +1,6 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <user>
-  <fullName>geoffjentry</fullName>
+  <fullName>Jeff Gentry</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
       <apiToken>{AQAAABAAAAAwoaVVggj/IB63nwFdQNdQkzWmJfDH0YZat2SKj2/EGFTei2UH60NRqEK4kE5WYawtKIOG5NN3W6/C0AO3xte5gA==}</apiToken>
@@ -32,7 +32,7 @@
       <emailAddress>geoffjentry@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAw1XEYzh8yjNp+7rWNtM50iVlYRtXGJR+FJkT/BFLiTEuDIBU+aNVY1Kl7vfkPDwd+qdF7IRHP3mm3yCh87HOgKQ==}</accessToken>
+      <accessToken>{AQAAABAAAAAwB8ZTcXMe+q10jxnmD9x99WikIBfm7vVTbR5HajOyPWZp1/60Rz3iVvp4L7lV2D3bA3CRnyn3/tguRTuCQ3WuuA==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
