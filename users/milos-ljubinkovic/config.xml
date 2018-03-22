@@ -32,7 +32,7 @@
       <emailAddress>milos.ljubinkovic@sbgenomics.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAw4x0poej9xPOBw1NhFcswb348C4e9yiCpe/fQbdJmQM9Fe3hWIl1RYomDZJLSS4Txc/caXTLfKFVJfscBTBunKw==}</accessToken>
+      <accessToken>{AQAAABAAAAAwSTX6tnYl0ecW/nETh1mxjlV7llInaWPxO8yL+JLTsDvAJJtGyhRh/4Ju/XYY/ivhktrgDVe6pgYR8jjh40uLHw==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
