@@ -28,11 +28,11 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>true</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwHcE+OH3gYb02KdrUo2tMErRlLYRTx1sUdj0jSwPlltkVdYh/dsglyZ4HcjvQ8CJFDrwI1Rreb3+lXsSxMm0qIg==}</accessToken>
-    </org.jenkinsci.plugins.GithubAccessTokenProperty>
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.20">
       <emailAddress>lodhja@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
+    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
+      <accessToken>{AQAAABAAAAAwV0L0VyHSU+OYwPwBMa78vTEi6BwXzPtwKOmRXmhqeqyzp+xbF1oGTi5xHGAzx003K2Wvrs7ldq9Beo5JNCi10g==}</accessToken>
+    </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
