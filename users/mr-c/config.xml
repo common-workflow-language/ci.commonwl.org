@@ -25,14 +25,14 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.20">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.21">
       <emailAddress>michael.crusoe@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.2.0">
       <providerId>default</providerId>
     </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwTQ6uOasG/gHIgLpXpG9Z10nPTBxrNP4hTjAvo0BF3CxvrTL3G9/fBbd85hVBsE3RBBw8xoI7RbS7Pg5tf3o52g==}</accessToken>
+      <accessToken>{AQAAABAAAAAw2Qu4h9KY4NfkguKMfT+VvUSoprLkwaqCrBAFdPN6Clzbnq78alceA67GQ14ObVde1PxS/z+vGevrYYx4TGMoCA==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
