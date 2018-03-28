@@ -4,7 +4,7 @@
     <string>jenkins.security.s2m.MasterKillSwitchWarning</string>
     <string>hudsonHomeIsFull</string>
   </disabledAdministrativeMonitors>
-  <version>2.89.4</version>
+  <version>2.107.1</version>
   <installState class="jenkins.install.InstallState$5">
     <isSetupComplete>true</isSetupComplete>
     <name>RESTART</name>
@@ -40,7 +40,7 @@
     <githubWebUri>https://github.com</githubWebUri>
     <githubApiUri>https://api.github.com</githubApiUri>
     <clientID>7db5afd5d440fee1aed4</clientID>
-    <clientSecret>{AQAAABAAAAAw7hifxIBc70yiP9QVaDq8Yt4LqHnRM5OL4umKiczf8eXFM08m3YA6cZWVQBQXtz/IfErAGzJviZxvFreARkWPjg==}</clientSecret>
+    <clientSecret>{AQAAABAAAAAwAzcoRma2gpNZlAz9urcN11zML9dymVz6hR0A45b558Pgxv5ndvgVT/cggjoA9teShhWgHPds/c4TJBOAipIPRA==}</clientSecret>
     <oauthScopes>read:org,user:email</oauthScopes>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
