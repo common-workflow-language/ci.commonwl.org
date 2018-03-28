@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <user>
   <fullName>Michael R. Crusoe</fullName>
   <properties>
@@ -32,7 +32,7 @@
       <providerId>default</providerId>
     </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwMEG0t/vlkqq7/+lM1hB0qFTMuNtDsgNybR+Kzur/EwTdYdUDaXeydkKOUktkONqFBvUYJqgmYUQwot6hnwwbAg==}</accessToken>
+      <accessToken>{AQAAABAAAAAwTm0A5KDzJO70fCEKreBKmagC6JFZABa3OflOwrcgC71Da2shZMeVJdpwYxxT7oM2z+KwMOntu2LXqmTyAlXnPA==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
