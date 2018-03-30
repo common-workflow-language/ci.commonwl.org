@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <user>
   <fullName>Jeff Gentry</fullName>
   <properties>
@@ -28,11 +28,11 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>true</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.20">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.21">
       <emailAddress>geoffjentry@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwVIs4wj6fT7sHWPKJKXt7hS+r6HkqeE98rat7eqsY9M5TWurJlSoq+tWy0q17isapXYq7L4lLVUvEeA/YabwsbQ==}</accessToken>
+      <accessToken>{AQAAABAAAAAwyN+mGa7tRCZydlKe3G+trYaIyliQzpxtSMu7sBMGQ405Ja1YmHC1CFx9PdbFIiPnbKpVrsyTJV7XBE9mtP5pQA==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
