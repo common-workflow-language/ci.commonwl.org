@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <user>
   <fullName>Peter Amstutz</fullName>
   <properties>
@@ -25,14 +25,14 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.20">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.21">
       <emailAddress>tetron@interreality.org</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.2.0">
       <providerId>default</providerId>
     </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwHl70BNhfYyZhs7LzN/MwCHEO0kLewRGiOPE0Bs1qLWefEKMlFjWNMCHz2RD4L+ZlLpdV5AT0/WmDF7XqxDjsBA==}</accessToken>
+      <accessToken>{AQAAABAAAAAwqzU2ovBVFAdu9OX1t29Jh08DY5jtsuUfg/kxwUee3udDSLnrS5haX2DYLnPFC7XkjuF8ed0K9f1ubX4K6e6iMQ==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
