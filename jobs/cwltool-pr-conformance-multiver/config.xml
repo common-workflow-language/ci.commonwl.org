@@ -100,7 +100,6 @@
       <name>version</name>
       <values>
         <string>v1.0</string>
-        <string>v1.1.0-dev1</string>
       </values>
     </hudson.matrix.TextAxis>
   </axes>
