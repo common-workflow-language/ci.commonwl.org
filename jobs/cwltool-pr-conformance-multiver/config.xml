@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <matrix-project plugin="matrix-project@1.12">
   <actions/>
   <description></description>
@@ -11,6 +11,7 @@
           <description>commit id you want to build or refname (eg: &quot;origin/pr/9/head&quot;)
 </description>
           <defaultValue>master</defaultValue>
+          <trim>false</trim>
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
@@ -26,7 +27,7 @@
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.7.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.8.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -99,6 +100,7 @@
       <name>version</name>
       <values>
         <string>v1.0</string>
+        <string>v1.1.0-dev1</string>
       </values>
     </hudson.matrix.TextAxis>
   </axes>
