@@ -98,6 +98,7 @@
         <string>galaxy-planemo-conformance</string>
         <string>rabix-conformance</string>
         <string>toil-conformance</string>
+        <string>wintest</string>
         <string>xenon-cwl-runner-conformance</string>
       </jobNames>
       <jobFilters/>
