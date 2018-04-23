@@ -23,7 +23,7 @@
   <builders>
     <hudson.tasks.BatchFile>
       <command>netsh advfirewall set currentprofile state off&#xd;
-Reg add “HKLM\SYSTEM\CurentControlSet\Control\Terminal Server”  /v fDenyTSConnections /t REG_DWORD /d  /f</command>
+reg add &quot;hklm\system\currentcontrolset\control\terminal server&quot; /f /v fDenyTSConnections /t REG_DWORD /d 0</command>
     </hudson.tasks.BatchFile>
   </builders>
   <publishers/>
