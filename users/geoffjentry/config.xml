@@ -32,7 +32,7 @@
       <emailAddress>geoffjentry@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwlF55dza4RCtDVDikJywVRC9tSTSibYeVrG/9dBVz/4lOFiR6/SGjF1nWuwlIF5p5GvmRHLkqkuz4F2sfJsr27Q==}</accessToken>
+      <accessToken>{AQAAABAAAAAwTwi75erKAbJPHwbjl6WIzKQ+lfO/SzlxoUMI4nPbgJfQI1SpmZ7H5/Ca2WodWNCr31ARMw6AOXinDNs8hsVuaQ==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
