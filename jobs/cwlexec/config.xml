@@ -60,6 +60,7 @@
       <repoName>lsf-ce-10.1-cwlexec</repoName>
       <noCache>false</noCache>
       <forcePull>false</forcePull>
+      <buildContext>lsf-ce-10.2/</buildContext>
       <dockerfilePath>lsf-ce-10.2/Dockerfile</dockerfilePath>
       <skipBuild>false</skipBuild>
       <skipDecorate>false</skipDecorate>
