@@ -43,6 +43,10 @@
     </hudson.triggers.SCMTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
+  <rootModule>
+    <groupId>com.ibm.spectrumcomputing.cwl</groupId>
+    <artifactId>cwlexec</artifactId>
+  </rootModule>
   <goals>-Dmaven.test.skip=true</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
