@@ -80,6 +80,21 @@
 	lsf-ce-10.1-cwlexec ${USER}</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.ArtifactArchiver>
+      <artifacts>/home/jenkins/cwl-workdir/cwlexec.xml</artifacts>
+      <allowEmptyArchive>false</allowEmptyArchive>
+      <onlyIfSuccessful>false</onlyIfSuccessful>
+      <fingerprint>false</fingerprint>
+      <defaultExcludes>true</defaultExcludes>
+      <caseSensitive>true</caseSensitive>
+    </hudson.tasks.ArtifactArchiver>
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.24">
+      <testResults>/home/jenkins/cwl-workdir/cwlexec.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <healthScaleFactor>1.0</healthScaleFactor>
+      <allowEmptyResults>false</allowEmptyResults>
+    </hudson.tasks.junit.JUnitResultArchiver>
+  </publishers>
   <buildWrappers/>
 </project>
