@@ -94,6 +94,7 @@
         <string>airflow-conformance</string>
         <string>arvados-conformance</string>
         <string>cromwell</string>
+        <string>cwlexec</string>
         <string>cwltool-conformance</string>
         <string>galaxy-planemo-conformance</string>
         <string>rabix-conformance</string>
