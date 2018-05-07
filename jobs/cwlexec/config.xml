@@ -77,12 +77,13 @@
     <hudson.tasks.Shell>
       <command>docker run -v /var/run/docker.sock:/var/run/docker.sock:rw \
 	-v /home/${USER}/cwl-workdir:/home/${USER}/cwl-workdir:rw \
-	lsf-ce-10.1-cwlexec ${USER}</command>
+	lsf-ce-10.1-cwlexec ${USER}
+cp /home/jenkins/cwl-workdir/cwlexec.xml ./</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
     <hudson.tasks.ArtifactArchiver>
-      <artifacts>/home/jenkins/cwl-workdir/cwlexec.xml</artifacts>
+      <artifacts>cwlexec.xml</artifacts>
       <allowEmptyArchive>false</allowEmptyArchive>
       <onlyIfSuccessful>false</onlyIfSuccessful>
       <fingerprint>false</fingerprint>
@@ -90,7 +91,7 @@
       <caseSensitive>true</caseSensitive>
     </hudson.tasks.ArtifactArchiver>
     <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.24">
-      <testResults>/home/jenkins/cwl-workdir/cwlexec.xml</testResults>
+      <testResults>cwlexec.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <healthScaleFactor>1.0</healthScaleFactor>
       <allowEmptyResults>false</allowEmptyResults>
