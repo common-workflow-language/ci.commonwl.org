@@ -1,5 +1,6 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
+  <actions/>
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
@@ -70,6 +71,11 @@
       <forceTag>false</forceTag>
       <dockerToolName></dockerToolName>
     </com.cloudbees.dockerpublish.DockerBuilder>
+    <hudson.tasks.Shell>
+      <command>docker run -v /var/run/docker.sock:/var/run/docker.sock:rw \
+	-v /home/${USER}/cwl-workdir:/home/${USER}/cwl-workdir:rw \
+	lsf-ce-10.1-cwlexec ${USER}</command>
+    </hudson.tasks.Shell>
   </builders>
   <publishers/>
   <buildWrappers/>
