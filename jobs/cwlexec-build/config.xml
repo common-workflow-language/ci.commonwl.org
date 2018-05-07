@@ -47,7 +47,7 @@
     <groupId>com.ibm.spectrumcomputing.cwl</groupId>
     <artifactId>cwlexec</artifactId>
   </rootModule>
-  <goals>-Dmaven.test.skip=true</goals>
+  <goals>compile -Dmaven.test.skip=true</goals>
   <aggregatorStyleBuild>true</aggregatorStyleBuild>
   <incrementalBuild>false</incrementalBuild>
   <ignoreUpstremChanges>false</ignoreUpstremChanges>
