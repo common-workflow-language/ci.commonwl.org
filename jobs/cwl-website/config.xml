@@ -37,9 +37,6 @@
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.29.0">
-      <spec></spec>
-    </com.cloudbees.jenkins.GitHubPushTrigger>
     <hudson.triggers.SCMTrigger>
       <spec>@daily</spec>
       <ignorePostCommitHooks>false</ignorePostCommitHooks>
