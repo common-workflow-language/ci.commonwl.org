@@ -27,7 +27,7 @@
               <id>github</id>
               <description>GitHub Access Token</description>
               <username>mr-c</username>
-              <password>{AQAAABAAAAAw6xpM9toK0QtBPURzjvLKQ8VuOOpKiYt4cgwiFvx9II5JWo1LVzDjwGpsI4G9u2Ik6/Y1iYzfnDU35KNXvnppYQ==}</password>
+              <password>{AQAAABAAAAAwZCKz8mhG0rVzTQnj2XPPBE1bRob3/jp6c2P4o1MtVh32YE1wdiardbgrjX6OYdG+2ov+5yRuLf2ntpkraj5HgQ==}</password>
             </com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
           </list>
         </entry>
