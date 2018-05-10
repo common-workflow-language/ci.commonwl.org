@@ -3,7 +3,7 @@
   <installations>
     <jenkins.plugins.shiningpanda.tools.PythonInstallation>
       <name>Windows-CPython-36</name>
-      <home>&quot;C:\Program Files\Python36\&quot;</home>
+      <home>C:\Program Files\Python36\</home>
       <properties/>
     </jenkins.plugins.shiningpanda.tools.PythonInstallation>
   </installations>
