@@ -60,7 +60,12 @@
       <autofavoriteEnabled>true</autofavoriteEnabled>
     </io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.1">
-      <data class="concurrent-hash-map"/>
+      <data class="concurrent-hash-map">
+        <entry>
+          <string>cwltool/windows-Jenkinsfile</string>
+          <boolean>true</boolean>
+        </entry>
+      </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
       <accessToken>{AQAAABAAAAAw+r2JEJ88OKEEsw2Ir9dl9F2SNv8gnLUtBNdEFGKkTj7oEnVjM+EJhslJTJ2s0OHJzGgewzQL6Rlqg0o9x2kUtA==}</accessToken>
