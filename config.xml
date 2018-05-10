@@ -1,9 +1,6 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <hudson>
-  <disabledAdministrativeMonitors>
-    <string>jenkins.security.s2m.MasterKillSwitchWarning</string>
-    <string>hudsonHomeIsFull</string>
-  </disabledAdministrativeMonitors>
+  <disabledAdministrativeMonitors/>
   <version>2.107.3</version>
   <installState class="jenkins.install.InstallState$5">
     <isSetupComplete>true</isSetupComplete>
