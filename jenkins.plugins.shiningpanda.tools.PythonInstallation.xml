@@ -2,8 +2,8 @@
 <jenkins.plugins.shiningpanda.tools.PythonInstallation_-DescriptorImpl plugin="shiningpanda@0.23">
   <installations>
     <jenkins.plugins.shiningpanda.tools.PythonInstallation>
-      <name>System-CPython-2.7</name>
-      <home>/usr/bin/python2.7</home>
+      <name>Windows-CPython-36</name>
+      <home>C:\Program Files\Python36</home>
       <properties/>
     </jenkins.plugins.shiningpanda.tools.PythonInstallation>
   </installations>
