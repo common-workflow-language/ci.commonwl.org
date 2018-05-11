@@ -3,19 +3,6 @@
   <actions/>
   <description>Common Workflow Language reference implementation</description>
   <properties>
-    <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl plugin="blueocean-pipeline-scm-api@1.5.0">
-      <domain plugin="credentials@2.1.16">
-        <name>blueocean-folder-credential-domain</name>
-        <description>Blue Ocean Folder Credentials domain</description>
-        <specifications/>
-      </domain>
-      <user>mr-c</user>
-      <id>github</id>
-    </io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl>
-    <org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig plugin="pipeline-model-definition@1.2.9">
-      <dockerLabel></dockerLabel>
-      <registry plugin="docker-commons@1.11"/>
-    </org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig>
     <com.cloudbees.hudson.plugins.folder.properties.FolderCredentialsProvider_-FolderCredentialsProperty plugin="cloudbees-folder@6.4">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
@@ -32,6 +19,19 @@
         </entry>
       </domainCredentialsMap>
     </com.cloudbees.hudson.plugins.folder.properties.FolderCredentialsProvider_-FolderCredentialsProperty>
+    <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl plugin="blueocean-pipeline-scm-api@1.5.0">
+      <domain plugin="credentials@2.1.16">
+        <name>blueocean-folder-credential-domain</name>
+        <description>Blue Ocean Folder Credentials domain</description>
+        <specifications/>
+      </domain>
+      <user>mr-c</user>
+      <id>github</id>
+    </io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl>
+    <org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig plugin="pipeline-model-definition@1.2.9">
+      <dockerLabel></dockerLabel>
+      <registry plugin="docker-commons@1.11"/>
+    </org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig>
   </properties>
   <folderViews class="jenkins.branch.MultiBranchProjectViewHolder" plugin="branch-api@2.0.20">
     <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
