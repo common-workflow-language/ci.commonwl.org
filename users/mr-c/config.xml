@@ -65,6 +65,10 @@
           <string>cwltool/windows-Jenkinsfile</string>
           <boolean>true</boolean>
         </entry>
+        <entry>
+          <string>cwltool/PR-742</string>
+          <boolean>true</boolean>
+        </entry>
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
