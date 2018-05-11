@@ -66,6 +66,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/docker-machine-mounts</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-742</string>
           <boolean>true</boolean>
         </entry>
