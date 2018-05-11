@@ -62,21 +62,25 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.1">
       <data class="concurrent-hash-map">
         <entry>
-          <string>cwltool/windows-Jenkinsfile</string>
+          <string>cwltool/PR-739</string>
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>cwltool/docker-machine-mounts</string>
+          <string>cwltool/PR-616</string>
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>cwltool/PR-742</string>
+          <string>cwltool/PR-467</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-744</string>
           <boolean>true</boolean>
         </entry>
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwup0/nRdulRSsKbQOZAa0+uTr3Zq4gVrN7KLyD+7JgAFik/IBhelY65J8WrOWyNlvUeaQ+h8rNuMeMqM7kBCJtw==}</accessToken>
+      <accessToken>{AQAAABAAAAAwY+TWHW2weFNW6X2VSBxOteE7QaBHWa06ANHizeWIpvOrzrGFpHic7PJfK95aC0oEngVcibFnFqCSQ5gDlpDC/w==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
