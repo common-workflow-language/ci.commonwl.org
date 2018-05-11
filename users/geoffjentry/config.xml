@@ -31,8 +31,14 @@
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.21">
       <emailAddress>geoffjentry@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
+    <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
+      <autofavoriteEnabled>true</autofavoriteEnabled>
+    </io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.1">
+      <data class="concurrent-hash-map"/>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwuS+jCSSBZpM4Lm54ulLiQmFp8KVmtDA2MvLYJjhWx0Ao1T3CH+6ILbbc3HAfuBEBntVqldevToV7F04BzsVpmQ==}</accessToken>
+      <accessToken>{AQAAABAAAAAwNdPNhtMabyyqkzvmgLFwxmMIh8F4l/A7G+DL/HRtk4xQu1Q7jEMFcUN5ZYvK0/8Lux0O6Kua3QfuFp2HcLeH3g==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
