@@ -3,7 +3,9 @@
   <actions/>
   <description>Testing the Broad Institue&apos;s &lt;a href=&quot;https://github.com/broadinstitute/cromwell&quot;&gt;Crommwell&lt;/a&gt; Workflow executor&#xd;
 against the &lt;a href=&quot;https://github.com/common-workflow-language/common-workflow-language/blob/master/CONFORMANCE_TESTS.md#common-workflow-language-conformance-test-suite&quot;&gt;&#xd;
-CWL v1.0 conformance suite&lt;/a&gt;.</description>
+CWL v1.0 conformance suite&lt;/a&gt;.&#xd;
+&#xd;
+&lt;img src=&quot;https://github.com/broadinstitute/cromwell/raw/develop/docs/jamie_the_cromwell_pig.png&quot; /&gt;</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.2">
