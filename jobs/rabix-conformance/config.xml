@@ -99,7 +99,7 @@ LC_ALL=C
 LANG=C
 (. cwltool-venv/bin/activate &amp;&amp; export DOCKER_HOST=&quot;unix:///var/run/docker.sock&quot; \
   &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml \
-  RUNNER=../rabix-cli-*/rabix) || /bin/true
+  RUNNER=../rabix-cli-*/rabix -j2) || /bin/true
 set -e</command>
     </hudson.tasks.Shell>
   </builders>
