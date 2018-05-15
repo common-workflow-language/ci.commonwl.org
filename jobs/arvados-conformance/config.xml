@@ -1,9 +1,14 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>&lt;p&gt;The Arvados core is a platform for production data science with very large data sets. It is made up of two major systems and a number of related services and components including APIs, SDKs, and visual tools.&lt;/p&gt;&#xd;
+  <description>&lt;p&gt;Testing the &lt;a href=&quot;https://arvados.org/&quot;&gt;Arvados Project&apos;s&lt;/a&gt; Core Platform workflow executor&#xd;
+against the &lt;a href=&quot;https://github.com/common-workflow-language/common-workflow-language/blob/master/CONFORMANCE_TESTS.md#common-workflow-language-conformance-test-suite&quot;&gt;&#xd;
+  CWL v1.0 conformance suite&lt;/a&gt;.&lt;/p&gt;&#xd;
+&lt;p&gt;&lt;a href=&apos;https://ci.commonwl.org/job/arvados-conformance&apos;&gt;&lt;img src=&apos;https://ci.commonwl.org/buildStatus/icon?job=arvados-conformance&apos;&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+&lt;img src=&quot;https://arvados.org/images/img01.png&quot; /&gt;&#xd;
+&lt;p&gt;The Arvados core is a platform for production data science with very large data sets. It is made up of two major systems and a number of related services and components including APIs, SDKs, and visual tools.&lt;/p&gt;&#xd;
 &#xd;
-&lt;a href=&quot;https://arvados.org/&quot;&gt;https://arvados.org/&lt;/a&gt;&#xd;
+&#xd;
 &#xd;
 </description>
   <keepDependencies>false</keepDependencies>
