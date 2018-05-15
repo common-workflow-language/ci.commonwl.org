@@ -60,7 +60,9 @@ against the &lt;a href=&quot;https://github.com/common-workflow-language/common-
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cloneorpull() {
+      <command>### Editing this command? Also update https://ci.commonwl.org/job/cwl-spec-pr/configure
+
+cloneorpull() {
         if test -d $1 ; then
         		rm -r $1 || /bin/true
         fi
@@ -92,6 +94,7 @@ trap &quot;shutdownCromwell&quot; EXIT
 
 CURRENT_DIR=$(pwd)
 cd common-workflow-language/v1.0/v1.0
+### Editing this command? Also update https://ci.commonwl.org/job/cwl-spec-pr/configure
 java -Dsystem.new-workflow-poll-rate=1 \
      -Dsystem.job-shell=/bin/sh \
 	-Dbackend.providers.Local.config.script-epilogue=&quot;sleep 5 &amp;&amp; sync&quot; \
