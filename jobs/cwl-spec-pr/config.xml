@@ -4,17 +4,6 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.model.ParametersDefinitionProperty>
-      <parameterDefinitions>
-        <hudson.model.StringParameterDefinition>
-          <name>sha1</name>
-          <description>commit id from the CWL specification repo that you want to build or refname (eg: &quot;origin/pr/9/head&quot;)
-</description>
-          <defaultValue>master</defaultValue>
-          <trim>false</trim>
-        </hudson.model.StringParameterDefinition>
-      </parameterDefinitions>
-    </hudson.model.ParametersDefinitionProperty>
     <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.2">
       <doNotScan>false</doNotScan>
     </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
@@ -26,6 +15,17 @@
       <autoRebuild>false</autoRebuild>
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
+    <hudson.model.ParametersDefinitionProperty>
+      <parameterDefinitions>
+        <hudson.model.StringParameterDefinition>
+          <name>sha1</name>
+          <description>commit id from the CWL specification repo that you want to build or refname (eg: &quot;origin/pr/9/head&quot;)
+</description>
+          <defaultValue>master</defaultValue>
+          <trim>false</trim>
+        </hudson.model.StringParameterDefinition>
+      </parameterDefinitions>
+    </hudson.model.ParametersDefinitionProperty>
   </properties>
   <scm class="hudson.plugins.git.GitSCM" plugin="git@3.8.0">
     <configVersion>2</configVersion>
@@ -201,10 +201,10 @@ then
     cloneorpull cromwell https://github.com/broadinstitute/cromwell.git
 	venv cromwell_venv
 	(. cromwell_venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
-	(. cromwell_venv/bin/activate &amp;&amp; pip install -U &quot;cwltest&gt;=1.0.20170809112706&quot; cwltool)
+	(. cromwell_venv/bin/activate &amp;&amp; pip install -U &quot;cwltest&gt;=1.0.20180503153209&quot; cwltool)
     cd cromwell
 	sbt clean assembly
-	CROMWELL_JAR=$(find &quot;$(pwd)/target/scala-2.12&quot; -name &quot;cromwell-*.jar&quot;)
+	CROMWELL_JAR=$(find &quot;$(pwd)/server/target/scala-2.12&quot; -name &quot;cromwell-*.jar&quot;)
 	shutdownCromwell() {
     if [ -z &quot;${CROMWELL_PID}&quot; ]; then
         kill ${CROMWELL_PID}
@@ -214,7 +214,7 @@ then
 	
 	CURRENT_DIR=$(pwd)
 	cd ../v1.0/v1.0
-	java -Dsystem.new-workflow-poll-rate=1 \
+	java -Dsystem.new-workflow-poll-rate=1 -Dsystem.job-shell=/bin/sh\
 		-Dbackend.providers.Local.config.script-epilogue=&quot;sleep 5 &amp;&amp; sync&quot; \
     	-jar ${CROMWELL_JAR} server &amp;
 	CROMWELL_PID=$$
