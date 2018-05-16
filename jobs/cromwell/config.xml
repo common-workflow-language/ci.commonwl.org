@@ -20,7 +20,7 @@ against the &lt;a href=&quot;https://github.com/common-workflow-language/common-
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.8.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -104,9 +104,12 @@ CROMWELL_PID=$$
 sleep 10
 
 cd $CURRENT_DIR
-(. venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=result.xml \
+### Editing this command? Also update https://ci.commonwl.org/job/cwl-spec-pr/configure
+(. venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh \
+  --junit-xml=result.xml -j$(($(nproc) / 2)) \
   RUNNER=../centaurCwlRunner/src/bin/centaur-cwl-runner.bash) || /bin/true
-set -e</command>
+set -e
+shutdownCromwell()</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
