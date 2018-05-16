@@ -96,7 +96,7 @@ set +e
 sdk/cwl/test_with_arvbox.sh --config localdemo --leave-running \
 	--junit-xml=/tmp/junit.xml  # -j$(($(nproc) / 2)
 CODE=$?
-docker exec $ARVBOX_CONTAINER cat /tmp/junit.xml &gt; junit.xml
+docker exec cwltest cat /tmp/junit.xml &gt; junit.xml
 arvbox reset -f
 #docker volume ls -qf dangling=true | grep -v metadata.db | xargs -r docker volume rm || true
 #docker rmi $(docker images -a --no-trunc | grep &quot;^arvados/arvbox-demo&quot; | grep -v &quot;latest&quot; | sed &apos;s/  */ /g&apos; | cut -d&apos; &apos; -f3) || true
