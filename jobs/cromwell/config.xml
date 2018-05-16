@@ -108,7 +108,7 @@ sleep 10
 cd $CURRENT_DIR
 cat &gt; centaur-cwl-runner &lt;&lt; EOF
 #!/bin/sh
-exec java -Xmx1g -jar ${CENTAUR_CWL_JAR} \\\$@
+exec java -Xmx1g -jar ${CENTAUR_CWL_JAR} \$@
 EOF
 chmod a+x centaur-cwl-runner
 ### Editing this command? Also update https://ci.commonwl.org/job/cwl-spec-pr/configure
