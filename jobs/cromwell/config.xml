@@ -111,7 +111,9 @@ cd $CURRENT_DIR
   --junit-xml=result.xml -j$(($(nproc) / 2)) \
   RUNNER=../centaurCwlRunner/src/bin/centaur-cwl-runner.bash) || /bin/true
 set -e
-shutdownCromwell()</command>
+
+shutdownCromwell || /bin/true
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
