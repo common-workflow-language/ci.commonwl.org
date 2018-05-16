@@ -87,7 +87,7 @@ sbt clean assembly
 CROMWELL_JAR=$(find &quot;$(pwd)/server/target/scala-2.12&quot; -name &quot;cromwell-*.jar&quot;)
 shutdownCromwell() {
     if [ -z &quot;${CROMWELL_PID}&quot; ]; then
-        kill ${CROMWELL_PID}
+        kill -9 ${CROMWELL_PID}
     fi
 }
 trap &quot;shutdownCromwell&quot; EXIT
