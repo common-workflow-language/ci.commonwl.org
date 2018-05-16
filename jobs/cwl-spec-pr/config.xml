@@ -227,10 +227,10 @@ then
 	
 	cd $CURRENT_DIR
 	(. ../cromwell_venv/bin/activate &amp;&amp; cd ../common-workflow-language &amp;&amp; \
-    	./run_test.sh --junit-xml=result.xml \
+    	./run_test.sh --junit-xml=result.xml -j$(($(nproc) /2 ))\
     	RUNNER=../cromwell/centaurCwlRunner/src/bin/centaur-cwl-runner.bash) || /bin/true
 	set -e
-    shutdownCromwell()
+    shutdownCromwell
 fi</command>
     </hudson.tasks.Shell>
   </builders>
