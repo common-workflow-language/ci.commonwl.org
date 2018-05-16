@@ -4,17 +4,6 @@
   <description></description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.2">
-      <doNotScan>false</doNotScan>
-    </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.0">
-      <projectUrl>https://github.com/common-workflow-language/common-workflow-language/</projectUrl>
-      <displayName></displayName>
-    </com.coravy.hudson.plugins.github.GithubProjectProperty>
-    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.28">
-      <autoRebuild>false</autoRebuild>
-      <rebuildDisabled>false</rebuildDisabled>
-    </com.sonyericsson.rebuild.RebuildSettings>
     <hudson.model.ParametersDefinitionProperty>
       <parameterDefinitions>
         <hudson.model.StringParameterDefinition>
@@ -26,8 +15,19 @@
         </hudson.model.StringParameterDefinition>
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.19.2">
+      <doNotScan>false</doNotScan>
+    </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.0">
+      <projectUrl>https://github.com/common-workflow-language/common-workflow-language/</projectUrl>
+      <displayName></displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.28">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.8.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -213,7 +213,7 @@ then
 	trap &quot;shutdownCromwell&quot; EXIT
 	
 	CURRENT_DIR=$(pwd)
-	cd ../v1.0/v1.0
+	cd ../common-workflow-language/v1.0/v1.0
 	java -Dsystem.new-workflow-poll-rate=1 -Dsystem.job-shell=/bin/sh\
 		-Dbackend.providers.Local.config.script-epilogue=&quot;sleep 5 &amp;&amp; sync&quot; \
     	-jar ${CROMWELL_JAR} server &amp;
@@ -222,9 +222,9 @@ then
 	sleep 10
 	
 	cd $CURRENT_DIR
-	(. ../cromwell_venv/bin/activate &amp;&amp; cd .. &amp;&amp; \
+	(. ../cromwell_venv/bin/activate &amp;&amp; cd ../common-workflow-language &amp;&amp; \
     	./run_test.sh --junit-xml=result.xml \
-    	RUNNER=cromwell/centaurCwlRunner/src/bin/centaur-cwl-runner.bash) || /bin/true
+    	RUNNER=../cromwell/centaurCwlRunner/src/bin/centaur-cwl-runner.bash) || /bin/true
 	set -e
 fi</command>
     </hudson.tasks.Shell>
