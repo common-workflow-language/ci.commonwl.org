@@ -107,7 +107,7 @@ CROMWELL_PID=$$
 sleep 10
 cd $CURRENT_DIR
 cat &gt; centaur-cwl-runner &lt;&lt; EOF
-#!/bin/sh
+#!/bin/bash
 java -Xmx1g -jar ${CENTAUR_CWL_JAR} \\\$@
 EOF
 chmod a+x centaur-cwl-runner
