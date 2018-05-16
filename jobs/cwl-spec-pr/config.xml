@@ -215,9 +215,12 @@ then
 	
 	CURRENT_DIR=$(pwd)
 	cd ../common-workflow-language/v1.0/v1.0
-	java -Dsystem.new-workflow-poll-rate=1 -Dsystem.job-shell=/bin/sh\
-		-Dbackend.providers.Local.config.script-epilogue=&quot;sleep 5 &amp;&amp; sync&quot; \
-    	-jar ${CROMWELL_JAR} server &amp;
+	java \
+      -Xmx2g \
+      -Dsystem.new-workflow-poll-rate=1 \
+      -Dbackend.providers.Local.config.script-epilogue=&quot;sleep 5 &amp;&amp; sync&quot; \
+      -Dsystem.job-shell=/bin/sh \
+      -jar ${CROMWELL_JAR} server &amp;
 	CROMWELL_PID=$$
 	
 	sleep 10
