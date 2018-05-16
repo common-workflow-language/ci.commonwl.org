@@ -93,7 +93,8 @@ venv() {
 cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
 docker pull arvados/arvbox-demo:latest
 set +e
-sdk/cwl/test_with_arvbox.sh --config localdemo --leave-running --junit-xml=/tmp/junit.xml -j$(($(nproc) / 2))
+sdk/cwl/test_with_arvbox.sh --config localdemo --leave-running \
+	--junit-xml=/tmp/junit.xml  # -j$(($(nproc) / 2)
 CODE=$?
 docker exec $ARVBOX_CONTAINER cat /tmp/junit.xml &gt; junit.xml
 arvbox reset -f
