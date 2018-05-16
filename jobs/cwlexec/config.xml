@@ -18,7 +18,7 @@
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.8.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -42,7 +42,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>cwlexec-build</upstreamProjects>
+      <upstreamProjects>cwlexec-build, cwl-website, </upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -64,8 +64,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <com.cloudbees.dockerpublish.DockerBuilder plugin="docker-build-publish@1.3.2">
-      <server plugin="docker-commons@1.11"/>
-      <registry plugin="docker-commons@1.11"/>
+      <server plugin="docker-commons@1.12"/>
+      <registry plugin="docker-commons@1.12"/>
       <repoName>lsf-ce-10.1-cwlexec</repoName>
       <noCache>false</noCache>
       <forcePull>false</forcePull>
