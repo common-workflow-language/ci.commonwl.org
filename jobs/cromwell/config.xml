@@ -76,9 +76,9 @@ venv() {
 }
 # hack for root owned files leaking from Cromwell
 CWLDIR=$PWD/common-workflow-language
-if [ -d &quot;${CWLDIR}&quot; ];
+if [ -d &quot;${CWLDIR}/v1.0&quot; ];
 then
-	docker run --mount type=bind,source=$PWD/common-workflow-language,destination=/cwl debian:latest rm -Rf /cwl/v1.0
+	docker run --mount type=bind,source=${CWLDIR},destination=/cwl debian:latest rm -Rf /cwl/v1.0
 fi
 cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
 venv venv
@@ -90,7 +90,7 @@ CENTAUR_CWL_JAR=$(find &quot;$(pwd)/centaurCwlRunner/target/scala-2.12&quot; -na
 shutdownCromwell() {
     if [ -d &quot;${CWLDIR}&quot; ];
 	then
-		docker run --mount type=bind,source=$PWD/common-workflow-language,destination=/cwl debian:latest rm -Rf /cwl/v1.0
+		docker run --mount type=bind,source=${CWLDIR},destination=/cwl debian:latest rm -Rf /cwl/v1.0
 	fi
     if [ -z &quot;${CROMWELL_PID}&quot; ]; then
         kill -9 ${CROMWELL_PID}
