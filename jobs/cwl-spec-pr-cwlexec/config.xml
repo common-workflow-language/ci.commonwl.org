@@ -100,7 +100,7 @@
         </org.jenkinsci.plugins.ghprb.GhprbBranch>
       </blackListTargetBranches>
       <gitHubAuthId>8cc5f67c-f92b-4dd3-b8e6-7997839e42ca</gitHubAuthId>
-      <triggerPhrase></triggerPhrase>
+      <triggerPhrase>.*test\W+cwlexec\W+please.*|.*[Jj]enkins,?\W+test\W+cwlexec\W+please.*</triggerPhrase>
       <skipBuildPhrase>.*\[skip\W+ci\].*</skipBuildPhrase>
       <blackListCommitAuthor></blackListCommitAuthor>
       <blackListLabels></blackListLabels>
