@@ -121,7 +121,7 @@ chmod a+x centaur-cwl-runner
   --junit-xml=result.xml -j$(($(nproc) / 2)) \
   RUNNER=../centaur-cwl-runner) || /bin/true
 set -e
-
+mv common-workflow-language/result.xml ./
 shutdownCromwell || /bin/true
 </command>
     </hudson.tasks.Shell>
