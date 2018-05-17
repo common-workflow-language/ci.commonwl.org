@@ -109,7 +109,7 @@
       <excludedRegions></excludedRegions>
       <extensions>
         <org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus>
-          <commitStatusContext></commitStatusContext>
+          <commitStatusContext>cwlexec</commitStatusContext>
           <triggeredStatus></triggeredStatus>
           <startedStatus></startedStatus>
           <statusUrl></statusUrl>
