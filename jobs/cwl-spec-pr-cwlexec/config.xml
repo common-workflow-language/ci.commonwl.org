@@ -19,7 +19,7 @@
     </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.0">
       <projectUrl>https://github.com/common-workflow-language/common-workflow-language/</projectUrl>
-      <displayName></displayName>
+      <displayName>cwl</displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.28">
       <autoRebuild>false</autoRebuild>
@@ -32,6 +32,7 @@
         <configVersion>2</configVersion>
         <userRemoteConfigs>
           <hudson.plugins.git.UserRemoteConfig>
+            <name>cwlexec</name>
             <url>https://github.com/mr-c/test-cwlexec.git</url>
           </hudson.plugins.git.UserRemoteConfig>
         </userRemoteConfigs>
@@ -48,6 +49,8 @@
         <configVersion>2</configVersion>
         <userRemoteConfigs>
           <hudson.plugins.git.UserRemoteConfig>
+            <name>origin</name>
+            <refspec>+refs/pull/${ghprbPullId}/*:refs/remotes/origin/pr/${ghprbPullId}/*</refspec>
             <url>https://github.com/common-workflow-language/common-workflow-language.git</url>
           </hudson.plugins.git.UserRemoteConfig>
         </userRemoteConfigs>
