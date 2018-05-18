@@ -219,7 +219,7 @@ then
 	}
 	trap &quot;shutdownCromwell&quot; EXIT
 	
-	CURRENT_DIR=$(pwd)
+	START_DIR=$(pwd)
 	cd ../common-workflow-language/v1.0/v1.0
 	java \
       -Xmx2g \
@@ -231,15 +231,15 @@ then
 	
 	sleep 10
 	
-	cd $CURRENT_DIR
-    cat &gt; centaur-cwl-runner &lt;&lt; EOF
+	cd ${START_DIR}
+    cat &gt; ${START_DIR}/centaur-cwl-runner &lt;&lt; EOF
 #!/bin/sh
 exec java -Xmx1g -jar ${CENTAUR_CWL_JAR} \$@
 EOF
-	chmod a+x centaur-cwl-runner
+	chmod a+x ${START_DIR}/centaur-cwl-runner
 	(. ../cromwell_venv/bin/activate &amp;&amp; cd ../common-workflow-language &amp;&amp; \
-    	./run_test.sh --junit-xml=result.xml -j$(($(nproc) /2 ))\
-    	RUNNER=../centaur-cwl-runner) || /bin/true
+    	./run_test.sh --junit-xml=${START_DIR}/result.xml -j$(($(nproc) /2 ))\
+    	RUNNER=${START_DIR}/centaur-cwl-runner) || /bin/true
 	set -e
     shutdownCromwell
 fi</command>
