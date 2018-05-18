@@ -1,7 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>&lt;p&gt;Testing the Broad Institue&apos;s &lt;a href=&quot;https://github.com/broadinstitute/cromwell&quot;&gt;Cromwell&lt;/a&gt; Workflow executor&#xd;
+  <description>&lt;p&gt;Testing the Broad Institute&apos;s &lt;a href=&quot;https://github.com/broadinstitute/cromwell&quot;&gt;Cromwell&lt;/a&gt; Workflow executor&#xd;
 against the &lt;a href=&quot;https://github.com/common-workflow-language/common-workflow-language/blob/master/CONFORMANCE_TESTS.md#common-workflow-language-conformance-test-suite&quot;&gt;&#xd;
   CWL v1.0 conformance suite&lt;/a&gt;.&lt;/p&gt;&#xd;
 &lt;p&gt;&lt;a href=&apos;https://ci.commonwl.org/job/cromwell&apos;&gt;&lt;img src=&apos;https://ci.commonwl.org/buildStatus/icon?job=cromwell&apos;&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
