@@ -30,7 +30,7 @@
     </io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanCredentialsProvider_-FolderPropertyImpl>
     <org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig plugin="pipeline-model-definition@1.2.9">
       <dockerLabel></dockerLabel>
-      <registry plugin="docker-commons@1.11"/>
+      <registry plugin="docker-commons@1.12"/>
     </org.jenkinsci.plugins.pipeline.modeldefinition.config.FolderConfig>
   </properties>
   <folderViews class="jenkins.branch.MultiBranchProjectViewHolder" plugin="branch-api@2.0.20">
@@ -75,13 +75,13 @@
             <org.jenkinsci.plugins.github__branch__source.OriginPullRequestDiscoveryTrait>
               <strategyId>1</strategyId>
             </org.jenkinsci.plugins.github__branch__source.OriginPullRequestDiscoveryTrait>
-            <jenkins.plugins.git.traits.CleanBeforeCheckoutTrait plugin="git@3.8.0">
+            <jenkins.plugins.git.traits.CleanBeforeCheckoutTrait plugin="git@3.9.0">
               <extension class="hudson.plugins.git.extensions.impl.CleanBeforeCheckout"/>
             </jenkins.plugins.git.traits.CleanBeforeCheckoutTrait>
-            <jenkins.plugins.git.traits.CleanAfterCheckoutTrait plugin="git@3.8.0">
+            <jenkins.plugins.git.traits.CleanAfterCheckoutTrait plugin="git@3.9.0">
               <extension class="hudson.plugins.git.extensions.impl.CleanCheckout"/>
             </jenkins.plugins.git.traits.CleanAfterCheckoutTrait>
-            <jenkins.plugins.git.traits.LocalBranchTrait plugin="git@3.8.0">
+            <jenkins.plugins.git.traits.LocalBranchTrait plugin="git@3.9.0">
               <extension class="hudson.plugins.git.extensions.impl.LocalBranch">
                 <localBranch>**</localBranch>
               </extension>
