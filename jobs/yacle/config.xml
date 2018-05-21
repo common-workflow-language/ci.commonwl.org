@@ -88,11 +88,18 @@ export GOPATH=${PWD}
 export PATH=${PATH}:${GOPATH}/bin
 go get yacle
 go install yacle
-cwl-upstream/run_test.sh RUNNER=yacle</command>
+cwl-upstream/run_test.sh RUNNER=yacle --junit-xml=${PWD}/yacle-results.xml</command>
       <ignoreExitCode>false</ignoreExitCode>
     </jenkins.plugins.shiningpanda.builders.VirtualenvBuilder>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.24">
+      <testResults>yacle-results.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <healthScaleFactor>1.0</healthScaleFactor>
+      <allowEmptyResults>false</allowEmptyResults>
+    </hudson.tasks.junit.JUnitResultArchiver>
+  </publishers>
   <buildWrappers>
     <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.2">
       <goVersion>Go 1.10 (Debian)</goVersion>
