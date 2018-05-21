@@ -81,12 +81,14 @@
       <clear>false</clear>
       <systemSitePackages>false</systemSitePackages>
       <nature>shell</nature>
-      <command>pip install cwltest
+      <command>pip install -U pip
+pip install -U wheel setuptools
+pip install cwltest
 export GOPATH=${PWD}
 export PATH=${PATH}:${GOPATH}/bin
 go get yacle
 go install yacle
-cwl-upstream/run_test.sh RUNNER=yacle -n1</command>
+cwl-upstream/run_test.sh RUNNER=yacle</command>
       <ignoreExitCode>false</ignoreExitCode>
     </jenkins.plugins.shiningpanda.builders.VirtualenvBuilder>
   </builders>
