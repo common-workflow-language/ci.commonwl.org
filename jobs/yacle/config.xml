@@ -74,7 +74,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>export GOPATH=${PWD}
-go get -u yacle
+go get yacle
 go install yacle
 cwl-upstream/run_test.sh RUNNER=yacle -n1</command>
     </hudson.tasks.Shell>
