@@ -45,7 +45,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>go get . ;  cwl/run_test.sh RUNNER=yacle -n1</command>
+      <command>go get -u github.com/otiai10/yacle;  cwl/run_test.sh RUNNER=yacle -n1</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
