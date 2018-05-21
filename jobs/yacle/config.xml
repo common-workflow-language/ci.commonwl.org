@@ -45,13 +45,13 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>go install . ;  cwl/run_test.sh RUNNER=yacle -n1</command>
+      <command>go get . ;  cwl/run_test.sh RUNNER=yacle -n1</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers/>
   <buildWrappers>
     <org.jenkinsci.plugins.golang.GolangBuildWrapper plugin="golang@1.2">
-      <goVersion>Go 1.10.2</goVersion>
+      <goVersion>Go 1.10 (Debian)</goVersion>
     </org.jenkinsci.plugins.golang.GolangBuildWrapper>
   </buildWrappers>
 </project>
