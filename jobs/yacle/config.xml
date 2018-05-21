@@ -76,7 +76,7 @@
       <command></command>
     </hudson.tasks.Shell>
     <jenkins.plugins.shiningpanda.builders.VirtualenvBuilder plugin="shiningpanda@0.23">
-      <pythonName>Windows-CPython-36</pythonName>
+      <pythonName>Debian-CPython-35</pythonName>
       <home></home>
       <clear>false</clear>
       <systemSitePackages>false</systemSitePackages>
