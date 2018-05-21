@@ -6,5 +6,10 @@
       <home>C:\Program Files\Python36\</home>
       <properties/>
     </jenkins.plugins.shiningpanda.tools.PythonInstallation>
+    <jenkins.plugins.shiningpanda.tools.PythonInstallation>
+      <name>Debian-CPython-35</name>
+      <home>/usr/bin/python3.5</home>
+      <properties/>
+    </jenkins.plugins.shiningpanda.tools.PythonInstallation>
   </installations>
 </jenkins.plugins.shiningpanda.tools.PythonInstallation_-DescriptorImpl>
