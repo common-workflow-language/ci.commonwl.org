@@ -32,7 +32,11 @@
         </branches>
         <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
         <submoduleCfg class="list"/>
-        <extensions/>
+        <extensions>
+          <hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+            <relativeTargetDir>src/yacle</relativeTargetDir>
+          </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+        </extensions>
       </hudson.plugins.git.GitSCM>
       <hudson.plugins.git.GitSCM plugin="git@3.9.0">
         <configVersion>2</configVersion>
@@ -69,9 +73,9 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>export GOPATH=${PWD}/go
-go get -u github.com/otiai10/yacle
-go install .
+      <command>export GOPATH=${PWD}
+go get -u yacle
+go install yacle
 cwl-upstream/run_test.sh RUNNER=yacle -n1</command>
     </hudson.tasks.Shell>
   </builders>
