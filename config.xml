@@ -99,7 +99,6 @@
         <string>rabix-conformance</string>
         <string>toil-conformance</string>
         <string>xenon-cwl-runner-conformance</string>
-        <string>yacle</string>
       </jobNames>
       <jobFilters/>
       <columns>
