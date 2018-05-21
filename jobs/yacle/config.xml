@@ -73,12 +73,22 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>export GOPATH=${PWD}
+      <command></command>
+    </hudson.tasks.Shell>
+    <jenkins.plugins.shiningpanda.builders.VirtualenvBuilder plugin="shiningpanda@0.23">
+      <pythonName>Windows-CPython-36</pythonName>
+      <home></home>
+      <clear>false</clear>
+      <systemSitePackages>false</systemSitePackages>
+      <nature>shell</nature>
+      <command>pip install cwltest
+export GOPATH=${PWD}
 export PATH=${PATH}:${GOPATH}/bin
 go get yacle
 go install yacle
 cwl-upstream/run_test.sh RUNNER=yacle -n1</command>
-    </hudson.tasks.Shell>
+      <ignoreExitCode>false</ignoreExitCode>
+    </jenkins.plugins.shiningpanda.builders.VirtualenvBuilder>
   </builders>
   <publishers/>
   <buildWrappers>
