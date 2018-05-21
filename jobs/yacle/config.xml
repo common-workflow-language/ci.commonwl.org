@@ -69,7 +69,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>echo ${GOPATH}
+      <command>export GOPATH=${PWD}/go
 go get -u github.com/otiai10/yacle
 go install .
 cwl-upstream/run_test.sh RUNNER=yacle -n1</command>
