@@ -173,7 +173,7 @@ then
     venv cwltool-venv
     (. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install -U setuptools wheel pip)
 	(. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install ./cwltool/)
-	(. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install &quot;cwltest&gt;=1.0.20161111155652&quot;)
+	(. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install &quot;cwltest&gt;=1.0.20180518074130&quot;)
 	(. cwltool-venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; \
     	./run_test.sh --junit-xml=result.xml RUNNER=cwltool DRAFT=$version EXTRA=--enable-dev -j2)
 elif [[ &quot;${implementation}&quot; == *rabix* ]]
@@ -181,7 +181,7 @@ then
 	cloneorpull bunny https://github.com/rabix/bunny.git
     venv cwltest-venv
     (. cwltest-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install -U setuptools wheel pip)
-    (. cwltest-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install &quot;cwltest&gt;=1.0.20161111155652&quot;)
+    (. cwltest-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install &quot;cwltest&gt;=1.0.20180518074130&quot;)
     cd bunny
     mvn clean package -P cwl
     tar xzf rabix-cli/target/rabix-cli-*-release.tar.gz
@@ -202,7 +202,7 @@ then
     cloneorpull cromwell https://github.com/broadinstitute/cromwell.git
 	venv cromwell_venv
 	(. cromwell_venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
-	(. cromwell_venv/bin/activate &amp;&amp; pip install -U &quot;cwltest&gt;=1.0.20180503153209&quot; cwltool)
+	(. cromwell_venv/bin/activate &amp;&amp; pip install -U &quot;cwltest&gt;=1.0.20180518074130&quot; cwltool)
     cd cromwell
 	sbt clean assembly
 	CROMWELL_JAR=$(find &quot;$(pwd)/server/target/scala-2.12&quot; -name &quot;cromwell-*.jar&quot;)
