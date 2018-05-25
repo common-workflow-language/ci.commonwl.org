@@ -27,7 +27,7 @@
       </parameterDefinitions>
     </hudson.model.ParametersDefinitionProperty>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.8.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -62,7 +62,7 @@
       <onlyTriggerPhrase>false</onlyTriggerPhrase>
       <useGitHubHooks>true</useGitHubHooks>
       <permitAll>false</permitAll>
-      <whitelist> kmhernan prismofeverything alexbarrera samuell hmenager chapmanb jeremiahsavage kellrott psafont gijzelaerr kapilkd13 michael-kotliar lijiayong ctb jxtx tiborsimko ThomasHickman</whitelist>
+      <whitelist> kmhernan prismofeverything alexbarrera samuell hmenager chapmanb jeremiahsavage kellrott psafont gijzelaerr kapilkd13 michael-kotliar lijiayong ctb jxtx tiborsimko ThomasHickman pvanheus</whitelist>
       <autoCloseFailedPullRequests>false</autoCloseFailedPullRequests>
       <displayBuildErrorsOnDownstreamBuilds>false</displayBuildErrorsOnDownstreamBuilds>
       <whiteListTargetBranches>
