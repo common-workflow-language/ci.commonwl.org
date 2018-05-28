@@ -52,7 +52,7 @@
         <submoduleCfg class="list"/>
         <extensions>
           <hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
-            <relativeTargetDir>common-workflow-language</relativeTargetDir>
+            <relativeTargetDir>lsf-ce-10.2/common-workflow-language</relativeTargetDir>
           </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
         </extensions>
       </hudson.plugins.git.GitSCM>
