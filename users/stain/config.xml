@@ -34,5 +34,16 @@
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
       <accessToken>{AQAAABAAAAAwzLcgNON4c56qODqrlIzR5J87cB9czzTbHyJYkQiIseO6BcNZo+yYxvJ0WIy82uoJF8iDRaIMkOZ9v7PQCFPMUA==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
+    <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
+      <autofavoriteEnabled>true</autofavoriteEnabled>
+    </io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.1">
+      <data class="concurrent-hash-map">
+        <entry>
+          <string>cwltool/nested-tests</string>
+          <boolean>true</boolean>
+        </entry>
+      </data>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
   </properties>
 </user>
