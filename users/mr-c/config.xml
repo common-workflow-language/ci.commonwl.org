@@ -59,7 +59,7 @@
     <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
       <autofavoriteEnabled>true</autofavoriteEnabled>
     </io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.1">
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
       <data class="concurrent-hash-map">
         <entry>
           <string>cwltool/PR-739</string>
@@ -84,7 +84,7 @@
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAw2A9LQ//FKGvNcOMdJyZsO5S7Zwbe9W87hBm20impsP1hsgSmWQ3cR2LGDveDfv0XslsJVQArJsTfBElJc2mrPw==}</accessToken>
+      <accessToken>{AQAAABAAAAAw2fBvDFCFm1XwD302kOLwiCwTCU9VVq9a+nExBPRDQACY2lxkb7vvbu6O+oCPA5TmT3ydq2NijIk6rs2sCCUbpA==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
