@@ -70,19 +70,11 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>cwltool/master</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>cwltool/PR-747</string>
           <boolean>true</boolean>
         </entry>
         <entry>
           <string>cwltool/PR-616</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/jenkinsfile-conformance</string>
           <boolean>true</boolean>
         </entry>
       </data>
