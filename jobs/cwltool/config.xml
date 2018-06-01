@@ -47,7 +47,7 @@
   <orphanedItemStrategy class="com.cloudbees.hudson.plugins.folder.computed.DefaultOrphanedItemStrategy" plugin="cloudbees-folder@6.4">
     <pruneDeadBranches>true</pruneDeadBranches>
     <daysToKeep>-1</daysToKeep>
-    <numToKeep>-1</numToKeep>
+    <numToKeep>10</numToKeep>
   </orphanedItemStrategy>
   <triggers>
     <com.cloudbees.hudson.plugins.folder.computed.PeriodicFolderTrigger plugin="cloudbees-folder@6.4">
@@ -65,9 +65,6 @@
           <repoOwner>common-workflow-language</repoOwner>
           <repository>cwltool</repository>
           <traits>
-            <org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait>
-              <strategyId>1</strategyId>
-            </org.jenkinsci.plugins.github__branch__source.BranchDiscoveryTrait>
             <org.jenkinsci.plugins.github__branch__source.ForkPullRequestDiscoveryTrait>
               <strategyId>1</strategyId>
               <trust class="org.jenkinsci.plugins.github_branch_source.ForkPullRequestDiscoveryTrait$TrustPermission"/>
