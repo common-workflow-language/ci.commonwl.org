@@ -62,6 +62,10 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
       <data class="concurrent-hash-map">
         <entry>
+          <string>cwltool/PR-783</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-739</string>
           <boolean>true</boolean>
         </entry>
