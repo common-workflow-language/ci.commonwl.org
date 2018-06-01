@@ -36,11 +36,7 @@
   <folderViews class="jenkins.branch.MultiBranchProjectViewHolder" plugin="branch-api@2.0.20">
     <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
   </folderViews>
-  <healthMetrics>
-    <com.cloudbees.hudson.plugins.folder.health.WorstChildHealthMetric plugin="cloudbees-folder@6.4">
-      <nonRecursive>false</nonRecursive>
-    </com.cloudbees.hudson.plugins.folder.health.WorstChildHealthMetric>
-  </healthMetrics>
+  <healthMetrics/>
   <icon class="jenkins.branch.MetadataActionFolderIcon" plugin="branch-api@2.0.20">
     <owner class="org.jenkinsci.plugins.workflow.multibranch.WorkflowMultiBranchProject" reference="../.."/>
   </icon>
