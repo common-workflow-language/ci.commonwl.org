@@ -4,8 +4,7 @@
     <string>jenkins.security.s2m.MasterKillSwitchWarning</string>
   </disabledAdministrativeMonitors>
   <version>2.107.3</version>
-  <installState class="jenkins.install.InstallState$5">
-    <isSetupComplete>true</isSetupComplete>
+  <installState class="jenkins.install.InstallState$Restart">
     <name>RESTART</name>
   </installState>
   <numExecutors>1</numExecutors>
@@ -56,7 +55,7 @@
       <properties>
         <hudson.tools.InstallSourceProperty>
           <installers>
-            <hudson.tools.JDKInstaller>
+            <hudson.tools.JDKInstaller plugin="jdk-tool@1.0">
               <id>jdk-8u121-oth-JPR</id>
               <acceptLicense>true</acceptLicense>
             </hudson.tools.JDKInstaller>
