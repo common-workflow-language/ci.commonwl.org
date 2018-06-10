@@ -1,31 +1,21 @@
-<?xml version='1.0' encoding='UTF-8'?>
-<org.jenkinsci.plugins.github.admin.GitHubHookRegisterProblemMonitor plugin="github@1.28.0">
+<?xml version='1.1' encoding='UTF-8'?>
+<org.jenkinsci.plugins.github.admin.GitHubHookRegisterProblemMonitor plugin="github@1.29.1">
   <id>GitHubHookRegisterProblemMonitor</id>
   <ignored>
     <com.cloudbees.jenkins.GitHubRepositoryName>
       <host>github.com</host>
-      <userName>curoverse</userName>
-      <repositoryName>arvados</repositoryName>
+      <userName>Barski-lab</userName>
+      <repositoryName>cwl-airflow</repositoryName>
     </com.cloudbees.jenkins.GitHubRepositoryName>
     <com.cloudbees.jenkins.GitHubRepositoryName>
       <host>github.com</host>
-      <userName>rabix</userName>
-      <repositoryName>bunny</repositoryName>
+      <userName>IBMSpectrumComputing</userName>
+      <repositoryName>cwlexec</repositoryName>
     </com.cloudbees.jenkins.GitHubRepositoryName>
     <com.cloudbees.jenkins.GitHubRepositoryName>
       <host>github.com</host>
       <userName>galaxyproject</userName>
       <repositoryName>planemo</repositoryName>
-    </com.cloudbees.jenkins.GitHubRepositoryName>
-    <com.cloudbees.jenkins.GitHubRepositoryName>
-      <host>github.com</host>
-      <userName>Barski-lab</userName>
-      <repositoryName>incubator-airflow</repositoryName>
-    </com.cloudbees.jenkins.GitHubRepositoryName>
-    <com.cloudbees.jenkins.GitHubRepositoryName>
-      <host>github.com</host>
-      <userName>BD2KGenomics</userName>
-      <repositoryName>toil</repositoryName>
     </com.cloudbees.jenkins.GitHubRepositoryName>
   </ignored>
 </org.jenkinsci.plugins.github.admin.GitHubHookRegisterProblemMonitor>

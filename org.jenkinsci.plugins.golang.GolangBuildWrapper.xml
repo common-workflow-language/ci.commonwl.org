@@ -1,0 +1,10 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<org.jenkinsci.plugins.golang.GolangBuildWrapper_-DescriptorImpl plugin="golang@1.2">
+  <installations>
+    <org.jenkinsci.plugins.golang.GolangInstallation>
+      <name>Go 1.10 (Debian)</name>
+      <home>/usr/lib/go-1.10</home>
+      <properties/>
+    </org.jenkinsci.plugins.golang.GolangInstallation>
+  </installations>
+</org.jenkinsci.plugins.golang.GolangBuildWrapper_-DescriptorImpl>

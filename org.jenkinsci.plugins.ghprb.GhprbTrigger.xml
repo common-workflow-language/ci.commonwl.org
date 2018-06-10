@@ -1,0 +1,38 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<org.jenkinsci.plugins.ghprb.GhprbTrigger_-DescriptorImpl plugin="ghprb@1.42.0">
+  <configVersion>1</configVersion>
+  <whitelistPhrase>.*add\W+to\W+testlist.*|.*[Jj]enkins,?\Wadd+to\W+testlist.*</whitelistPhrase>
+  <okToTestPhrase>.*ok\W+to\W+test.*|.*[Jj]enkins,?\Wok\W+to\W+test.*|.*okay\W+to\W+test.*|.*[Jj]enkins,?\Wokay\W+to\W+test.*</okToTestPhrase>
+  <retestPhrase>.*test\W+this\W+please.*|.*[Jj]enkins,?\W+test\W+this\W+please.*</retestPhrase>
+  <skipBuildPhrase>.*\[skip\W+ci\].*</skipBuildPhrase>
+  <blackListCommitAuthor></blackListCommitAuthor>
+  <cron>H/5 * * * *</cron>
+  <useComments>false</useComments>
+  <useDetailedComments>false</useDetailedComments>
+  <manageWebhooks>true</manageWebhooks>
+  <unstableAs>FAILURE</unstableAs>
+  <autoCloseFailedPullRequests>false</autoCloseFailedPullRequests>
+  <displayBuildErrorsOnDownstreamBuilds>false</displayBuildErrorsOnDownstreamBuilds>
+  <blackListLabels></blackListLabels>
+  <whiteListLabels></whiteListLabels>
+  <githubAuth>
+    <org.jenkinsci.plugins.ghprb.GhprbGitHubAuth>
+      <serverAPIUrl>https://api.github.com</serverAPIUrl>
+      <credentialsId>730421d7-9232-4a1d-8add-aba43fbef976</credentialsId>
+      <id>8cc5f67c-f92b-4dd3-b8e6-7997839e42ca</id>
+      <description>cwl-bot</description>
+      <secret>{AQAAABAAAAAQv8BFJIVEDOVZm4XR6fQRxFb4MYOAXVmNG37sr/vfki0=}</secret>
+    </org.jenkinsci.plugins.ghprb.GhprbGitHubAuth>
+  </githubAuth>
+  <adminlist>mr-c tetron</adminlist>
+  <requestForTestingPhrase>Can one of the admins verify this patch?</requestForTestingPhrase>
+  <extensions>
+    <org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus>
+      <commitStatusContext></commitStatusContext>
+      <triggeredStatus></triggeredStatus>
+      <startedStatus></startedStatus>
+      <statusUrl></statusUrl>
+      <addTestResults>false</addTestResults>
+    </org.jenkinsci.plugins.ghprb.extensions.status.GhprbSimpleStatus>
+  </extensions>
+</org.jenkinsci.plugins.ghprb.GhprbTrigger_-DescriptorImpl>

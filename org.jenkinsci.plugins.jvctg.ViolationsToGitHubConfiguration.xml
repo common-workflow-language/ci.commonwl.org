@@ -1,5 +1,5 @@
 <?xml version='1.0' encoding='UTF-8'?>
-<org.jenkinsci.plugins.jvctg.ViolationsToGitHubConfiguration plugin="violation-comments-to-github@1.42">
+<org.jenkinsci.plugins.jvctg.ViolationsToGitHubConfiguration plugin="violation-comments-to-github@1.48">
   <gitHubUrl></gitHubUrl>
   <oAuth2Token></oAuth2Token>
   <password></password>
