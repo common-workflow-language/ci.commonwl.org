@@ -46,7 +46,21 @@
     </hudson.triggers.TimerTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
-  <builders/>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>git clone https://github.com/MG-RAST/Skyport2.git
+### Build ne AWE container
+export TAG=CWL
+cd AWE
+docker build -t mgrast:awe:${TAG} -f Dockerfile .
+docker build -t mgrast:awe-worker:${TAG} -f Dockerfile_worker .
+docker build -t mgrast-submitter:awe:${TAG} -f Dockerfile_submitter .
+cd ../Skyport2 
+./init.sh
+docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml up 
+docker-compose down</command>
+    </hudson.tasks.Shell>
+  </builders>
   <publishers/>
   <buildWrappers/>
 </project>
