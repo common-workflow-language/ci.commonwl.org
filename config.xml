@@ -2,6 +2,7 @@
 <hudson>
   <disabledAdministrativeMonitors>
     <string>jenkins.security.s2m.MasterKillSwitchWarning</string>
+    <string>GitHubHookRegisterProblemMonitor</string>
   </disabledAdministrativeMonitors>
   <version>2.121.1</version>
   <installStateName>RESTART</installStateName>
