@@ -22,7 +22,7 @@
         <string>nielsdrost</string>
         <string>stain</string>
         <string>jmchilton</string>
-        <string>awilke</string>
+        <string>wilke</string>
       </adminUserNameList>
       <authenticatedUserReadPermission>true</authenticatedUserReadPermission>
       <useRepositoryPermissions>true</useRepositoryPermissions>
@@ -37,7 +37,7 @@
     <githubWebUri>https://github.com</githubWebUri>
     <githubApiUri>https://api.github.com</githubApiUri>
     <clientID>7db5afd5d440fee1aed4</clientID>
-    <clientSecret>{AQAAABAAAAAwYdcNgrNpTTd6Yt0QqCEMDhRvHQkdN6kpSEXk7R3gqzaqZH+4MuUKULK3lTYVKln09CZPUl44PIclMbgWQSKznw==}</clientSecret>
+    <clientSecret>{AQAAABAAAAAwtu8ZrNbbOBdSa+Chjn+1zVMw60dt0pOk2QSbdPZJA+vYb8/7aEXmC/RWlwsXD4O9gMKtSFDSrKs9ZLwxTzoxYg==}</clientSecret>
     <oauthScopes>read:org,user:email</oauthScopes>
   </securityRealm>
   <disableRememberMe>false</disableRememberMe>
