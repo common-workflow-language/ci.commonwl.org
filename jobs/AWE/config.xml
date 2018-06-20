@@ -44,9 +44,6 @@
     <hudson.triggers.TimerTrigger>
       <spec>@daily</spec>
     </hudson.triggers.TimerTrigger>
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.29.1">
-      <spec></spec>
-    </com.cloudbees.jenkins.GitHubPushTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
   <builders/>
