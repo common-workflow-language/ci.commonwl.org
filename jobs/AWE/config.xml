@@ -62,7 +62,8 @@
       </hudson.plugins.git.GitSCM>
     </scms>
   </scm>
-  <canRoam>true</canRoam>
+  <assignedNode>awe</assignedNode>
+  <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
