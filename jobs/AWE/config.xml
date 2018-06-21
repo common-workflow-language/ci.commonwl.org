@@ -91,7 +91,7 @@ cd ../Skyport2
 export TAG=CWL
 docker-compose down
 docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml up -d
-wait 60
+sleep 60
 docker-compose down
 ## TEST COMES HERE</command>
     </hudson.tasks.Shell>
