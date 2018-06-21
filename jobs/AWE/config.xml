@@ -35,7 +35,11 @@
         </branches>
         <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
         <submoduleCfg class="list"/>
-        <extensions/>
+        <extensions>
+          <hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+            <relativeTargetDir></relativeTargetDir>
+          </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+        </extensions>
       </hudson.plugins.git.GitSCM>
     </scms>
   </scm>
@@ -53,6 +57,8 @@
     <hudson.tasks.Shell>
       <command>#git clone https://github.com/MG-RAST/Skyport2.git
 ### Build ne AWE container
+pwd
+ps
 export TAG=CWL
 cd AWE
 docker build -t mgras/:awe:${TAG} -f Dockerfile .
