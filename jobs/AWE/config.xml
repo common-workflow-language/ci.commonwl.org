@@ -87,6 +87,7 @@ docker build -t mgrast/awe-submitter:${TAG} -f Dockerfile_submitter .
 cd ../Skyport2	
 ./init.sh
 . ./skyport2.env
+# skyport2.env overwrites TAG - set back
 export TAG=CWL
 docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml up -d
 wait 60
