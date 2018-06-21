@@ -89,6 +89,7 @@ cd ../Skyport2
 . ./skyport2.env
 # skyport2.env overwrites TAG - set back
 export TAG=CWL
+docker-compose down
 docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml up -d
 wait 60
 docker-compose down
