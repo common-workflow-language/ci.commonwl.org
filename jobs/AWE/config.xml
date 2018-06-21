@@ -24,6 +24,23 @@
           <hudson.plugins.git.UserRemoteConfig>
             <url>https://github.com/wgerlach/AWE.git</url>
           </hudson.plugins.git.UserRemoteConfig>
+        </userRemoteConfigs>
+        <branches>
+          <hudson.plugins.git.BranchSpec>
+            <name>*/master</name>
+          </hudson.plugins.git.BranchSpec>
+        </branches>
+        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+        <submoduleCfg class="list"/>
+        <extensions>
+          <hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+            <relativeTargetDir>AWE</relativeTargetDir>
+          </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+        </extensions>
+      </hudson.plugins.git.GitSCM>
+      <hudson.plugins.git.GitSCM plugin="git@3.9.1">
+        <configVersion>2</configVersion>
+        <userRemoteConfigs>
           <hudson.plugins.git.UserRemoteConfig>
             <url>https://github.com/MG-RAST/Skyport2.git</url>
           </hudson.plugins.git.UserRemoteConfig>
@@ -37,7 +54,7 @@
         <submoduleCfg class="list"/>
         <extensions>
           <hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
-            <relativeTargetDir></relativeTargetDir>
+            <relativeTargetDir>Skyport2</relativeTargetDir>
           </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
         </extensions>
       </hudson.plugins.git.GitSCM>
