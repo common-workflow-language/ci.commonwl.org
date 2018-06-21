@@ -138,7 +138,7 @@ docker create --name submitter mgrast/awe-submitter:${TAG}
 docker cp submitter:/go/bin/awe-submitter tests/awe-submitter
 docker rm submitter 
 
-chmod u+x tests/awe-submiiter
+chmod u+x tests/awe-submitter
 chmod u+x tests/awe-cwl-submitter-wrapper.sh
 cd ..
 
