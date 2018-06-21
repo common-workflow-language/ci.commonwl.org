@@ -80,7 +80,7 @@ pwd
 ls
 export TAG=CWL
 cd AWE
-docker build -t mgras/:awe:${TAG} -f Dockerfile .
+docker build -t mgrast/awe:${TAG} -f Dockerfile .
 docker build -t mgrast/awe-worker:${TAG} -f Dockerfile_worker .
 docker build -t mgrast/awe-submitter:${TAG} -f Dockerfile_submitter .
 cd ../Skyport2 
