@@ -51,7 +51,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>git clone https://github.com/MG-RAST/Skyport2.git
+      <command>#git clone https://github.com/MG-RAST/Skyport2.git
 ### Build ne AWE container
 export TAG=CWL
 cd AWE
