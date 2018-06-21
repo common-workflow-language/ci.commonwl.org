@@ -85,7 +85,7 @@ docker build -t mgrast/awe:${TAG} -f Dockerfile .
 docker build -t mgrast/awe-worker:${TAG} -f Dockerfile_worker .
 docker build -t mgrast/awe-submitter:${TAG} -f Dockerfile_submitter .
 cd ../Skyport2	
-source ./init.sh
+. ./init.sh
 docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml up -d
 wait 60
 docker-compose down
