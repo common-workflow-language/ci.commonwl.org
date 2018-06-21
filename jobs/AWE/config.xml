@@ -58,7 +58,7 @@
       <command>#git clone https://github.com/MG-RAST/Skyport2.git
 ### Build ne AWE container
 pwd
-ps
+ls
 export TAG=CWL
 cd AWE
 docker build -t mgras/:awe:${TAG} -f Dockerfile .
