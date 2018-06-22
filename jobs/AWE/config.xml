@@ -104,11 +104,11 @@ virtualenv -p python3 env3
 pip install cwltest cwltool cwlref-runner
 
 
-export TAG=CWL
+export TAG=develop
 cd AWE
 # docker build -t mgrast/awe:${TAG} -f Dockerfile .
 # docker build -t mgrast/awe-worker:${TAG} -f Dockerfile_worker .
-docker build -t mgrast/awe-submitter:${TAG} -f Dockerfile_submitter .
+# docker build -t mgrast/awe-submitter:${TAG} -f Dockerfile_submitter .
 
 ### Copy submitter
 docker create --name submitter mgrast/awe-submitter:${TAG}
