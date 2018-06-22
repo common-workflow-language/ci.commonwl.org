@@ -106,8 +106,8 @@ pip install cwltest cwltool cwlref-runner
 
 export TAG=CWL
 cd AWE
-docker build -t mgrast/awe:${TAG} -f Dockerfile .
-docker build -t mgrast/awe-worker:${TAG} -f Dockerfile_worker .
+# docker build -t mgrast/awe:${TAG} -f Dockerfile .
+# docker build -t mgrast/awe-worker:${TAG} -f Dockerfile_worker .
 docker build -t mgrast/awe-submitter:${TAG} -f Dockerfile_submitter .
 
 ### Copy submitter
@@ -131,7 +131,7 @@ cd Skyport2
 ./init.sh
 . ./skyport2.env
 # skyport2.env overwrites TAG - set back
-export TAG=CWL
+export TAG=latest
 docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml down
 docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml up -d
 cd ..
