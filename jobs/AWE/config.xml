@@ -119,8 +119,8 @@ cat &gt; tests/awe-cwl-submitter-wrapper.sh &lt;&lt;&apos;EOF&apos;
 #!/bin/bash
 DIR=&quot;$( cd &quot;$( dirname &quot;${BASH_SOURCE[0]}&quot; )&quot; &amp;&amp; pwd )&quot;
 ${DIR}/awe-submitter --pack --wait \
-         --shockurl=${SHOCK_SERVER} \
-         --serverurl=${AWE_SERVER} --download_files=true $@
+         --shockurl=${SHOCK_SERVER_URL} \
+         --serverurl=${AWE_SERVER_URL} --download_files=true $@
 EOF
 
 chmod u+x tests/awe-submitter
