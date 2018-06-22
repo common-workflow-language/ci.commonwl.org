@@ -139,12 +139,12 @@ docker cp submitter:/go/bin/awe-submitter tests/awe-submitter
 docker rm submitter 
 
 cat &gt; tests/awe-cwl-submitter-wrapper.sh &lt;&lt;&apos;EOF&apos;
-&gt; #!/bin/bash
-&gt; DIR=&quot;$( cd &quot;$( dirname &quot;${BASH_SOURCE[0]}&quot; )&quot; &amp;&amp; pwd )&quot;
-&gt; ${DIR}/awe-submitter --pack --wait \
-&gt;         --shockurl=${SHOCK_SERVER} \
-&gt;         --serverurl=${AWE_SERVER} --download_files=true $@
-&gt; EOF
+#!/bin/bash
+DIR=&quot;$( cd &quot;$( dirname &quot;${BASH_SOURCE[0]}&quot; )&quot; &amp;&amp; pwd )&quot;
+${DIR}/awe-submitter --pack --wait \
+         --shockurl=${SHOCK_SERVER} \
+         --serverurl=${AWE_SERVER} --download_files=true $@
+EOF
 
 chmod u+x tests/awe-submitter
 chmod u+x tests/awe-cwl-submitter-wrapper.sh
