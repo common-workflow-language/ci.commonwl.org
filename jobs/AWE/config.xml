@@ -80,26 +80,6 @@
           </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
         </extensions>
       </hudson.plugins.git.GitSCM>
-      <hudson.plugins.git.GitSCM plugin="git@3.9.1">
-        <configVersion>2</configVersion>
-        <userRemoteConfigs>
-          <hudson.plugins.git.UserRemoteConfig>
-            <url>https://github.com/common-workflow-language/cwltest.git</url>
-          </hudson.plugins.git.UserRemoteConfig>
-        </userRemoteConfigs>
-        <branches>
-          <hudson.plugins.git.BranchSpec>
-            <name>*/master</name>
-          </hudson.plugins.git.BranchSpec>
-        </branches>
-        <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
-        <submoduleCfg class="list"/>
-        <extensions>
-          <hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
-            <relativeTargetDir>cwltest</relativeTargetDir>
-          </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
-        </extensions>
-      </hudson.plugins.git.GitSCM>
     </scms>
   </scm>
   <assignedNode>awe</assignedNode>
@@ -118,13 +98,10 @@
       <command>#git clone https://github.com/MG-RAST/Skyport2.git
 ### Build ne AWE container
 
-# Build cwltest
-cd cwltest/
-mkdir -p ./install//lib/python2.7/site-packages/
-export PYTHONPATH=$PATHONPATH:`pwd`/install//lib/python2.7/site-packages/
-export PATH=$PATH:`pwd`/install/bin/
-python setup.py install --prefix `pwd`/install/
-cd .. 
+# Get cwltest and cwltool
+virtualenv -p python3 env3
+. env3/bin/activate
+pip install cwltest cwltool cwlref-runner
 
 
 export TAG=CWL
