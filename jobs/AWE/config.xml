@@ -132,8 +132,8 @@ cd Skyport2
 . ./skyport2.env
 # skyport2.env overwrites TAG - set back
 export TAG=latest
-docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml down
-docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml up -d
+# docker-compose -f Docker/Compose/skyport-awe-latest.yaml down
+docker-compose -f Docker/Compose/skyport-awe-latest.yaml up -d
 cd ..
 
 cd common-workflow-language/
