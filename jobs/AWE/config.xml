@@ -137,14 +137,21 @@ docker-compose -f Docker/Compose/skyport-awe-latest.yaml up -d
 cd ..
 
 cd common-workflow-language/
-./run_test.sh RUNNER=`pwd`/../AWE/tests/awe-cwl-submitter-wrapper.sh
+./run_test.sh --junit-xml=../result.xml RUNNER=`pwd`/../AWE/tests/awe-cwl-submitter-wrapper.sh
 
 cd ../Skyport2
 docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml down
 ## TEST COMES HERE</command>
     </hudson.tasks.Shell>
   </builders>
-  <publishers/>
+  <publishers>
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.24">
+      <testResults>result.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <healthScaleFactor>1.0</healthScaleFactor>
+      <allowEmptyResults>false</allowEmptyResults>
+    </hudson.tasks.junit.JUnitResultArchiver>
+  </publishers>
   <buildWrappers>
     <hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@0.5.2">
       <colorMapName>xterm</colorMapName>
