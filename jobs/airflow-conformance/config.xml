@@ -33,7 +33,7 @@
     </userRemoteConfigs>
     <branches>
       <hudson.plugins.git.BranchSpec>
-        <name>*/devel</name>
+        <name>*/master</name>
       </hudson.plugins.git.BranchSpec>
     </branches>
     <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
@@ -81,7 +81,7 @@ cloneorpull common-workflow-language https://github.com/common-workflow-language
 venv cwltool-venv
 (. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install -U setuptools wheel pip==9.0.3)
 (. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install -U .)
-(. cwltool-venv/bin/activate &amp;&amp; export AIRFLOW_HOME=${PWD}/airflow &amp;&amp; rm -Rf ${AIRFLOW_HOME} &amp;&amp; airflow initdb &amp;&amp; cwl-airflow init)
+(. cwltool-venv/bin/activate &amp;&amp; export AIRFLOW_HOME=${PWD}/airflow &amp;&amp; rm -Rf ${AIRFLOW_HOME} &amp;&amp; airflow initdb)
 (. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip install &quot;cwltest&gt;=1.0.20180130081614&quot;)
 (. cwltool-venv/bin/activate &amp;&amp; export AIRFLOW_HOME=${PWD}/airflow &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh \
 	--junit-xml=result.xml RUNNER=cwl-airflow EXTRA=run ) # -j$(($(nproc) / 2)) )
