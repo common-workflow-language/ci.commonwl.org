@@ -152,7 +152,7 @@ docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml down
       <allowEmptyResults>false</allowEmptyResults>
     </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.tasks.Mailer plugin="mailer@1.21">
-      <recipients>wilke@anl.g9v</recipients>
+      <recipients>wilke@anl.gov</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
