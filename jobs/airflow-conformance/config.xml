@@ -79,7 +79,7 @@ venv() {
 }
 cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
 venv cwltool-venv
-(. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip3 install -U setuptools wheel pip)
+(. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip3 install -U setuptools wheel pip==9.0.3)
 (. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip3 install .)
 (. cwltool-venv/bin/activate &amp;&amp; export AIRFLOW_HOME=${PWD}/airflow &amp;&amp; rm -Rf ${AIRFLOW_HOME} &amp;&amp; airflow initdb &amp;&amp; cwl-airflow init)
 (. cwltool-venv/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip3 install &quot;cwltest&gt;=1.0.20180130081614&quot;)
