@@ -56,7 +56,7 @@
     <hudson.tasks.Shell>
       <command>cloneorpull() {
         if test -d $1 ; then
-                (cd $1 &amp;&amp; git stash &amp;&amp; git pull &amp;&amp; git status)
+                (cd $1 &amp;&amp; git stash &amp;&amp; git clean -fd &amp;&amp; git pull &amp;&amp; git status)
         else
                 git clone $2
         fi
@@ -74,7 +74,7 @@ venv cwltool-venv3
 (. cwltool-venv3/bin/activate &amp;&amp; export AIRFLOW_HOME=${PWD}/airflow &amp;&amp; rm -Rf ${AIRFLOW_HOME} &amp;&amp; airflow initdb &amp;&amp; cwl-airflow init -l 1 -p 1)
 (. cwltool-venv3/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip3 install &quot;cwltest&gt;=1.0.20180130081614&quot;)
 (. cwltool-venv3/bin/activate &amp;&amp; export AIRFLOW_HOME=${PWD}/airflow &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh \
-	--junit-xml=result.xml RUNNER=cwl-airflow EXTRA=run -n23) # -j$(($(nproc) / 2)) )
+	--junit-xml=result.xml RUNNER=cwl-airflow EXTRA=run) # -j$(($(nproc) / 2)) )
 exit 0</command>
     </hudson.tasks.Shell>
   </builders>
