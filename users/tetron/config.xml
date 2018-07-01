@@ -5,7 +5,7 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>{AQAAABAAAAAwt7VEjOeM3SsrKWZI3U8qUKA6Y1/CZ1zB5Dq7AGH0g09vm51v9rbuIWVYUvuT/ezEH/NH2LdvUU6t8prfHLE+pw==}</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.16">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.17">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.model.MyViewsProperty>
@@ -38,6 +38,10 @@
       <data class="concurrent-hash-map">
         <entry>
           <string>cwltool/PR-792</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-805</string>
           <boolean>true</boolean>
         </entry>
         <entry>
