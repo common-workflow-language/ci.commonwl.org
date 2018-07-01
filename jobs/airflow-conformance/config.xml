@@ -56,7 +56,7 @@
     <hudson.tasks.Shell>
       <command>cloneorpull() {
         if test -d $1 ; then
-                (cd $1 &amp;&amp; git pull)
+                (cd $1 &amp;&amp; git pull &amp;&amp; git status)
         else
                 git clone $2
         fi
