@@ -45,7 +45,7 @@
       <data class="concurrent-hash-map"/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwXCKNws7/27WZlrx4dQ4BcgHsanX9WLGOgYUwEvD/VHY3l4FpTD2GTXO3IoJCzCSqln9yH5yCMVsh/pK/BekSQA==}</accessToken>
+      <accessToken>{AQAAABAAAAAwpFCAZho3ivow83h5SHUpcAHlqaie6PvYHQg8z4yTNHpu6XLQ+ydyz1WW+WM7MdZz/J13yGD2QSfW6Lpc4zeMhQ==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
