@@ -5,7 +5,7 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>{AQAAABAAAAAwPrxFwgRHRBfAOhkS3z7h/50DuObi0lx9a1MIPCl/gB316t0KI5ISJdWGYbqlIYVLcnFbPcaiIziO1M93FeRaaQ==}</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.16">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.17">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.model.MyViewsProperty>
@@ -37,10 +37,14 @@
     <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
       <autofavoriteEnabled>true</autofavoriteEnabled>
     </io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty>
-    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.1">
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
       <data class="concurrent-hash-map">
         <entry>
           <string>cwltool/nested-tests</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-810</string>
           <boolean>true</boolean>
         </entry>
       </data>
