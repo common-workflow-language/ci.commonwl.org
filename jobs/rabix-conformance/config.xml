@@ -109,7 +109,7 @@ set -e</command>
       <allowEmptyResults>false</allowEmptyResults>
     </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.tasks.Mailer plugin="mailer@1.21">
-      <recipients>ivan.batic@sbgenomics.com, kaushik.ghose@sbgenomics.com</recipients>
+      <recipients>kaushik.ghose@sbgenomics.com</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
