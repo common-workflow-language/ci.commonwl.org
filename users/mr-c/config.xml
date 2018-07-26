@@ -5,7 +5,7 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>{AQAAABAAAAAwdAwlKpdtN0BV5sfEFi7q0lvxL01WNCuBj4/R/bNYLcOcto//lzTrd5wdyi4K5okKMBhKdMnFa2RmyCZ3FkX04A==}</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.17">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -92,7 +92,7 @@
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwGd27v1hrNFsURzmfGGLhCpBxC9XmQKhqkaRn9dnyJeZ6mCOWVXF2tDsr4CrlWJ9TNQZZjZEt5GFavDghlcadXw==}</accessToken>
+      <accessToken>{AQAAABAAAAAwAyqEq9d3cozYi4dcbVGZiA+ZxIeT7fUPRyFsX/gNed9lobjL0RgQx12xCxzEejCLeC+by+aEmVHHdahw43wszg==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
