@@ -47,7 +47,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>schema_salad</upstreamProjects>
+      <upstreamProjects>cwltool-conformance</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
