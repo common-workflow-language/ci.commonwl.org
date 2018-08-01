@@ -85,13 +85,14 @@
       <repoName>commonworkflowlanguage/cwltool-module</repoName>
       <noCache>false</noCache>
       <forcePull>true</forcePull>
+      <dockerfilePath>cwltool.Dockerfile</dockerfilePath>
       <skipBuild>true</skipBuild>
-      <skipDecorate>false</skipDecorate>
+      <skipDecorate>true</skipDecorate>
       <repoTag></repoTag>
       <skipPush>false</skipPush>
       <createFingerprint>true</createFingerprint>
       <skipTagLatest>false</skipTagLatest>
-      <buildAdditionalArgs></buildAdditionalArgs>
+      <buildAdditionalArgs>cwltool.Dockerfile</buildAdditionalArgs>
       <forceTag>false</forceTag>
       <dockerToolName></dockerToolName>
     </com.cloudbees.dockerpublish.DockerBuilder>
@@ -103,8 +104,9 @@
       <repoName>commonworkflowlanguage/cwltool</repoName>
       <noCache>false</noCache>
       <forcePull>true</forcePull>
+      <dockerfilePath>cwltool.Dockerfile</dockerfilePath>
       <skipBuild>true</skipBuild>
-      <skipDecorate>false</skipDecorate>
+      <skipDecorate>true</skipDecorate>
       <repoTag></repoTag>
       <skipPush>false</skipPush>
       <createFingerprint>true</createFingerprint>
