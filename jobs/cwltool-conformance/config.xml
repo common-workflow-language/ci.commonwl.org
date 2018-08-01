@@ -65,17 +65,10 @@
     </com.cloudbees.jenkins.GitHubPushTrigger>
   </triggers>
   <concurrentBuild>false</concurrentBuild>
-  <axes>
-    <hudson.matrix.TextAxis>
-      <name>version</name>
-      <values>
-        <string>v1.0</string>
-      </values>
-    </hudson.matrix.TextAxis>
-  </axes>
+  <axes/>
   <builders>
     <hudson.tasks.Shell>
-      <command>bash jenkins.bash</command>
+      <command>version=v1.0 bash jenkins.bash</command>
     </hudson.tasks.Shell>
     <com.cloudbees.dockerpublish.DockerBuilder plugin="docker-build-publish@1.3.2">
       <server plugin="docker-commons@1.13"/>
