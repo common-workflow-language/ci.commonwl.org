@@ -84,7 +84,7 @@ pip install -U &apos;pip&gt;=7.0.0&apos;
 pip install -U &apos;setuptools&gt;=8.0.0&apos; wheel
 pip install .[cwl]
 pip install &quot;cwltest&gt;=1.0.20180209171722&quot;
-(cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml={START_DIR}/result.xml RUNNER=toil-cwl-runner)
+(cd common-workflow-language &amp;&amp; ./run_test.sh --junit-xml=${START_DIR}/result.xml RUNNER=toil-cwl-runner)
 docker volume ls -qf dangling=true | grep -v metadata.db | xargs -r docker volume rm || true
 test -s ${START_DIR}/result.xml</command>
     </hudson.tasks.Shell>
