@@ -73,7 +73,7 @@ git clone http://${jenkins_cwl_website}@github.com/common-workflow-language/comm
 (cd common-workflow-language.github.io; git config user.email &quot;cwl-bot@users.noreply.github.com&quot;; git config user.name &quot;CWL Jenkins build bot&quot;; git rm $(git ls-files | grep -v CNAME | grep -v .gitignore))
 venv cwl-venv
 (. cwl-venv/bin/activate &amp;&amp; pip install -U setuptools pip)
-(. cwl-venv/bin/activate &amp;&amp; pip install cwltool &amp;&amp; ./website.sh --enable-pull)
+(. cwl-venv/bin/activate &amp;&amp; pip install cwltool &amp;&amp; ./website.sh --force-docker-pull)
 (cd common-workflow-language.github.io &amp;&amp; \
  git add --all &amp;&amp; \
  git diff-index --quiet HEAD || git commit -m &quot;CWL Jenkins Build bot&quot; &amp;&amp; \
