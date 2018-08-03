@@ -114,8 +114,14 @@ docker build -t mgrast/cwl-submitter:test -f Docker/Dockerfiles/cwl-test-submitt
 
 docker-compose -f Docker/Compose/skyport-awe-latest.yaml up -d
 cd $cdir
-
-docker run -ti --rm --network compose_default mgrast/cwl-submitter:test -n1 --junit-xml=../result.xml RUNNER=`pwd`/../AWE/tests/awe-cwl-submitter-wrapper.sh
+touch result.xml
+docker run \
+	-ti \
+    --rm \
+    --network compose_default \
+    --volume `pwd`/result.xml:/output/result.xml
+    mgrast/cwl-submitter:test \
+    --junit-xml=/output/result.xml
 
 cd AWE/Skyport2
 docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml down
