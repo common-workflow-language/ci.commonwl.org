@@ -7,7 +7,7 @@
     <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.20.0">
       <doNotScan>false</doNotScan>
     </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.1">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.2">
       <projectUrl>https://github.com/wgerlach/AWE/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
@@ -95,51 +95,29 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>#git clone https://github.com/MG-RAST/Skyport2.git
-### Build ne AWE container
+      <command>export TAG=test
 
-# Get cwltest and cwltool
-virtualenv -p python3 env3
-. env3/bin/activate
-pip install cwltest cwltool cwlref-runner
+docker volume prune -f
 
-
-export TAG=develop
+cdir=`pwd`
 cd AWE
-# docker build -t mgrast/awe:${TAG} -f Dockerfile .
-# docker build -t mgrast/awe-worker:${TAG} -f Dockerfile_worker .
-# docker build -t mgrast/awe-submitter:${TAG} -f Dockerfile_submitter .
-
-### Copy submitter
-docker create --name submitter mgrast/awe-submitter:${TAG}
-docker cp submitter:/go/bin/awe-submitter tests/awe-submitter
-docker rm submitter 
-
-cat &gt; tests/awe-cwl-submitter-wrapper.sh &lt;&lt;&apos;EOF&apos;
-#!/bin/bash
-DIR=&quot;$( cd &quot;$( dirname &quot;${BASH_SOURCE[0]}&quot; )&quot; &amp;&amp; pwd )&quot;
-${DIR}/awe-submitter --pack --wait \
-         --shockurl=${SHOCK_SERVER_URL} \
-         --serverurl=${AWE_SERVER_URL} --download_files=true $@
-EOF
-
-chmod u+x tests/awe-submitter
-chmod u+x tests/awe-cwl-submitter-wrapper.sh
-cd ..
-
-cd Skyport2	
+docker build -t mgrast/awe:test -f Dockerfile .
+docker build -t mgrast/awe-worker:test -f Dockerfile_worker .
+docker build -t mgrast/awe-submitter:test -f Dockerfile_submitter .
+cd Skyport2
+docker build -t mgrast/cwl-submitter:test -f Docker/Dockerfiles/cwl-test-submitter.dockerfile .
 ./init.sh
 . ./skyport2.env
 # skyport2.env overwrites TAG - set back
 # export TAG=latest
 # docker-compose -f Docker/Compose/skyport-awe-latest.yaml down
+
 docker-compose -f Docker/Compose/skyport-awe-latest.yaml up -d
-cd ..
+cd $cdir
 
-cd common-workflow-language/
-./run_test.sh --junit-xml=../result.xml RUNNER=`pwd`/../AWE/tests/awe-cwl-submitter-wrapper.sh
+docker run -ti --rm --network compose_default mgrast/cwl-submitter:test -n1 --junit-xml=../result.xml RUNNER=`pwd`/../AWE/tests/awe-cwl-submitter-wrapper.sh
 
-cd ../Skyport2
+cd AWE/Skyport2
 docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml down
 ## TEST COMES HERE</command>
     </hudson.tasks.Shell>
