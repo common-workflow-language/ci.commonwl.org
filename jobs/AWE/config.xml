@@ -125,6 +125,7 @@ docker run \
 
 cd AWE/Skyport2
 docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml down
+docker run --rm --volume `pwd`/live-data:/live-data bash rm -rf /live-data/*
 ## TEST COMES HERE</command>
     </hudson.tasks.Shell>
   </builders>
