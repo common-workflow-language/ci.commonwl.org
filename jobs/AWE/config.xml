@@ -121,7 +121,9 @@ docker run \
     --network compose_default \
     --volume `pwd`/result.xml:/output/result.xml
     mgrast/cwl-submitter:test \
-    --junit-xml=/output/result.xml
+    --junit-xml=/output/result.xml \
+    --timeout=120
+    
 
 cd AWE/Skyport2
 docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml down
