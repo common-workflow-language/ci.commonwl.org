@@ -91,7 +91,7 @@ test -s ${START_DIR}/result.xml</command>
   </builders>
   <publishers>
     <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.24">
-      <testResults>common-workflow-language/v1.0/result.xml</testResults>
+      <testResults>result.xml</testResults>
       <keepLongStdio>true</keepLongStdio>
       <healthScaleFactor>1.0</healthScaleFactor>
       <allowEmptyResults>false</allowEmptyResults>
