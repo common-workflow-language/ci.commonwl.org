@@ -96,18 +96,22 @@
       <command>
 export TAG=test
 
-echo `pwd`
+pwd
 ls -l
+docker images
+
+exit 1
 
 docker volume prune -f
+docker images 
 
 base_dir=`pwd`
 cd $base_dir/AWE
-docker build -t mgrast/awe:test -f Dockerfile .
-docker build -t mgrast/awe-worker:test -f Dockerfile_worker .
-docker build -t mgrast/awe-submitter:test -f Dockerfile_submitter .
+docker build --no-cache -t mgrast/awe:test -f Dockerfile .
+docker build --no-cache -t mgrast/awe-worker:test -f Dockerfile_worker .
+docker build --no-cache -t mgrast/awe-submitter:test -f Dockerfile_submitter .
 cd $base_dir/Skyport2
-docker build -t mgrast/cwl-submitter:test -f Docker/Dockerfiles/cwl-test-submitter.dockerfile .
+docker build --no-cache -t mgrast/cwl-submitter:test -f Docker/Dockerfiles/cwl-test-submitter.dockerfile .
 ./init.sh
 . ./skyport2.env
 # skyport2.env overwrites TAG - set back
