@@ -96,6 +96,9 @@
       <command>
 export TAG=test
 
+echo `pwd`
+ls -l
+
 docker volume prune -f
 
 base_dir=`pwd`
