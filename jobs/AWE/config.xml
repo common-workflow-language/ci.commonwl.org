@@ -115,7 +115,6 @@ docker-compose -f Docker/Compose/skyport-awe-latest.yaml up -d
 cd $base_dir
 touch result.xml
 docker run \
-	-ti \
     --rm \
     --network compose_default \
     --volume `pwd`/result.xml:/output/result.xml \
