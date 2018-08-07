@@ -93,19 +93,17 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>ls -la 
-exit 1
-
+      <command>
 export TAG=test
 
 docker volume prune -f
 
-cdir=`pwd`
-cd AWE
+base_dir=`pwd`
+cd $base_dir/AWE
 docker build -t mgrast/awe:test -f Dockerfile .
 docker build -t mgrast/awe-worker:test -f Dockerfile_worker .
 docker build -t mgrast/awe-submitter:test -f Dockerfile_submitter .
-cd Skyport2
+cd $base_dir/Skyport2
 docker build -t mgrast/cwl-submitter:test -f Docker/Dockerfiles/cwl-test-submitter.dockerfile .
 ./init.sh
 . ./skyport2.env
@@ -114,7 +112,7 @@ docker build -t mgrast/cwl-submitter:test -f Docker/Dockerfiles/cwl-test-submitt
 # docker-compose -f Docker/Compose/skyport-awe-latest.yaml down
 
 docker-compose -f Docker/Compose/skyport-awe-latest.yaml up -d
-cd $cdir
+cd $base_dir
 touch result.xml
 docker run \
 	-ti \
@@ -126,7 +124,7 @@ docker run \
     --timeout=120
     
 
-cd AWE/Skyport2
+cd $base_dir/Skyport2
 docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml down
 docker run --rm --volume `pwd`/live-data:/live-data bash rm -rf /live-data/*
 ## TEST COMES HERE</command>
