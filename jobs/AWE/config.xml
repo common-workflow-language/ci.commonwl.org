@@ -118,7 +118,7 @@ docker run \
 	-ti \
     --rm \
     --network compose_default \
-    --volume `pwd`/result.xml:/output/result.xml
+    --volume `pwd`/result.xml:/output/result.xml \
     mgrast/cwl-submitter:test \
     --junit-xml=/output/result.xml \
     --timeout=120
