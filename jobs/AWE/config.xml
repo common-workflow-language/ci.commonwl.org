@@ -99,8 +99,8 @@ export TAG=test
 pwd
 ls -l
 
-docker rmi -f mgrast/awe-submitter:CWL mgrast/awe-worker:CWL mgrast/awe:CWL   mgrast/awe-worker:latest    mgrast/awe:latest    adminer:latest      mgrast/shock:latest
 docker rm -f 9e4d0ee3ae64 f86d1540f449 0dfab9db4517 638d25871fa4 8df9267ac524 ee294416808a 4b8f98c30127 97f79ec1c93c 402c9dad97a9 f60f5b6d98b1 e5122c6ab082 99effb6a9471 1ac71bc7a9f3 
+docker rmi -f mgrast/awe-submitter:CWL mgrast/awe-worker:CWL mgrast/awe:CWL   mgrast/awe-worker:latest    mgrast/awe:latest    adminer:latest      mgrast/shock:latest
 docker images
 
 docker ps -a
