@@ -93,7 +93,10 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>export TAG=test
+      <command>ls -la 
+exit 1
+
+export TAG=test
 
 docker volume prune -f
 
