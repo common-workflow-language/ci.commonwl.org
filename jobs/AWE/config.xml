@@ -94,6 +94,10 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
+docker ps -a | grep compose
+
+exit 0
+
 export TAG=test
 
 # Debugging
