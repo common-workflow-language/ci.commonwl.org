@@ -96,20 +96,21 @@
       <command>
 export TAG=test
 
+# Debugging
 pwd
 ls -l
-
-docker rm -f 9e4d0ee3ae64 f86d1540f449 0dfab9db4517 638d25871fa4 8df9267ac524 ee294416808a 4b8f98c30127 97f79ec1c93c 402c9dad97a9 f60f5b6d98b1 e5122c6ab082 99effb6a9471 1ac71bc7a9f3 
-docker rmi -f mgrast/awe-submitter:CWL mgrast/awe-worker:CWL mgrast/awe:CWL   mgrast/awe-worker:latest    mgrast/awe:latest    adminer:latest      mgrast/shock:latest
 docker images
-
-docker ps -a
-exit 1
-
-docker volume prune -f
-docker images 
+docker ps
 
 base_dir=`pwd`
+
+# Clean up
+cd $base_dir/Skyport
+docker-compose -f Docker/Compose/skyport-awe-latest.yaml down
+docker rm -f mgrast_cwl_submitter
+docker volume prune -f
+
+# Build container
 cd $base_dir/AWE
 git branch 
 docker build --no-cache -t mgrast/awe:test -f Dockerfile .
@@ -122,13 +123,14 @@ docker build --no-cache -t mgrast/cwl-submitter:test -f Docker/Dockerfiles/cwl-t
 # skyport2.env overwrites TAG - set back
 # export TAG=latest
 # docker-compose -f Docker/Compose/skyport-awe-latest.yaml down
-
+docker-compose -f Docker/Compose/skyport-awe-latest.yaml down
 docker-compose -f Docker/Compose/skyport-awe-latest.yaml up -d
 cd $base_dir
 touch result.xml
 docker run \
     --rm \
     --network compose_default \
+    --name mgrast_cwl_submitter
     --volume `pwd`/result.xml:/output/result.xml \
     mgrast/cwl-submitter:test \
     --junit-xml=/output/result.xml \
