@@ -100,6 +100,7 @@ pwd
 ls -l
 docker images
 
+docker ps -a
 exit 1
 
 docker volume prune -f
