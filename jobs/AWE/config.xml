@@ -106,7 +106,7 @@ base_dir=`pwd`
 
 # Clean up
 cd $base_dir/Skyport2
-docker-compose -f Docker/Compose/skyport-awe-latest.yaml down
+docker-compose -f Docker/Compose/skyport-awe-testing.yaml down
 docker rm -f mgrast_cwl_submitter
 docker volume prune -f
 
