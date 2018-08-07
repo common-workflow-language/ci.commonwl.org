@@ -123,8 +123,8 @@ docker build --no-cache -t mgrast/cwl-submitter:test -f Docker/Dockerfiles/cwl-t
 # skyport2.env overwrites TAG - set back
 # export TAG=latest
 # docker-compose -f Docker/Compose/skyport-awe-latest.yaml down
-docker-compose -f Docker/Compose/skyport-awe-latest.yaml down
-docker-compose -f Docker/Compose/skyport-awe-latest.yaml up -d
+docker-compose -f Docker/Compose/skyport-awe-testing.yaml down
+docker-compose -f Docker/Compose/skyport-awe-testing.yaml up -d
 cd $base_dir
 touch result.xml
 docker run \
@@ -138,7 +138,7 @@ docker run \
     
 
 cd $base_dir/Skyport2
-docker-compose -f Docker/Compose/skyport-awe-jenkins.yaml down
+docker-compose -f Docker/Compose/skyport-awe-testing.yaml down
 docker run --rm --volume `pwd`/live-data:/live-data bash rm -rf /live-data/*
 ## TEST COMES HERE</command>
     </hudson.tasks.Shell>
