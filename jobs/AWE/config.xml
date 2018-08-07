@@ -95,7 +95,7 @@
     <hudson.tasks.Shell>
       <command>
 docker ps -a | grep compose
-
+docker rm -f compose_nginx_1
 exit 0
 
 export TAG=test
