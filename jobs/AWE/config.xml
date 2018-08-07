@@ -108,6 +108,7 @@ docker images
 
 base_dir=`pwd`
 cd $base_dir/AWE
+git branch 
 docker build --no-cache -t mgrast/awe:test -f Dockerfile .
 docker build --no-cache -t mgrast/awe-worker:test -f Dockerfile_worker .
 docker build --no-cache -t mgrast/awe-submitter:test -f Dockerfile_submitter .
