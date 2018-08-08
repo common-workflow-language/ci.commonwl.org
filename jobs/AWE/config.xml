@@ -129,7 +129,7 @@ touch result.xml
 docker run \
     --rm \
     --network compose_default \
-    --name mgrast_cwl_submitter
+    --name mgrast_cwl_submitter \
     --volume `pwd`/result.xml:/output/result.xml \
     mgrast/cwl-submitter:test \
     --junit-xml=/output/result.xml \
