@@ -5,7 +5,7 @@
     <jenkins.security.ApiTokenProperty>
       <apiToken>{AQAAABAAAAAwPrxFwgRHRBfAOhkS3z7h/50DuObi0lx9a1MIPCl/gB316t0KI5ISJdWGYbqlIYVLcnFbPcaiIziO1M93FeRaaQ==}</apiToken>
     </jenkins.security.ApiTokenProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.17">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.model.MyViewsProperty>
@@ -41,6 +41,10 @@
       <data class="concurrent-hash-map">
         <entry>
           <string>cwltool/nested-tests</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-862</string>
           <boolean>true</boolean>
         </entry>
         <entry>
