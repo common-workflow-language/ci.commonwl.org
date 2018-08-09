@@ -81,7 +81,7 @@ fi
 cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
 venv venv
 (. venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
-(. venv/bin/activate &amp;&amp; pip install -U &quot;cwltest&gt;=2.7.20180719125426&quot; cwltool)
+(. venv/bin/activate &amp;&amp; pip install -U cwltest cwltool)
 
 sbt -d -warn clean assembly
 CROMWELL_JAR=$(find &quot;$(pwd)/server/target/scala-2.12&quot; -name &quot;cromwell-*.jar&quot;)
