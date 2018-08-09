@@ -116,6 +116,7 @@ docker build --no-cache -t mgrast/awe:test -f Dockerfile .
 docker build --no-cache -t mgrast/awe-worker:test -f Dockerfile_worker .
 docker build --no-cache -t mgrast/awe-submitter:test -f Dockerfile_submitter .
 cd $base_dir/Skyport2
+docker run --rm --volume `pwd`:/Skyport2 bash rm -rf /Skyport2/tmp
 docker build --no-cache -t mgrast/cwl-submitter:test -f Docker/Dockerfiles/cwl-test-submitter.dockerfile .
 ./init.sh
 . ./skyport2.env
