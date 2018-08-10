@@ -56,6 +56,7 @@
           <hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
             <relativeTargetDir>Skyport2</relativeTargetDir>
           </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+          <hudson.plugins.git.extensions.impl.IgnoreNotifyCommit/>
         </extensions>
       </hudson.plugins.git.GitSCM>
       <hudson.plugins.git.GitSCM plugin="git@3.9.1">
