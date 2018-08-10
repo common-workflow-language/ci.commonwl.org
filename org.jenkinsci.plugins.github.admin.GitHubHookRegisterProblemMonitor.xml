@@ -17,10 +17,5 @@
       <userName>galaxyproject</userName>
       <repositoryName>planemo</repositoryName>
     </com.cloudbees.jenkins.GitHubRepositoryName>
-    <com.cloudbees.jenkins.GitHubRepositoryName>
-      <host>github.com</host>
-      <userName>MG-RAST</userName>
-      <repositoryName>Skyport2</repositoryName>
-    </com.cloudbees.jenkins.GitHubRepositoryName>
   </ignored>
 </org.jenkinsci.plugins.github.admin.GitHubHookRegisterProblemMonitor>
