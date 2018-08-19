@@ -62,15 +62,7 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
       <data class="concurrent-hash-map">
         <entry>
-          <string>cwltool/PR-783</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>cwl-website</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-747</string>
           <boolean>true</boolean>
         </entry>
         <entry>
@@ -91,10 +83,6 @@
         </entry>
         <entry>
           <string>cwltool/PR-873</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-797</string>
           <boolean>true</boolean>
         </entry>
         <entry>
