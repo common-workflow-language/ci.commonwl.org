@@ -18,7 +18,7 @@
             <name>blueocean-github-domain</name>
             <description>blueocean-github-domain to store credentials by BlueOcean</description>
             <specifications>
-              <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanDomainSpecification plugin="blueocean-pipeline-scm-api@1.7.2"/>
+              <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanDomainSpecification plugin="blueocean-pipeline-scm-api@1.8.2"/>
             </specifications>
           </com.cloudbees.plugins.credentials.domains.Domain>
           <list>
@@ -66,6 +66,14 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/PR-826</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-739</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-616</string>
           <boolean>true</boolean>
         </entry>
@@ -94,11 +102,7 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>cwltool/PR-826</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-739</string>
+          <string>cwltool/PR-875</string>
           <boolean>true</boolean>
         </entry>
       </data>
