@@ -94,7 +94,8 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>
+      <command>#!/bin/bash
+
 echo $SHELL
 export TAG=test
 
