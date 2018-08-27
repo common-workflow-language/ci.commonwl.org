@@ -95,6 +95,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>
+echo $SHELL
 export TAG=test
 
 # Debugging
