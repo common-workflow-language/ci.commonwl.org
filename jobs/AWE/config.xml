@@ -107,6 +107,8 @@ base_dir=`pwd`
 
 # Clean up
 cd $base_dir/Skyport2
+./init.sh
+. ./skyport2.env
 docker-compose -f Docker/Compose/skyport-awe-testing.yaml down
 docker run --rm --volume `pwd`/live-data:/live-data bash rm -rf /live-data/*
 docker volume prune -f
@@ -120,8 +122,7 @@ docker build --no-cache -t mgrast/awe-submitter:test -f Dockerfile_submitter .
 cd $base_dir/Skyport2
 docker run --rm --volume `pwd`:/Skyport2 bash rm -rf /Skyport2/tmp
 docker build --no-cache -t mgrast/cwl-submitter:test -f Docker/Dockerfiles/cwl-test-submitter.dockerfile .
-./init.sh
-. ./skyport2.env
+
 # skyport2.env overwrites TAG - set back
 # export TAG=latest
 # docker-compose -f Docker/Compose/skyport-awe-latest.yaml down
