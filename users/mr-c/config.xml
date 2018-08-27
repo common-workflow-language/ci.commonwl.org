@@ -66,14 +66,6 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>cwltool/PR-826</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-739</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>cwltool/PR-616</string>
           <boolean>true</boolean>
         </entry>
@@ -94,6 +86,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/PR-884</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-852</string>
           <boolean>true</boolean>
         </entry>
@@ -103,6 +99,14 @@
         </entry>
         <entry>
           <string>cwltool/PR-875</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-826</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-739</string>
           <boolean>true</boolean>
         </entry>
       </data>
