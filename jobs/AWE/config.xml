@@ -147,10 +147,10 @@ docker run \
     --timeout=120
     
 # Clean up
-cd $base_dir/Skyport2
-docker-compose -f Docker/Compose/skyport-awe-testing.yaml down
-docker run --rm --volume `pwd`/live-data:/live-data bash rm -rf /live-data/*
-docker volume prune -f</command>
+# cd $base_dir/Skyport2
+# docker-compose -f Docker/Compose/skyport-awe-testing.yaml down
+# docker run --rm --volume `pwd`/live-data:/live-data bash rm -rf /live-data/*
+# docker volume prune -f</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
