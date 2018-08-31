@@ -114,12 +114,11 @@ docker-compose -f Docker/Compose/skyport-awe-testing.yaml down
 # docker rm -f $(docker ps -a -f name=skyport2_ -q)
 
 echo &quot;Deleting live-data&quot;
-echo docker run --rm --volume `pwd`/live-data:/live-data bash rm -rf /live-data/*
 docker run --rm --volume `pwd`/live-data:/live-data bash rm -rf /live-data/*
-ls -l live-data
+# ls -l live-data
 docker volume prune -f
 . ./init.sh
-. ./skyport2.env
+#. ./skyport2.env
 
 # Build container
 cd $base_dir/AWE
@@ -132,11 +131,14 @@ cd $base_dir/Skyport2
 docker run --rm --volume `pwd`:/Skyport2 bash rm -rf /Skyport2/tmp
 docker build --no-cache -t mgrast/cwl-submitter:test -f Docker/Dockerfiles/cwl-test-submitter.dockerfile .
 
+
+
 # skyport2.env overwrites TAG - set back
 # export TAG=latest
 # docker-compose -f Docker/Compose/skyport-awe-latest.yaml down
 ## TEST COMES HERE
-docker-compose -f Docker/Compose/skyport-awe-testing.yaml down
+# docker-compose -f Docker/Compose/skyport-awe-testing.yaml down
+
 docker-compose -f Docker/Compose/skyport-awe-testing.yaml up -d
 cd $base_dir
 touch result.xml
