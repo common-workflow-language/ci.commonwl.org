@@ -111,6 +111,8 @@ base_dir=`pwd`
 cd $base_dir/Skyport2
 . ./skyport2.env
 docker-compose -f Docker/Compose/skyport-awe-testing.yaml down
+# docker rm -f $(docker ps -a -f name=skyport2_ -q)
+
 echo &quot;Deleting live-data&quot;
 echo docker run --rm --volume `pwd`/live-data:/live-data bash rm -rf /live-data/*
 docker run --rm --volume `pwd`/live-data:/live-data bash rm -rf /live-data/*
