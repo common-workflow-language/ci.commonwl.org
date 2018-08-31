@@ -97,12 +97,12 @@
       <command>#!/bin/bash
 
 echo $SHELL
-export TAG=test
+
 
 # Debugging
 pwd
 ls -l
-docker images
+# docker images
 docker ps
 
 base_dir=`pwd`
@@ -121,6 +121,7 @@ docker volume prune -f
 
 # Build container
 cd $base_dir/AWE
+echo Building AWE Container
 git branch 
 docker build --no-cache -t mgrast/awe:test -f Dockerfile .
 docker build --no-cache -t mgrast/awe-worker:test -f Dockerfile_worker .
