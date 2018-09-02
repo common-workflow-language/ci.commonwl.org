@@ -38,7 +38,7 @@
       <emailAddress>wilke@mcs.anl.gov</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwlngApkVb71SnBjWCR+xcsRfN4eNGlclo5roZLSJdb2VErmuogdG2UhV6GaWp/7YUDIqx6sLDOA7qZcxyqUbJ3g==}</accessToken>
+      <accessToken>{AQAAABAAAAAwi1YwPmJfUCLJpWGlyq4HjKrg6ynHBhvkNziujlUytgQ9CLMm6lq8b6NMyTjGKfwGCZ7S2YSfWJadi1VEySS2Yg==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
