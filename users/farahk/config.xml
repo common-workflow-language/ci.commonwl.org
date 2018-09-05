@@ -40,6 +40,10 @@
           <string>cwltool/PR-880</string>
           <boolean>true</boolean>
         </entry>
+        <entry>
+          <string>cwltool/PR-893</string>
+          <boolean>true</boolean>
+        </entry>
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
   </properties>
