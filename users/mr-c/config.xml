@@ -82,6 +82,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/jenkinsfile-conformance</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-875</string>
           <boolean>true</boolean>
         </entry>
