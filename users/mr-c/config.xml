@@ -117,6 +117,10 @@
           <string>cwltool/PR-739</string>
           <boolean>true</boolean>
         </entry>
+        <entry>
+          <string>cwltool/master</string>
+          <boolean>true</boolean>
+        </entry>
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
