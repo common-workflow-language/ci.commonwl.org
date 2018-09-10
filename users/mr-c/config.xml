@@ -70,6 +70,18 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/PR-826</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-739</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/master</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-616</string>
           <boolean>true</boolean>
         </entry>
@@ -89,22 +101,10 @@
           <string>cwltool/PR-875</string>
           <boolean>true</boolean>
         </entry>
-        <entry>
-          <string>cwltool/PR-826</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-739</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/master</string>
-          <boolean>true</boolean>
-        </entry>
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwERnFMkF+879cKNkTF3oW2BZYKh60QYXHiwRESLqlJKK4zWq+JuT8leux7nPTFdE+cYuUxcQda0dcViVlOQToiw==}</accessToken>
+      <accessToken>{AQAAABAAAAAwgLSwVQ2X32jTewSmRHREHYEslzUuPV+jS5WhWVuKvPGJF7Ycch+dXK0HWxn4wzvWy45t2//7I4GHM1xohmB+1A==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
