@@ -67,6 +67,7 @@ venv() {
         fi
         . $1/bin/activate
 }
+export AIRFLOW_GPL_UNIDECODE=true
 cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
 venv cwltool-venv3
 (. cwltool-venv3/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip3 install -U setuptools wheel pip)
