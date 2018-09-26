@@ -3,7 +3,9 @@
   <fullName>jh36</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAAAwy03h7mvJs9GMSXWZLwLxDSRGugTkmW5VHp4YzHgcra8qzHuIJf6ZQwfeiljIvXfI05qXighddR9MLgQkQV7zqw==}</apiToken>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
     </jenkins.security.ApiTokenProperty>
     <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
       <autofavoriteEnabled>true</autofavoriteEnabled>

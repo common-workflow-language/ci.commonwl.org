@@ -1,11 +1,13 @@
-<?xml version='1.0' encoding='UTF-8'?>
+<?xml version='1.1' encoding='UTF-8'?>
 <user>
   <fullName>Anton Khodak</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAAAwZ6J3KkewnIyQCPZapn7KvluBhFUV2cre4B1/7ElHys4pb682dLNxGr2m6NUm5gd5HAfDgsFDp1J35zzuhzDAcw==}</apiToken>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
     </jenkins.security.ApiTokenProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.16">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.model.MyViewsProperty>
@@ -25,7 +27,7 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.20">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.21">
       <emailAddress>anton.khodak@ukr.net</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.2.0">
@@ -34,5 +36,11 @@
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
       <accessToken>{AQAAABAAAAAweFkkeLivdZgY4GejT7NdgSaEjkUrFTRJtMw9dNVlTTQysR/daNJ3ZDAjxFCHCf/TGc27Syoip3csJTAOljQHIA==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
+    <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
+      <autofavoriteEnabled>true</autofavoriteEnabled>
+    </io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
+      <data class="concurrent-hash-map"/>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
   </properties>
 </user>

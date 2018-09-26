@@ -3,7 +3,9 @@
   <fullName>Michael Kotliar</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAAAw263dPsuDRTjg++7DfIysJ6npMtT00HivizlRnVkPtW6PPShzm51QVEGv3/T6tXG0WUUKS/Fdd561cW2h3krqHw==}</apiToken>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
     </jenkins.security.ApiTokenProperty>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">

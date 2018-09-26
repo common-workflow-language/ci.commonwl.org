@@ -3,12 +3,14 @@
   <fullName>mwiens91</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAAAw/xlmUiCfNQr5ddA0d6CM21QkQm7EYrGXaTmRlikiVi5yN/ODnpKXTf95B+KwyqBNNrxFVJ7NRv0JgiVbPVv2gQ==}</apiToken>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
     </jenkins.security.ApiTokenProperty>
     <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
       <autofavoriteEnabled>true</autofavoriteEnabled>
     </io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.16">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">

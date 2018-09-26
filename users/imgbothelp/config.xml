@@ -3,7 +3,9 @@
   <fullName>ImgBotHelp</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAAAwEvVG0+Axek7IWAa0tvYap06rrytE7RVvdg3iC33qijxwAYTarthJSb6u4/Up4ND8v5x4BNMALgbXLIejj52zMA==}</apiToken>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
     </jenkins.security.ApiTokenProperty>
     <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
       <autofavoriteEnabled>true</autofavoriteEnabled>

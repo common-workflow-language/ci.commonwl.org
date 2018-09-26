@@ -3,7 +3,9 @@
   <fullName>psafont</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAAAwFMsp7hK0cGU8cIx+mt7bBfMJPPaSSofzHMGG3xa9xFpCN41MWFEO26hEG3mdx/AEbM+zl/hueFiFLSWBf3fzCQ==}</apiToken>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
     </jenkins.security.ApiTokenProperty>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>

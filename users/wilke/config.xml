@@ -3,7 +3,9 @@
   <fullName>Andreas Wilke</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAAAwMzI9/fmuzNwGp2dZy+79SYU4M/nS0QSnZp6ZpszY4sTZ2IOV+5g18hjcjltf+gQPBPZHqrabEMi2LzlU0qIuFg==}</apiToken>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
     </jenkins.security.ApiTokenProperty>
     <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
       <autofavoriteEnabled>true</autofavoriteEnabled>

@@ -3,7 +3,9 @@
   <fullName>skeeey.liu</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAAAwAOQBXWWcToDDF7rSeRY6d3492/LZNKHMnm2SHg4M5CRd3frm+0rn49BmqOVDuqTlh/IUJEZxICO+lk91zJZgaQ==}</apiToken>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
     </jenkins.security.ApiTokenProperty>
     <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
       <autofavoriteEnabled>true</autofavoriteEnabled>

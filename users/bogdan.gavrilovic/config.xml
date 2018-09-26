@@ -3,7 +3,9 @@
   <fullName>bogdan.gavrilovic</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAAAwU+LSFMdNF/iOTth4jnYPRXQ3iQGE/RSPvSZII3Lm1zXAuwc57LVcgVU3gg7imyGJDOLgAiOGWnS1agd11+WgHQ==}</apiToken>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
     </jenkins.security.ApiTokenProperty>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>

@@ -3,7 +3,9 @@
   <fullName>farahk</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAAAw7fni38ft37W2NbP1/xNNFL1+kPUbLU13cC2DzNM3Scst3AJWpx781OlLQPMkegTpFM54E/1RCkjNV1h8TNwBRw==}</apiToken>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
     </jenkins.security.ApiTokenProperty>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>

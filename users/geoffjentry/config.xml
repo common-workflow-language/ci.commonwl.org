@@ -3,7 +3,9 @@
   <fullName>Jeff Gentry</fullName>
   <properties>
     <jenkins.security.ApiTokenProperty>
-      <apiToken>{AQAAABAAAAAwoaVVggj/IB63nwFdQNdQkzWmJfDH0YZat2SKj2/EGFTei2UH60NRqEK4kE5WYawtKIOG5NN3W6/C0AO3xte5gA==}</apiToken>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
     </jenkins.security.ApiTokenProperty>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
