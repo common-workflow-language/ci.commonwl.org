@@ -27,7 +27,7 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.21">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.22">
       <emailAddress>tetron@interreality.org</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.2.0">
@@ -44,6 +44,10 @@
         </entry>
         <entry>
           <string>cwltool/PR-805</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-949</string>
           <boolean>true</boolean>
         </entry>
         <entry>
