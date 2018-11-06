@@ -19,11 +19,11 @@ against the &lt;a href=&quot;https://github.com/common-workflow-language/common-
     <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.20.0">
       <doNotScan>false</doNotScan>
     </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.2">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.3">
       <projectUrl>https://github.com/broadinstitute/cromwell/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
-    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.28">
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.29">
       <autoRebuild>false</autoRebuild>
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
@@ -103,6 +103,7 @@ cd common-workflow-language/v1.0/v1.0
 java \
   -Xmx2g \
   -Dsystem.new-workflow-poll-rate=1 \
+  -Dcwltool-runner.class=cwl.CwltoolProcess
   -Dbackend.providers.Local.config.script-epilogue=&quot;sleep 5 &amp;&amp; sync&quot; \
   -Dsystem.job-shell=/bin/sh \
   -jar ${CROMWELL_JAR} server &amp;
@@ -125,7 +126,7 @@ shutdownCromwell || /bin/true
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.24">
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.26.1">
       <testResults>**/result.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <healthScaleFactor>1.0</healthScaleFactor>
