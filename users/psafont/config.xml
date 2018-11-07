@@ -59,6 +59,10 @@
           <string>cwltool/PR-887</string>
           <boolean>true</boolean>
         </entry>
+        <entry>
+          <string>cwltool/PR-964</string>
+          <boolean>true</boolean>
+        </entry>
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.2.0">
