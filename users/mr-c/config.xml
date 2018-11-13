@@ -72,6 +72,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/default_no_cidfile_creation</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-956</string>
           <boolean>true</boolean>
         </entry>
