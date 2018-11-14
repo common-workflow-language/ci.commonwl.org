@@ -236,6 +236,7 @@
         <string>cromwell</string>
         <string>cwlexec</string>
         <string>cwltool-conformance</string>
+        <string>galaxy-conformance</string>
         <string>galaxy-planemo-conformance</string>
         <string>rabix-conformance</string>
         <string>toil-conformance</string>

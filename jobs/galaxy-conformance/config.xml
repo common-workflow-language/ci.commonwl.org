@@ -1,0 +1,141 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<project>
+  <actions/>
+  <description>&lt;p&gt;Testing the Broad Institute&apos;s &lt;a href=&quot;https://github.com/broadinstitute/cromwell&quot;&gt;Cromwell&lt;/a&gt; Workflow executor&#xd;
+against the &lt;a href=&quot;https://github.com/common-workflow-language/common-workflow-language/blob/master/CONFORMANCE_TESTS.md#common-workflow-language-conformance-test-suite&quot;&gt;&#xd;
+  CWL v1.0 conformance suite&lt;/a&gt;.&lt;/p&gt;&#xd;
+&lt;p&gt;&lt;a href=&apos;https://ci.commonwl.org/job/cromwell&apos;&gt;&lt;img src=&apos;https://ci.commonwl.org/buildStatus/icon?job=cromwell&apos;&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
+&lt;img src=&quot;https://github.com/broadinstitute/cromwell/raw/develop/docs/jamie_the_cromwell_pig.png&quot; /&gt;</description>
+  <keepDependencies>false</keepDependencies>
+  <properties>
+    <jenkins.model.BuildDiscarderProperty>
+      <strategy class="hudson.tasks.LogRotator">
+        <daysToKeep>-1</daysToKeep>
+        <numToKeep>10</numToKeep>
+        <artifactDaysToKeep>-1</artifactDaysToKeep>
+        <artifactNumToKeep>-1</artifactNumToKeep>
+      </strategy>
+    </jenkins.model.BuildDiscarderProperty>
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.20.0">
+      <doNotScan>false</doNotScan>
+    </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.3">
+      <projectUrl>https://github.com/broadinstitute/cromwell/</projectUrl>
+      <displayName></displayName>
+    </com.coravy.hudson.plugins.github.GithubProjectProperty>
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.29">
+      <autoRebuild>false</autoRebuild>
+      <rebuildDisabled>false</rebuildDisabled>
+    </com.sonyericsson.rebuild.RebuildSettings>
+  </properties>
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
+    <configVersion>2</configVersion>
+    <userRemoteConfigs>
+      <hudson.plugins.git.UserRemoteConfig>
+        <url>https://github.com/broadinstitute/cromwell.git</url>
+      </hudson.plugins.git.UserRemoteConfig>
+    </userRemoteConfigs>
+    <branches>
+      <hudson.plugins.git.BranchSpec>
+        <name>*/develo</name>
+      </hudson.plugins.git.BranchSpec>
+    </branches>
+    <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
+    <submoduleCfg class="list"/>
+    <extensions/>
+  </scm>
+  <assignedNode>linux</assignedNode>
+  <canRoam>false</canRoam>
+  <disabled>false</disabled>
+  <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
+  <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
+  <triggers>
+    <hudson.triggers.SCMTrigger>
+      <spec>@daily</spec>
+      <ignorePostCommitHooks>false</ignorePostCommitHooks>
+    </hudson.triggers.SCMTrigger>
+  </triggers>
+  <concurrentBuild>false</concurrentBuild>
+  <builders>
+    <hudson.tasks.Shell>
+      <command>### Editing this command? Also update https://ci.commonwl.org/job/cwl-spec-pr/configure
+
+cloneorpull() {
+        if test -d $1 ; then
+        		rm -r $1 || /bin/true
+        fi
+        git clone $2
+}
+venv() {
+        if ! test -d $1 ; then
+                virtualenv $1
+        fi
+        . $1/bin/activate
+}
+# hack for root owned files leaking from Cromwell
+CWLDIR=$PWD/common-workflow-language
+if [ -d &quot;${CWLDIR}/v1.0&quot; ];
+then
+	docker run --mount type=bind,source=${CWLDIR},destination=/cwl debian:latest rm -Rf /cwl/v1.0
+fi
+cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
+venv venv
+(. venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
+(. venv/bin/activate &amp;&amp; pip install --ignore-installed --verbose -U cwltest cwltool)
+
+sbt -d -warn clean assembly
+CROMWELL_JAR=$(find &quot;$(pwd)/server/target/scala-2.12&quot; -name &quot;cromwell-*.jar&quot;)
+CENTAUR_CWL_JAR=$(find &quot;$(pwd)/centaurCwlRunner/target/scala-2.12&quot; -name &quot;centaur-cwl-runner-*.jar&quot;)
+shutdownCromwell() {
+    if [ -d &quot;${CWLDIR}&quot; ];
+	then
+		docker run --mount type=bind,source=${CWLDIR},destination=/cwl debian:latest rm -Rf /cwl/v1.0
+	fi
+    if [ -z &quot;${CROMWELL_PID}&quot; ]; then
+        kill -9 ${CROMWELL_PID}
+    fi
+}
+trap &quot;shutdownCromwell&quot; EXIT
+
+START_DIR=$(pwd)
+cd common-workflow-language/v1.0/v1.0
+### Editing this command? Also update https://ci.commonwl.org/job/cwl-spec-pr/configure
+java \
+  -Xmx2g \
+  -Dsystem.new-workflow-poll-rate=1 \
+  -Dcwltool-runner.class=cwl.CwltoolProcess \
+  -Dbackend.providers.Local.config.script-epilogue=&quot;sleep 5 &amp;&amp; sync&quot; \
+  -Dsystem.job-shell=/bin/sh \
+  -jar ${CROMWELL_JAR} server &amp;
+CROMWELL_PID=$$
+
+sleep 10
+cd $START_DIR
+cat &gt; ${START_DIR}/centaur-cwl-runner &lt;&lt; EOF
+#!/bin/sh
+exec java -Xmx1g -jar ${CENTAUR_CWL_JAR} \$@
+EOF
+chmod a+x ${START_DIR}/centaur-cwl-runner
+### Editing this command? Also update https://ci.commonwl.org/job/cwl-spec-pr/configure
+(. venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh \
+  --junit-xml=${START_DIR}/result.xml -j$(($(nproc) / 2)) \
+  RUNNER=${START_DIR}/centaur-cwl-runner) || /bin/true
+set -e
+shutdownCromwell || /bin/true
+</command>
+    </hudson.tasks.Shell>
+  </builders>
+  <publishers>
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.26.1">
+      <testResults>**/result.xml</testResults>
+      <keepLongStdio>false</keepLongStdio>
+      <healthScaleFactor>1.0</healthScaleFactor>
+      <allowEmptyResults>false</allowEmptyResults>
+    </hudson.tasks.junit.JUnitResultArchiver>
+  </publishers>
+  <buildWrappers>
+    <hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@0.5.2">
+      <colorMapName>xterm</colorMapName>
+    </hudson.plugins.ansicolor.AnsiColorBuildWrapper>
+  </buildWrappers>
+</project>
