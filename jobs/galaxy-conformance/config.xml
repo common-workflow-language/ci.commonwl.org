@@ -70,14 +70,12 @@ venv() {
 }
 # hack for root owned files leaking from Cromwell
 CWLDIR=$PWD/common-workflow-language
-if [ -d &quot;${CWLDIR}/v1.0&quot; ];
-then
-	docker run --mount type=bind,source=${CWLDIR},destination=/cwl debian:latest rm -Rf /cwl/v1.0
-fi
 cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
 venv venv
 (. venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
 (. venv/bin/activate &amp;&amp; pip install --ignore-installed --verbose -U cwltest cwltool)
+
+bash scripts/run_for_cwl_conformance.bash
 
 shutdownGalaxy() {
     bash scripts/end_cwl_conformance.bash
