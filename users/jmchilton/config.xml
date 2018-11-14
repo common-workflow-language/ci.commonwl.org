@@ -27,7 +27,7 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.21">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.22">
       <emailAddress>jmchilton@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
@@ -45,7 +45,7 @@
       <providerId>default</providerId>
     </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAw2jWYmyQ1zVI3WUbgQdozXxp27DqWHXywNGpD7mKm+5XD47YYm9Y127u3DiQ+buIdoBV8+i0j8rgpFrMo++9nvA==}</accessToken>
+      <accessToken>{AQAAABAAAAAwTq/YA4mFnpVKKcqI0BjYDC6vdE+ugZt6uPE8RB2D2/zTUrPGkUrdcKGtrT+yVJNtCE3ePTNw32PRYVTUoNENkA==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
