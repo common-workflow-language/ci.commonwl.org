@@ -1,11 +1,7 @@
 <?xml version='1.1' encoding='UTF-8'?>
 <project>
   <actions/>
-  <description>&lt;p&gt;Testing the Broad Institute&apos;s &lt;a href=&quot;https://github.com/broadinstitute/cromwell&quot;&gt;Cromwell&lt;/a&gt; Workflow executor&#xd;
-against the &lt;a href=&quot;https://github.com/common-workflow-language/common-workflow-language/blob/master/CONFORMANCE_TESTS.md#common-workflow-language-conformance-test-suite&quot;&gt;&#xd;
-  CWL v1.0 conformance suite&lt;/a&gt;.&lt;/p&gt;&#xd;
-&lt;p&gt;&lt;a href=&apos;https://ci.commonwl.org/job/cromwell&apos;&gt;&lt;img src=&apos;https://ci.commonwl.org/buildStatus/icon?job=cromwell&apos;&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
-&lt;img src=&quot;https://github.com/broadinstitute/cromwell/raw/develop/docs/jamie_the_cromwell_pig.png&quot; /&gt;</description>
+  <description>Galaxy Conformance Tests</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -20,7 +16,7 @@ against the &lt;a href=&quot;https://github.com/common-workflow-language/common-
       <doNotScan>false</doNotScan>
     </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
     <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.3">
-      <projectUrl>https://github.com/broadinstitute/cromwell/</projectUrl>
+      <projectUrl>https://github.com/common-workflow-language/galaxy/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
     <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.29">
@@ -32,7 +28,7 @@ against the &lt;a href=&quot;https://github.com/common-workflow-language/common-
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
-        <url>https://github.com/broadinstitute/cromwell.git</url>
+        <url>https://github.com/common-workflow-language/galaxy.git</url>
       </hudson.plugins.git.UserRemoteConfig>
     </userRemoteConfigs>
     <branches>
