@@ -47,14 +47,6 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>cwltool/PR-805</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-949</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>cwltool/PR-800</string>
           <boolean>true</boolean>
         </entry>
@@ -80,6 +72,18 @@
         </entry>
         <entry>
           <string>cwltool/bump-yaml</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-974</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-805</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-949</string>
           <boolean>true</boolean>
         </entry>
       </data>
