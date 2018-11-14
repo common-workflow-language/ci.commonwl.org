@@ -83,45 +83,18 @@ venv venv
 (. venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
 (. venv/bin/activate &amp;&amp; pip install --ignore-installed --verbose -U cwltest cwltool)
 
-sbt -d -warn clean assembly
-CROMWELL_JAR=$(find &quot;$(pwd)/server/target/scala-2.12&quot; -name &quot;cromwell-*.jar&quot;)
-CENTAUR_CWL_JAR=$(find &quot;$(pwd)/centaurCwlRunner/target/scala-2.12&quot; -name &quot;centaur-cwl-runner-*.jar&quot;)
-shutdownCromwell() {
-    if [ -d &quot;${CWLDIR}&quot; ];
-	then
-		docker run --mount type=bind,source=${CWLDIR},destination=/cwl debian:latest rm -Rf /cwl/v1.0
-	fi
-    if [ -z &quot;${CROMWELL_PID}&quot; ]; then
-        kill -9 ${CROMWELL_PID}
-    fi
+shutdownGalaxy() {
+    bash scripts/end_cwl_conformance.bash
 }
-trap &quot;shutdownCromwell&quot; EXIT
+trap &quot;shutdownGalaxy&quot; EXIT
 
 START_DIR=$(pwd)
-cd common-workflow-language/v1.0/v1.0
-### Editing this command? Also update https://ci.commonwl.org/job/cwl-spec-pr/configure
-java \
-  -Xmx2g \
-  -Dsystem.new-workflow-poll-rate=1 \
-  -Dcwltool-runner.class=cwl.CwltoolProcess \
-  -Dbackend.providers.Local.config.script-epilogue=&quot;sleep 5 &amp;&amp; sync&quot; \
-  -Dsystem.job-shell=/bin/sh \
-  -jar ${CROMWELL_JAR} server &amp;
-CROMWELL_PID=$$
-
-sleep 10
-cd $START_DIR
-cat &gt; ${START_DIR}/centaur-cwl-runner &lt;&lt; EOF
-#!/bin/sh
-exec java -Xmx1g -jar ${CENTAUR_CWL_JAR} \$@
-EOF
-chmod a+x ${START_DIR}/centaur-cwl-runner
 ### Editing this command? Also update https://ci.commonwl.org/job/cwl-spec-pr/configure
 (. venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh \
-  --junit-xml=${START_DIR}/result.xml -j$(($(nproc) / 2)) \
-  RUNNER=${START_DIR}/centaur-cwl-runner) || /bin/true
+  --junit-xml=${START_DIR}/result.xml \
+  RUNNER=${START_DIR}/scripts/cwl-runner) || /bin/true
 set -e
-shutdownCromwell || /bin/true
+shutdownGalaxy || /bin/true
 </command>
     </hudson.tasks.Shell>
   </builders>
