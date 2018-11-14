@@ -75,7 +75,6 @@ venv venv
 (. venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
 (. venv/bin/activate &amp;&amp; pip install --ignore-installed --verbose -U cwltest cwltool)
 
-bash scripts/run_for_cwl_conformance.bash
 
 shutdownGalaxy() {
     bash scripts/end_cwl_conformance.bash
@@ -84,6 +83,9 @@ trap &quot;shutdownGalaxy&quot; EXIT
 
 START_DIR=$(pwd)
 GALAXY_SKIP_CLIENT_BUILD=1 sh scripts/common_startup.sh
+(. .venv/bin/activate &amp;&amp; pip install psycopg2)
+
+bash scripts/run_for_cwl_conformance.bash
 ### Editing this command? Also update https://ci.commonwl.org/job/cwl-spec-pr/configure
 (. venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh \
   --junit-xml=${START_DIR}/result.xml \
