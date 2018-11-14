@@ -27,15 +27,12 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.21">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.22">
       <emailAddress>stain@apache.org</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.2.0">
       <providerId>default</providerId>
     </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
-    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwzLcgNON4c56qODqrlIzR5J87cB9czzTbHyJYkQiIseO6BcNZo+yYxvJ0WIy82uoJF8iDRaIMkOZ9v7PQCFPMUA==}</accessToken>
-    </org.jenkinsci.plugins.GithubAccessTokenProperty>
     <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
       <autofavoriteEnabled>true</autofavoriteEnabled>
     </io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty>
@@ -59,5 +56,8 @@
         </entry>
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
+      <accessToken>{AQAAABAAAAAw0bAnxSdbBLDGJZAWRafUxpQU5kfCqQuwMDDKZXw5KSwFCCOYtkn0iRZGirWE1PvgnVGk9lxS5lQtLD0nloL7dg==}</accessToken>
+    </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
