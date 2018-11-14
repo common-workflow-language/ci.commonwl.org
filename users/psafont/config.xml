@@ -44,6 +44,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/prov_decoupling</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-926</string>
           <boolean>true</boolean>
         </entry>
