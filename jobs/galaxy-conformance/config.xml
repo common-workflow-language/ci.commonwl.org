@@ -85,7 +85,7 @@ shutdownGalaxy() {
 trap &quot;shutdownGalaxy&quot; EXIT
 
 START_DIR=$(pwd)
-sh scripts/common_startup.sh
+GALAXY_SKIP_CLIENT_BUILD=1 sh scripts/common_startup.sh
 ### Editing this command? Also update https://ci.commonwl.org/job/cwl-spec-pr/configure
 (. venv/bin/activate &amp;&amp; cd common-workflow-language &amp;&amp; ./run_test.sh \
   --junit-xml=${START_DIR}/result.xml \
