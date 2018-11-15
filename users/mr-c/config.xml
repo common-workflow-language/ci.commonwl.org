@@ -104,6 +104,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/tweak_singularity_test</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-826</string>
           <boolean>true</boolean>
         </entry>
