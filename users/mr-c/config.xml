@@ -126,7 +126,7 @@
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwIRGnkNpM8zzvqV+gCvMsFnkRt3Tuh81OToLDsKIz1vFC6TvBbgcANeQFiRBOsMvbfqBqXB8QXWSo9rZb6QXkOA==}</accessToken>
+      <accessToken>{AQAAABAAAAAwd+ZqYOY+NF01nJQwvMgm+m8ZzocImbzxsOJazMYPbL+wfl+rAtHSc8IMrfyvn9s3leJhBRXqBgPIVcXop054vw==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
