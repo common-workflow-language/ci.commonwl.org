@@ -128,6 +128,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/cwl-requirement_fix_and_test</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/writablefile_delete</string>
           <boolean>true</boolean>
         </entry>
