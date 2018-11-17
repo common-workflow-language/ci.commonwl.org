@@ -108,6 +108,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/v1.1.0-dev1_user_reqs</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/tweak_singularity_test</string>
           <boolean>true</boolean>
         </entry>
