@@ -132,6 +132,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/file_literal_fix</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/cwl-requirement_fix_and_test</string>
           <boolean>true</boolean>
         </entry>
