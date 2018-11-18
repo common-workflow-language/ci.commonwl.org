@@ -92,6 +92,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/add_cwltool-requirements_inputfield</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-616</string>
           <boolean>true</boolean>
         </entry>
