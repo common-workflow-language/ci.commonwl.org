@@ -64,14 +64,6 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
       <data class="concurrent-hash-map">
         <entry>
-          <string>cwltool/PR-980</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-981</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>cwltool/PR-894</string>
           <boolean>true</boolean>
         </entry>
@@ -96,10 +88,6 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>cwltool/add_cwltool-requirements_inputfield</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>cwltool/PR-616</string>
           <boolean>true</boolean>
         </entry>
@@ -108,16 +96,48 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>cwltool/PR-884</string>
+          <string>cwltool/PR-896</string>
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>cwltool/PR-896</string>
+          <string>cwltool/tweak_singularity_test</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/master</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-739</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/cwl-requirement_fix_and_test</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-980</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-981</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/add_cwltool-requirements_inputfield</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-884</string>
           <boolean>true</boolean>
         </entry>
         <entry>
           <string>cwltool/jenkinsfile-conformance</string>
           <boolean>false</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/jenkinsfile_upgrade_windebug</string>
+          <boolean>true</boolean>
         </entry>
         <entry>
           <string>cwltool/jenkinsfile_upgrade</string>
@@ -128,27 +148,11 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>cwltool/tweak_singularity_test</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>cwltool/PR-826</string>
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>cwltool/PR-739</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/master</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>cwltool/file_literal_fix</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/cwl-requirement_fix_and_test</string>
           <boolean>true</boolean>
         </entry>
         <entry>
