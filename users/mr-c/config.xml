@@ -132,10 +132,6 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>cwltool/jenkinsfile-conformance</string>
-          <boolean>false</boolean>
-        </entry>
-        <entry>
           <string>cwltool/jenkinsfile_upgrade_windebug</string>
           <boolean>true</boolean>
         </entry>
@@ -149,10 +145,6 @@
         </entry>
         <entry>
           <string>cwltool/PR-826</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/file_literal_fix</string>
           <boolean>true</boolean>
         </entry>
         <entry>
