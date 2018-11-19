@@ -14,7 +14,12 @@
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
-      <data class="concurrent-hash-map"/>
+      <data class="concurrent-hash-map">
+        <entry>
+          <string>cwltool/PR-982</string>
+          <boolean>true</boolean>
+        </entry>
+      </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.model.MyViewsProperty>
       <views>
