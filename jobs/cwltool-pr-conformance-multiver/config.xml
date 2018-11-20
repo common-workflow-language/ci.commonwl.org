@@ -71,7 +71,7 @@
       <onlyTriggerPhrase>false</onlyTriggerPhrase>
       <useGitHubHooks>true</useGitHubHooks>
       <permitAll>false</permitAll>
-      <whitelist> kmhernan prismofeverything alexbarrera samuell hmenager chapmanb jeremiahsavage kellrott psafont gijzelaerr kapilkd13 michael-kotliar lijiayong ctb jxtx tiborsimko ThomasHickman pvanheus bogdang989 anowlcalledjosh</whitelist>
+      <whitelist> kmhernan prismofeverything alexbarrera samuell hmenager chapmanb jeremiahsavage kellrott psafont gijzelaerr kapilkd13 michael-kotliar lijiayong ctb jxtx tiborsimko ThomasHickman pvanheus bogdang989 anowlcalledjosh davidjsherman</whitelist>
       <autoCloseFailedPullRequests>false</autoCloseFailedPullRequests>
       <displayBuildErrorsOnDownstreamBuilds>false</displayBuildErrorsOnDownstreamBuilds>
       <whiteListTargetBranches>
@@ -126,7 +126,7 @@
     </hudson.tasks.junit.JUnitResultArchiver>
   </publishers>
   <buildWrappers>
-    <org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper plugin="credentials-binding@1.16">
+    <org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper plugin="credentials-binding@1.17">
       <bindings>
         <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
           <credentialsId>codecov_cwltool</credentialsId>
