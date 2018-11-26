@@ -58,7 +58,11 @@
         </branches>
         <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
         <submoduleCfg class="list"/>
-        <extensions/>
+        <extensions>
+          <hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+            <relativeTargetDir>common-workflow-language</relativeTargetDir>
+          </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
+        </extensions>
       </hudson.plugins.git.GitSCM>
     </scms>
   </scm>
@@ -76,21 +80,13 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>cloneorpull() {
-        if test -d $1 ; then
-                (cd $1 &amp;&amp; git stash &amp;&amp; git clean -fd &amp;&amp; git pull &amp;&amp; git status)
-        else
-                git clone $2
-        fi
-}
-venv() {
+      <command>venv() {
         if ! test -d $1 ; then
                 virtualenv -p python3 &quot;$1&quot;
         fi
         . $1/bin/activate
 }
 export AIRFLOW_GPL_UNIDECODE=true
-cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
 venv cwltool-venv3
 (. cwltool-venv3/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip3 install -U setuptools wheel pip)
 git submodule update --init --recursive
