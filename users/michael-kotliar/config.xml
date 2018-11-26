@@ -37,7 +37,7 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.21">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.22">
       <emailAddress>misha.kotliar@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
@@ -47,7 +47,7 @@
       <data class="concurrent-hash-map"/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwl2yuzD96KHqBHSRO63O/pv3Vz/sBF9FMUOtP9838h9HHl903kBp2XfwVK3ec2LGkRqkbAFWVk1hpeVD38+uThQ==}</accessToken>
+      <accessToken>{AQAAABAAAAAwLEf8UYJGcC/Mz80W7Ro9WQv9t3C3m335rAHY2Kt2cfB3yQfJDOTJBWvTCCp3cNrjnqHoIWnnuuS7Ft6xM7uDbw==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
