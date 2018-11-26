@@ -47,6 +47,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/add-size</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-800</string>
           <boolean>true</boolean>
         </entry>
