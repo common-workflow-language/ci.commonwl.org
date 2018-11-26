@@ -3,7 +3,7 @@
   <actions/>
   <description>&lt;p&gt;Toil is a scalable, efficient, cross-platform pipeline management system, written entirely in Python, and designed around the principles of functional programming.&lt;/p&gt;&#xd;
 &#xd;
-&lt;a href=&quot;https://github.com/BD2KGenomics/toil&quot;&gt;https://github.com/BD2KGenomics/toil&lt;/a&gt;</description>
+&lt;a href=&quot;https://github.com/DataBiosphere/toil&quot;&gt;https://github.com/DataBiosphere/toil&lt;/a&gt;</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
