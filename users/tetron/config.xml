@@ -67,6 +67,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/less-deep-copy</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/workflowstep-hook</string>
           <boolean>true</boolean>
         </entry>
