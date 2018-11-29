@@ -124,6 +124,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/schema_salad_v3</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-987</string>
           <boolean>true</boolean>
         </entry>
