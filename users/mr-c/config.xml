@@ -100,6 +100,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/PR-994</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-896</string>
           <boolean>true</boolean>
         </entry>
