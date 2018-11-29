@@ -104,6 +104,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/nested_anonymous_types</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/tweak_singularity_test</string>
           <boolean>true</boolean>
         </entry>
