@@ -83,7 +83,7 @@ venv venv
 (. venv/bin/activate &amp;&amp; pip install -U setuptools wheel pip)
 (. venv/bin/activate &amp;&amp; pip install --ignore-installed --verbose -U cwltest cwltool)
 
-sbt -d -warn clean assembly
+sbt -J-Xms2g -J-Xmx4g -J-XX:MaxMetaspaceSize=2g -J-Xss8m -d -warn clean assembly
 CROMWELL_JAR=$(find &quot;$(pwd)/server/target/scala-2.12&quot; -name &quot;cromwell-*.jar&quot;)
 CENTAUR_CWL_JAR=$(find &quot;$(pwd)/centaurCwlRunner/target/scala-2.12&quot; -name &quot;centaur-cwl-runner-*.jar&quot;)
 shutdownCromwell() {
