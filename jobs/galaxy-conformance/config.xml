@@ -36,7 +36,7 @@
         </userRemoteConfigs>
         <branches>
           <hudson.plugins.git.BranchSpec>
-            <name>refs/remotes/origin/cwl-v1.0</name>
+            <name>refs/remotes/origin/cwl-1.0</name>
           </hudson.plugins.git.BranchSpec>
         </branches>
         <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
