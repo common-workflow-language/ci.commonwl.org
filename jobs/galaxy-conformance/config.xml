@@ -30,12 +30,13 @@
         <configVersion>2</configVersion>
         <userRemoteConfigs>
           <hudson.plugins.git.UserRemoteConfig>
+            <name>origin</name>
             <url>https://github.com/common-workflow-language/galaxy.git</url>
           </hudson.plugins.git.UserRemoteConfig>
         </userRemoteConfigs>
         <branches>
           <hudson.plugins.git.BranchSpec>
-            <name>refs/heads/cwl-v1.0</name>
+            <name>refs/remotes/origin/cwl-v1.0</name>
           </hudson.plugins.git.BranchSpec>
         </branches>
         <doGenerateSubmoduleConfigurations>false</doGenerateSubmoduleConfigurations>
