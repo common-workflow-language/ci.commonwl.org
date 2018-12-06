@@ -57,7 +57,7 @@
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.22">
       <emailAddress>michael.crusoe@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
-    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.2.0">
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.0">
       <providerId>default</providerId>
     </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
     <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
@@ -176,7 +176,7 @@
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwhFcirr7Hr+S9U7XSlW/VcsBvW1SbIVeDMQGyoKKBKW+7IETdGSeLDExUrWdOQhKMqDyg/cV330qJIpMHIc8UgA==}</accessToken>
+      <accessToken>{AQAAABAAAAAwdjrgfjMhMSCy+IhL/78yYEuf4lvRmZInj3uGLBq97/oDfpOp8xcyh8w5swIxRemA+LoPH+43eRvn16MD2xyGlQ==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
