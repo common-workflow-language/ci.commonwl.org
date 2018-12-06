@@ -1,0 +1,182 @@
+<?xml version='1.1' encoding='UTF-8'?>
+<user>
+  <version>10</version>
+  <id>mr-c</id>
+  <fullName>Michael R. Crusoe</fullName>
+  <properties>
+    <jenkins.security.ApiTokenProperty>
+      <tokenStore>
+        <tokenList/>
+      </tokenStore>
+    </jenkins.security.ApiTokenProperty>
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
+      <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
+        <entry>
+          <com.cloudbees.plugins.credentials.domains.Domain>
+            <specifications/>
+          </com.cloudbees.plugins.credentials.domains.Domain>
+          <java.util.concurrent.CopyOnWriteArrayList/>
+        </entry>
+        <entry>
+          <com.cloudbees.plugins.credentials.domains.Domain>
+            <name>blueocean-github-domain</name>
+            <description>blueocean-github-domain to store credentials by BlueOcean</description>
+            <specifications>
+              <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanDomainSpecification plugin="blueocean-pipeline-scm-api@1.9.0"/>
+            </specifications>
+          </com.cloudbees.plugins.credentials.domains.Domain>
+          <list>
+            <com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+              <scope>USER</scope>
+              <id>github</id>
+              <description>GitHub Access Token</description>
+              <username>mr-c</username>
+              <password>{AQAAABAAAAAwZCKz8mhG0rVzTQnj2XPPBE1bRob3/jp6c2P4o1MtVh32YE1wdiardbgrjX6OYdG+2ov+5yRuLf2ntpkraj5HgQ==}</password>
+            </com.cloudbees.plugins.credentials.impl.UsernamePasswordCredentialsImpl>
+          </list>
+        </entry>
+      </domainCredentialsMap>
+    </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
+    <hudson.model.MyViewsProperty>
+      <views>
+        <hudson.model.AllView>
+          <owner class="hudson.model.MyViewsProperty" reference="../../.."/>
+          <name>All</name>
+          <filterExecutors>false</filterExecutors>
+          <filterQueue>false</filterQueue>
+          <properties class="hudson.model.View$PropertyList"/>
+        </hudson.model.AllView>
+      </views>
+    </hudson.model.MyViewsProperty>
+    <hudson.model.PaneStatusProperties>
+      <collapsed/>
+    </hudson.model.PaneStatusProperties>
+    <hudson.search.UserSearchProperty>
+      <insensitiveSearch>false</insensitiveSearch>
+    </hudson.search.UserSearchProperty>
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.22">
+      <emailAddress>michael.crusoe@gmail.com</emailAddress>
+    </hudson.tasks.Mailer_-UserProperty>
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.2.0">
+      <providerId>default</providerId>
+    </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
+    <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
+      <autofavoriteEnabled>true</autofavoriteEnabled>
+    </io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty>
+    <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
+      <data class="concurrent-hash-map">
+        <entry>
+          <string>cwltool/PR-990</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-894</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-971</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/default_no_cidfile_creation</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwl-website</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-976</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-956</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-616</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-979</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-994</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-896</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/nested_anonymous_types</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/tweak_singularity_test</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/master</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-739</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/cwl-requirement_fix_and_test</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-980</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-981</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/schema_salad_v3</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-987</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/add_cwltool-requirements_inputfield</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-884</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/jenkinsfile_upgrade_windebug</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/jenkinsfile_upgrade</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/v1.1.0-dev1_user_reqs</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/PR-826</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
+          <string>cwltool/writablefile_delete</string>
+          <boolean>true</boolean>
+        </entry>
+      </data>
+    </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
+      <accessToken>{AQAAABAAAAAwhFcirr7Hr+S9U7XSlW/VcsBvW1SbIVeDMQGyoKKBKW+7IETdGSeLDExUrWdOQhKMqDyg/cV330qJIpMHIc8UgA==}</accessToken>
+    </org.jenkinsci.plugins.GithubAccessTokenProperty>
+  </properties>
+</user>
