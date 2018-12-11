@@ -21,6 +21,10 @@
           <string>cwltool/PR-947</string>
           <boolean>true</boolean>
         </entry>
+        <entry>
+          <string>cwltool/mem_monitoring_non_docker</string>
+          <boolean>true</boolean>
+        </entry>
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.model.MyViewsProperty>
