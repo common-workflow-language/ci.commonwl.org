@@ -86,6 +86,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/temp_cidfile_cleanup</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-976</string>
           <boolean>true</boolean>
         </entry>
