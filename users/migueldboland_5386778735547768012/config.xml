@@ -18,6 +18,10 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
       <data class="concurrent-hash-map">
         <entry>
+          <string>cwltool/fix_udocker_cid_file_arg</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-1006</string>
           <boolean>true</boolean>
         </entry>
