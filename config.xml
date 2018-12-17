@@ -196,7 +196,7 @@
       <properties>
         <hudson.tools.InstallSourceProperty>
           <installers>
-            <hudson.tools.JDKInstaller plugin="jdk-tool@1.1">
+            <hudson.tools.JDKInstaller plugin="jdk-tool@1.2">
               <id>jdk-8u121-oth-JPR</id>
               <acceptLicense>true</acceptLicense>
             </hudson.tools.JDKInstaller>
