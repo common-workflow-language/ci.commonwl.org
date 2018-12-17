@@ -105,6 +105,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/PR-1019</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-805</string>
           <boolean>true</boolean>
         </entry>
@@ -114,7 +118,7 @@
         </entry>
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
+    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.31">
       <accessToken>{AQAAABAAAAAwL1BOjFNrADwjz4PQGQSX6Q8tcOTXTAmz4J63ReXFMhMJr5IYe2DnuUnmT8fOd+gyyN0XZMzHMErERzNdTd8iOQ==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
