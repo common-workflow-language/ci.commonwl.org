@@ -182,6 +182,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/coc</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/writablefile_delete</string>
           <boolean>true</boolean>
         </entry>
