@@ -150,6 +150,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/add_exec_line</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/add_cwltool-requirements_inputfield</string>
           <boolean>true</boolean>
         </entry>
