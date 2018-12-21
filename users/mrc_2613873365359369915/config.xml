@@ -130,6 +130,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/spelling_typo</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/cleanup_test_output</string>
           <boolean>true</boolean>
         </entry>
