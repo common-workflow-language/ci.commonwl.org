@@ -167,7 +167,7 @@ docker volume prune -f</command>
       <allowEmptyResults>false</allowEmptyResults>
     </hudson.tasks.junit.JUnitResultArchiver>
     <hudson.tasks.Mailer plugin="mailer@1.22">
-      <recipients>wilke@anl.gov</recipients>
+      <recipients>wilke@anl.gov, wgerlach@mcs.anl.gov</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
