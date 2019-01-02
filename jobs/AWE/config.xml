@@ -170,7 +170,7 @@ cd $base_dir
 touch result.xml
 docker run \
     --rm \
-    --network compose_default \
+    --network skyport2 \
     --name mgrast_cwl_submitter \
     --volume `pwd`/result.xml:/output/result.xml \
     mgrast/cwl-submitter:test \
