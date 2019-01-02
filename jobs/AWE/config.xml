@@ -107,13 +107,11 @@ docker ps
 
 base_dir=`pwd`
 
-
+cd $base_dir/Skyport2
 rm -f docker-compose.yaml
 ln -s Docker/Compose/skyport-awe-testing.yaml docker-compose.yaml
 
-
 # Clean up
-cd $base_dir/Skyport2
 if [ -e ./skyport2.env ] ; then
   . ./skyport2.env
   docker-compose down
