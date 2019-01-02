@@ -122,7 +122,8 @@ docker rm -f mgrast_cwl_submitter
 
 
 echo &quot;Deleting live-data&quot;
-docker run --rm --volume `pwd`/live-data:/live-data bash rm -rf /live-data/*
+
+docker run --rm --volume `pwd`:/tmp/workspace bash rm -rf /tmp/workspace/live-data
 # ls -l live-data
 docker volume prune -f
 
