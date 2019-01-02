@@ -14,38 +14,46 @@
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:geoffjentry</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:jmchilton</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:mr-c</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:wgerlach</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:common-workflow-language*Owners</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:geoffjentry</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:jmchilton</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:mr-c</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:wgerlach</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:common-workflow-language*Owners</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:geoffjentry</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:jmchilton</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:mr-c</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:wgerlach</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:common-workflow-language*Owners</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:geoffjentry</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:jmchilton</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:mr-c</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:wgerlach</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:common-workflow-language*Owners</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:geoffjentry</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:jmchilton</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:mr-c</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:wgerlach</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:authenticated</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:common-workflow-language*Owners</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:geoffjentry</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:jmchilton</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:mr-c</permission>
+    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:wgerlach</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:authenticated</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:common-workflow-language*Owners</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:geoffjentry</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:jmchilton</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:mr-c</permission>
+    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:wgerlach</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:anonymous</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:authenticated</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:common-workflow-language*Owners</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:geoffjentry</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:jmchilton</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:mr-c</permission>
+    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:wgerlach</permission>
     <permission>hudson.model.Computer.Build:common-workflow-language*Owners</permission>
     <permission>hudson.model.Computer.Build:geoffjentry</permission>
     <permission>hudson.model.Computer.Build:jmchilton</permission>
@@ -80,100 +88,121 @@
     <permission>hudson.model.Hudson.Read:geoffjentry</permission>
     <permission>hudson.model.Hudson.Read:jmchilton</permission>
     <permission>hudson.model.Hudson.Read:mr-c</permission>
+    <permission>hudson.model.Hudson.Read:wgerlach</permission>
     <permission>hudson.model.Item.Build:authenticated</permission>
     <permission>hudson.model.Item.Build:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Build:geoffjentry</permission>
     <permission>hudson.model.Item.Build:jmchilton</permission>
     <permission>hudson.model.Item.Build:mr-c</permission>
+    <permission>hudson.model.Item.Build:wgerlach</permission>
     <permission>hudson.model.Item.Cancel:authenticated</permission>
     <permission>hudson.model.Item.Cancel:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Cancel:geoffjentry</permission>
     <permission>hudson.model.Item.Cancel:jmchilton</permission>
     <permission>hudson.model.Item.Cancel:mr-c</permission>
+    <permission>hudson.model.Item.Cancel:wgerlach</permission>
     <permission>hudson.model.Item.Configure:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Configure:geoffjentry</permission>
     <permission>hudson.model.Item.Configure:jmchilton</permission>
     <permission>hudson.model.Item.Configure:mr-c</permission>
+    <permission>hudson.model.Item.Configure:wgerlach</permission>
     <permission>hudson.model.Item.Create:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Create:geoffjentry</permission>
     <permission>hudson.model.Item.Create:jmchilton</permission>
     <permission>hudson.model.Item.Create:mr-c</permission>
+    <permission>hudson.model.Item.Create:wgerlach</permission>
     <permission>hudson.model.Item.Delete:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Delete:geoffjentry</permission>
     <permission>hudson.model.Item.Delete:jmchilton</permission>
     <permission>hudson.model.Item.Delete:mr-c</permission>
+    <permission>hudson.model.Item.Delete:wgerlach</permission>
     <permission>hudson.model.Item.Discover:anonymous</permission>
     <permission>hudson.model.Item.Discover:authenticated</permission>
     <permission>hudson.model.Item.Discover:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Discover:geoffjentry</permission>
     <permission>hudson.model.Item.Discover:jmchilton</permission>
     <permission>hudson.model.Item.Discover:mr-c</permission>
+    <permission>hudson.model.Item.Discover:wgerlach</permission>
     <permission>hudson.model.Item.Move:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Move:geoffjentry</permission>
     <permission>hudson.model.Item.Move:jmchilton</permission>
     <permission>hudson.model.Item.Move:mr-c</permission>
+    <permission>hudson.model.Item.Move:wgerlach</permission>
     <permission>hudson.model.Item.Read:anonymous</permission>
     <permission>hudson.model.Item.Read:authenticated</permission>
     <permission>hudson.model.Item.Read:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Read:geoffjentry</permission>
     <permission>hudson.model.Item.Read:jmchilton</permission>
     <permission>hudson.model.Item.Read:mr-c</permission>
+    <permission>hudson.model.Item.Read:wgerlach</permission>
     <permission>hudson.model.Item.ViewStatus:anonymous</permission>
     <permission>hudson.model.Item.ViewStatus:authenticated</permission>
     <permission>hudson.model.Item.ViewStatus:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.ViewStatus:geoffjentry</permission>
     <permission>hudson.model.Item.ViewStatus:jmchilton</permission>
     <permission>hudson.model.Item.ViewStatus:mr-c</permission>
+    <permission>hudson.model.Item.ViewStatus:wgerlach</permission>
     <permission>hudson.model.Item.Workspace:authenticated</permission>
     <permission>hudson.model.Item.Workspace:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Workspace:geoffjentry</permission>
     <permission>hudson.model.Item.Workspace:jmchilton</permission>
     <permission>hudson.model.Item.Workspace:mr-c</permission>
+    <permission>hudson.model.Item.Workspace:wgerlach</permission>
     <permission>hudson.model.Run.Delete:common-workflow-language*Owners</permission>
     <permission>hudson.model.Run.Delete:geoffjentry</permission>
     <permission>hudson.model.Run.Delete:jmchilton</permission>
     <permission>hudson.model.Run.Delete:mr-c</permission>
+    <permission>hudson.model.Run.Delete:wgerlach</permission>
     <permission>hudson.model.Run.Replay:common-workflow-language*Owners</permission>
     <permission>hudson.model.Run.Replay:geoffjentry</permission>
     <permission>hudson.model.Run.Replay:jmchilton</permission>
     <permission>hudson.model.Run.Replay:mr-c</permission>
+    <permission>hudson.model.Run.Replay:wgerlach</permission>
     <permission>hudson.model.Run.Update:common-workflow-language*Owners</permission>
     <permission>hudson.model.Run.Update:geoffjentry</permission>
     <permission>hudson.model.Run.Update:jmchilton</permission>
     <permission>hudson.model.Run.Update:mr-c</permission>
+    <permission>hudson.model.Run.Update:wgerlach</permission>
     <permission>hudson.model.View.Configure:authenticated</permission>
     <permission>hudson.model.View.Configure:common-workflow-language*Owners</permission>
     <permission>hudson.model.View.Configure:geoffjentry</permission>
     <permission>hudson.model.View.Configure:jmchilton</permission>
     <permission>hudson.model.View.Configure:mr-c</permission>
+    <permission>hudson.model.View.Configure:wgerlach</permission>
     <permission>hudson.model.View.Create:authenticated</permission>
     <permission>hudson.model.View.Create:common-workflow-language*Owners</permission>
     <permission>hudson.model.View.Create:geoffjentry</permission>
     <permission>hudson.model.View.Create:jmchilton</permission>
     <permission>hudson.model.View.Create:mr-c</permission>
+    <permission>hudson.model.View.Create:wgerlach</permission>
     <permission>hudson.model.View.Delete:authenticated</permission>
     <permission>hudson.model.View.Delete:common-workflow-language*Owners</permission>
     <permission>hudson.model.View.Delete:geoffjentry</permission>
     <permission>hudson.model.View.Delete:jmchilton</permission>
     <permission>hudson.model.View.Delete:mr-c</permission>
+    <permission>hudson.model.View.Delete:wgerlach</permission>
     <permission>hudson.model.View.Read:anonymous</permission>
     <permission>hudson.model.View.Read:authenticated</permission>
     <permission>hudson.model.View.Read:common-workflow-language*Owners</permission>
     <permission>hudson.model.View.Read:geoffjentry</permission>
     <permission>hudson.model.View.Read:jmchilton</permission>
     <permission>hudson.model.View.Read:mr-c</permission>
+    <permission>hudson.model.View.Read:wgerlach</permission>
     <permission>hudson.scm.SCM.Tag:common-workflow-language*Owners</permission>
     <permission>hudson.scm.SCM.Tag:geoffjentry</permission>
     <permission>hudson.scm.SCM.Tag:jmchilton</permission>
     <permission>hudson.scm.SCM.Tag:mr-c</permission>
+    <permission>hudson.scm.SCM.Tag:wgerlach</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:common-workflow-language*Owners</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:geoffjentry</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:jmchilton</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:mr-c</permission>
+    <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:wgerlach</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock:common-workflow-language*Owners</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock:geoffjentry</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock:jmchilton</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock:mr-c</permission>
+    <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock:wgerlach</permission>
   </authorizationStrategy>
   <securityRealm class="org.jenkinsci.plugins.GithubSecurityRealm">
     <githubWebUri>https://github.com</githubWebUri>
