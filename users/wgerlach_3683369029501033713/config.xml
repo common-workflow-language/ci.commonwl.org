@@ -27,7 +27,12 @@
       <emailAddress>wgerlach@mcs.anl.gov</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
-      <data class="concurrent-hash-map"/>
+      <data class="concurrent-hash-map">
+        <entry>
+          <string>AWE</string>
+          <boolean>true</boolean>
+        </entry>
+      </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.31">
       <accessToken>{AQAAABAAAAAwMkUpfSP0zm32fVOPPbkPwaGXpcaT5L4O6LAnUtWhuuCFEIBoSChlpVVadJYQfLzW7mTYUPKfUwIm9zx1qYxMQw==}</accessToken>
