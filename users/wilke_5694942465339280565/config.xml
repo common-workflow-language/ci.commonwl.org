@@ -42,7 +42,7 @@
       <emailAddress>wilke@mcs.anl.gov</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.31">
-      <accessToken>{AQAAABAAAAAwQB/fHF598ApCD1aAcTGJJ6e6MwYj7PPUfK74/t4HjqzkIauVlqCE0zv0wm6mF+hXlhUdQQL1X7hUL9SW42nDqA==}</accessToken>
+      <accessToken>{AQAAABAAAAAwEF5AOqfUHViRgJC8NtoCOL33xHp+lNc9yQxzO4HwuEDZPE65+ljKAFurifpmnmpey6/DE5QW3YFZ/Ul61kXEDw==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
