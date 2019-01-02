@@ -139,8 +139,13 @@ docker ps
 
 # Build container
 cd $base_dir/AWE
+set +x
 echo Building AWE Container
-git branch 
+set -x
+
+git branch -v
+git remote -v
+git describe
 
 USE_CACHE=&quot;--no-cache&quot;
 USE_CACHE=&quot;&quot; #speed-up for debugging purposes 
