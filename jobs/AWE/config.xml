@@ -120,6 +120,7 @@ if [ -e ./skyport2.env ] ; then
 fi
 docker rm -f $(docker ps -a -f name=skyport2_ -q)
 docker rm -f $(docker ps -a -f name=compose_ -q)
+docker rm -f mgrast_cwl_submitter
 
 
 echo &quot;Deleting live-data&quot;
