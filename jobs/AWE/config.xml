@@ -119,6 +119,14 @@ echo &quot;Deleting live-data&quot;
 docker run --rm --volume `pwd`/live-data:/live-data bash rm -rf /live-data/*
 # ls -l live-data
 docker volume prune -f
+
+
+set +x
+echo &quot;clean-up done&quot;
+set -x
+
+docker ps
+
 . ./init.sh
 #. ./skyport2.env
 
@@ -126,12 +134,16 @@ docker volume prune -f
 cd $base_dir/AWE
 echo Building AWE Container
 git branch 
-docker build --no-cache -t mgrast/awe:test -f Dockerfile .
-docker build --no-cache -t mgrast/awe-worker:test -f Dockerfile_worker .
-docker build --no-cache -t mgrast/awe-submitter:test -f Dockerfile_submitter .
+
+USE_CACHE=&quot;--no-cache&quot;
+USE_CACHE=&quot;&quot; #speed-up for debugging purposes 
+
+docker build ${USE_CACHE} -t mgrast/awe:test -f Dockerfile .
+docker build ${USE_CACHE} -t mgrast/awe-worker:test -f Dockerfile_worker .
+docker build ${USE_CACHE} -t mgrast/awe-submitter:test -f Dockerfile_submitter .
 cd $base_dir/Skyport2
 docker run --rm --volume `pwd`:/Skyport2 bash rm -rf /Skyport2/tmp
-docker build --no-cache -t mgrast/cwl-submitter:test -f Docker/Dockerfiles/cwl-test-submitter.dockerfile .
+docker build ${USE_CACHE} -t mgrast/cwl-submitter:test -f Docker/Dockerfiles/cwl-test-submitter.dockerfile .
 
 echo &quot;docker builds complete&quot;
 sleep 5
@@ -141,6 +153,10 @@ sleep 5
 # docker-compose down
 ## TEST COMES HERE
 # docker-compose -f Docker/Compose/skyport-awe-testing.yaml down
+
+docker ps
+
+sleep 1
 
 docker-compose up -d
 cd $base_dir
@@ -153,12 +169,14 @@ docker run \
     mgrast/cwl-submitter:test \
     --junit-xml=/output/result.xml \
     --timeout=120
-    
+
+
 # Clean up
 cd $base_dir/Skyport2
 docker-compose down
 docker run --rm --volume `pwd`/live-data:/live-data bash rm -rf /live-data/*
-docker volume prune -f</command>
+docker volume prune -f
+</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
