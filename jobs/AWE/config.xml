@@ -95,7 +95,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>#!/bin/bash
-
+set -x
 echo $SHELL
 
 
