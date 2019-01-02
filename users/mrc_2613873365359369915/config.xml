@@ -198,6 +198,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/PR-1028</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-1005</string>
           <boolean>true</boolean>
         </entry>
