@@ -1,9 +1,9 @@
 <?xml version='1.1' encoding='UTF-8'?>
-<jenkins.plugins.shiningpanda.tools.PythonInstallation_-DescriptorImpl plugin="shiningpanda@0.23">
+<jenkins.plugins.shiningpanda.tools.PythonInstallation_-DescriptorImpl plugin="shiningpanda@0.24">
   <installations>
     <jenkins.plugins.shiningpanda.tools.PythonInstallation>
-      <name>Windows-CPython-36</name>
-      <home>C:\Program Files\Python36\</home>
+      <name>Windows-CPython-37</name>
+      <home>C:\Program Files\Python37\</home>
       <properties/>
     </jenkins.plugins.shiningpanda.tools.PythonInstallation>
     <jenkins.plugins.shiningpanda.tools.PythonInstallation>
