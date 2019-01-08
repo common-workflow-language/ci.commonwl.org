@@ -22,7 +22,7 @@
             <name>blueocean-github-domain</name>
             <description>blueocean-github-domain to store credentials by BlueOcean</description>
             <specifications>
-              <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanDomainSpecification plugin="blueocean-pipeline-scm-api@1.9.0"/>
+              <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanDomainSpecification plugin="blueocean-pipeline-scm-api@1.10.1"/>
             </specifications>
           </com.cloudbees.plugins.credentials.domains.Domain>
           <list>
@@ -54,7 +54,7 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.22">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.23">
       <emailAddress>michael.crusoe@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.0">
@@ -224,7 +224,7 @@
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.31">
-      <accessToken>{AQAAABAAAAAwY620iKATYc12e3himXd6yvmJHqMO45kvITq0gNsHQkX8RvaGIrRgTuT6aI6S2HK7qZztbynCJXgwLSACBLBpBw==}</accessToken>
+      <accessToken>{AQAAABAAAAAw447fc4ua3KJqzJQnmx+IOGiWim5uYERaq47sFUcg2YaTN4Idk2ePM/bQNgZfT9ccgRgEj2MdP5zvbTvmoJfD6g==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
