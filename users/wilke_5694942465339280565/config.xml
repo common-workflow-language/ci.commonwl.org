@@ -38,11 +38,11 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>true</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.22">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.23">
       <emailAddress>wilke@mcs.anl.gov</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.31">
-      <accessToken>{AQAAABAAAAAwWoKXQNRHptjgw9qNBEqhux1SOLg8h4ZJqP3U9He6LOX4jCmd02LbIpzdHU3jZByRzf3db+5L6dTBR9jL7xYm/Q==}</accessToken>
+      <accessToken>{AQAAABAAAAAwQq4Foe9WpzNs409wefZHa1ljl/rpJPRnpDsXsBBGxIXpYJ1ha5y5l8t4gWE5dEiyUh0gdb/J2dKqdFIl8e9wOg==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
