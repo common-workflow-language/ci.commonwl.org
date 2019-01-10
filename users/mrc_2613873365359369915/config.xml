@@ -114,6 +114,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/PR-1034</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/nested_anonymous_types</string>
           <boolean>true</boolean>
         </entry>
