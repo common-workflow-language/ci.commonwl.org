@@ -29,7 +29,7 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.22">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.23">
       <emailAddress>tetron@interreality.org</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.0">
@@ -119,7 +119,7 @@
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.31">
-      <accessToken>{AQAAABAAAAAw3ZPi93YskO0UvFeA/WWyTc0RP9Jh8PUCHNx5085M/6xEY9r1Y5YcrQeT6gMLk0Sw+2rrGomT3dba41giDHR2rA==}</accessToken>
+      <accessToken>{AQAAABAAAAAwKAt7QBRFnJt93HpCbgLXvGXEn8kMLVze8neos17xRFlGeTMnajNXmEeDgvoYCwA4z32FVt0n5xSG1LfXdOtC7Q==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
