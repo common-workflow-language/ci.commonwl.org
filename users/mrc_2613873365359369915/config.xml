@@ -235,8 +235,11 @@
         </entry>
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
+    <jenkins.security.seed.UserSeedProperty>
+      <seed>c47aaeddfc5a6a58</seed>
+    </jenkins.security.seed.UserSeedProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.31">
-      <accessToken>{AQAAABAAAAAwvS+r1m9so7j5U7YMGVL7bsz1cyHNJDT2WWDW8/zbOzGnwQQPO6lGu0uvHWcWDDdbYEW0RfSlA56kqvamCoKL2A==}</accessToken>
+      <accessToken>{AQAAABAAAAAwlK2wboJOjyvKRENYFnDvIV6TKPysWuhgpkepeLiKx69n0uheGq3rFMDIHSL3jjJyZyFZL/eFlVc4lqYBkIvVFQ==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
