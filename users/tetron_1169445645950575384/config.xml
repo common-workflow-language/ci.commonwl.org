@@ -126,11 +126,11 @@
         </entry>
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.31">
-      <accessToken>{AQAAABAAAAAwAh9ohMXjm2jRMJLQISPAs0Z+b3BKjXUBT4knGlOiuBkj3F2aCUlGwjOd5bzT2bfQCTOeH2w8e8TutJN7mO64Cw==}</accessToken>
-    </org.jenkinsci.plugins.GithubAccessTokenProperty>
     <jenkins.security.seed.UserSeedProperty>
       <seed>90fc46c3c29fb794</seed>
     </jenkins.security.seed.UserSeedProperty>
+    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.31">
+      <accessToken>{AQAAABAAAAAw5eBqGw5Z1w2Fiw+lvFBSF4EQ/CKkrDNBdY+nxSt0NDypV+rH9C8EWOZJRlfk+i4GgGeqZj0dQE+C/YzC9T6HGw==}</accessToken>
+    </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
