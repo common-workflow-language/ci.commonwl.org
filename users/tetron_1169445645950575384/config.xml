@@ -35,7 +35,7 @@
     <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.0">
       <providerId>default</providerId>
     </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
-    <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
+    <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.3">
       <autofavoriteEnabled>true</autofavoriteEnabled>
     </io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
@@ -105,6 +105,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/PR-1047</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-1008</string>
           <boolean>true</boolean>
         </entry>
@@ -125,5 +129,8 @@
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.31">
       <accessToken>{AQAAABAAAAAwAh9ohMXjm2jRMJLQISPAs0Z+b3BKjXUBT4knGlOiuBkj3F2aCUlGwjOd5bzT2bfQCTOeH2w8e8TutJN7mO64Cw==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
+    <jenkins.security.seed.UserSeedProperty>
+      <seed>90fc46c3c29fb794</seed>
+    </jenkins.security.seed.UserSeedProperty>
   </properties>
 </user>
