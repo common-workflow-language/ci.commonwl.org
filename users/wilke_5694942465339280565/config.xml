@@ -9,7 +9,7 @@
         <tokenList/>
       </tokenStore>
     </jenkins.security.ApiTokenProperty>
-    <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
+    <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.3">
       <autofavoriteEnabled>true</autofavoriteEnabled>
     </io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
@@ -41,8 +41,11 @@
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.23">
       <emailAddress>wilke@mcs.anl.gov</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
+    <jenkins.security.seed.UserSeedProperty>
+      <seed>c366e1495e3f263c</seed>
+    </jenkins.security.seed.UserSeedProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.31">
-      <accessToken>{AQAAABAAAAAwsyAZmURvWeVWzMMpScYi/BJJymHylpQN2z368K6u73xqrC3/HkEs5Hg8zYKn0IUNZ/A/SYlfHnNRZ6HRynLG3w==}</accessToken>
+      <accessToken>{AQAAABAAAAAwytDUBPQxp/YRcBvp6UMW/SSDQ1byK0zD9JaX7sK+f1J+/lr+ifft5/a1cURJuB4NN+2Zy/fSx6H8Fb/O3w6EpQ==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
