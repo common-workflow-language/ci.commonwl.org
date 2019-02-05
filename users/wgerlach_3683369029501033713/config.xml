@@ -10,7 +10,7 @@
         <tokenList/>
       </tokenStore>
     </jenkins.security.ApiTokenProperty>
-    <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
+    <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.3">
       <autofavoriteEnabled>true</autofavoriteEnabled>
     </io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty>
     <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.18">
@@ -58,8 +58,11 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>true</insensitiveSearch>
     </hudson.search.UserSearchProperty>
+    <jenkins.security.seed.UserSeedProperty>
+      <seed>98d6943a713797ec</seed>
+    </jenkins.security.seed.UserSeedProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.31">
-      <accessToken>{AQAAABAAAAAwBmARXHOxMMwk4mDkwlhI1DC8GAk3CFNMrerZAcfayJBFJO8FMEQdx0n9rc0G80aLaVHrhbj/EERWZNPNYZyZkQ==}</accessToken>
+      <accessToken>{AQAAABAAAAAwapbvJVxUNDPWWCeYzU1ox4fK/SeqHrFwUW+8i08ASjoiFYz2BLJStzbkcgOg2vIin01AU4B9suHkPosKOZypTw==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
