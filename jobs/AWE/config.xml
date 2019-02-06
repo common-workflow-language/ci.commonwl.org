@@ -134,8 +134,6 @@ set -x
 
 docker ps
 
-sudo ./scripts/add_etc_hosts_entry.sh
-
 . ./init.sh
 #. ./skyport2.env
 
