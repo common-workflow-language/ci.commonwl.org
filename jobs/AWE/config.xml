@@ -18,7 +18,7 @@
   </properties>
   <scm class="org.jenkinsci.plugins.multiplescms.MultiSCM" plugin="multiple-scms@0.6">
     <scms>
-      <hudson.plugins.git.GitSCM plugin="git@3.9.1">
+      <hudson.plugins.git.GitSCM plugin="git@3.9.2">
         <configVersion>2</configVersion>
         <userRemoteConfigs>
           <hudson.plugins.git.UserRemoteConfig>
@@ -38,7 +38,7 @@
           </hudson.plugins.git.extensions.impl.RelativeTargetDirectory>
         </extensions>
       </hudson.plugins.git.GitSCM>
-      <hudson.plugins.git.GitSCM plugin="git@3.9.1">
+      <hudson.plugins.git.GitSCM plugin="git@3.9.2">
         <configVersion>2</configVersion>
         <userRemoteConfigs>
           <hudson.plugins.git.UserRemoteConfig>
@@ -59,7 +59,7 @@
           <hudson.plugins.git.extensions.impl.IgnoreNotifyCommit/>
         </extensions>
       </hudson.plugins.git.GitSCM>
-      <hudson.plugins.git.GitSCM plugin="git@3.9.1">
+      <hudson.plugins.git.GitSCM plugin="git@3.9.2">
         <configVersion>2</configVersion>
         <userRemoteConfigs>
           <hudson.plugins.git.UserRemoteConfig>
@@ -134,6 +134,8 @@ set -x
 
 docker ps
 
+sudo ./scripts/add_etc_hosts_entry.sh
+
 . ./init.sh
 #. ./skyport2.env
 
@@ -198,14 +200,14 @@ docker volume prune -f
       <healthScaleFactor>1.0</healthScaleFactor>
       <allowEmptyResults>false</allowEmptyResults>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.tasks.Mailer plugin="mailer@1.22">
+    <hudson.tasks.Mailer plugin="mailer@1.23">
       <recipients>wilke@anl.gov, wgerlach@mcs.anl.gov</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
     </hudson.tasks.Mailer>
   </publishers>
   <buildWrappers>
-    <hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@0.6.0">
+    <hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@0.6.1">
       <colorMapName>xterm</colorMapName>
     </hudson.plugins.ansicolor.AnsiColorBuildWrapper>
   </buildWrappers>
