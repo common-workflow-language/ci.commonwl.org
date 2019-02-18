@@ -39,10 +39,10 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.22">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.23">
       <emailAddress>misha.kotliar@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
-    <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.2">
+    <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.3">
       <autofavoriteEnabled>true</autofavoriteEnabled>
     </io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
@@ -53,8 +53,11 @@
         </entry>
       </data>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.29">
-      <accessToken>{AQAAABAAAAAwllufy0qiPrkhUPIpefgubK9px+B2wINRI95nJPcEgQX+s7M5AcS3y1fBfhH3+S7cQWTie8U7qfzM03kMt5RM1w==}</accessToken>
+    <jenkins.security.seed.UserSeedProperty>
+      <seed>b979cc65038c9c8a</seed>
+    </jenkins.security.seed.UserSeedProperty>
+    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.31">
+      <accessToken>{AQAAABAAAAAwWJBfuh5lHfnhFtHePep+LmcqQS1qx/xMNQ8N6Tyu9187hjFot4Hvv922yWyq9GNSDRNG1HSDUPZryRJWTgLMJw==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
