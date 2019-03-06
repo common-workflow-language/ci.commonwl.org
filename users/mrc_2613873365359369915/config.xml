@@ -22,7 +22,7 @@
             <name>blueocean-github-domain</name>
             <description>blueocean-github-domain to store credentials by BlueOcean</description>
             <specifications>
-              <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanDomainSpecification plugin="blueocean-pipeline-scm-api@1.11.1"/>
+              <io.jenkins.blueocean.rest.impl.pipeline.credential.BlueOceanDomainSpecification plugin="blueocean-pipeline-scm-api@1.13.1"/>
             </specifications>
           </com.cloudbees.plugins.credentials.domains.Domain>
           <list>
@@ -239,7 +239,7 @@
       <seed>c47aaeddfc5a6a58</seed>
     </jenkins.security.seed.UserSeedProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.31">
-      <accessToken>{AQAAABAAAAAwJ3Qhz4Qy7ZVIBLaxuybUA3tvRDjcQ+hoeCwDsoD31uTKIbNu0mk81tOhrEq41PWeHa4Fc93rhn9+AK7iHKjPsg==}</accessToken>
+      <accessToken>{AQAAABAAAAAwPB/SystgxHqKE7tzokhdBwDFBdg1JgyPG3go6fJgwDGsTObz9wYUL29SLV05MC6nYaUJumv1mEfY9QTNwBAv2g==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
