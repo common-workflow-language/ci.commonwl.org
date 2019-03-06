@@ -12,19 +12,19 @@
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
-    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.20.0">
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.22.0">
       <doNotScan>false</doNotScan>
     </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.2">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.4">
       <projectUrl>https://github.com/common-workflow-language/cwl-website/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
-    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.28">
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.29">
       <autoRebuild>false</autoRebuild>
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.3">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -55,7 +55,7 @@
         <completeBuild>true</completeBuild>
       </threshold>
     </jenkins.triggers.ReverseBuildTrigger>
-    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.29.2">
+    <com.cloudbees.jenkins.GitHubPushTrigger plugin="github@1.29.4">
       <spec></spec>
     </com.cloudbees.jenkins.GitHubPushTrigger>
   </triggers>
@@ -73,7 +73,7 @@ git clone http://${jenkins_cwl_website}@github.com/common-workflow-language/comm
 (cd common-workflow-language.github.io; git config user.email &quot;cwl-bot@users.noreply.github.com&quot;; git config user.name &quot;CWL Jenkins build bot&quot;; git rm $(git ls-files | grep -v CNAME | grep -v .gitignore))
 venv cwl-venv
 (. cwl-venv/bin/activate &amp;&amp; pip install -U setuptools pip)
-(. cwl-venv/bin/activate &amp;&amp; pip install -U cwltool &amp;&amp; ./website.sh --force-docker-pull --parallel)
+(. cwl-venv/bin/activate &amp;&amp; pip install -U cwltool &amp;&amp; ./website.sh --force-docker-pull)
 (cd common-workflow-language.github.io &amp;&amp; \
  git add --all &amp;&amp; \
  git diff-index --quiet HEAD || git commit -m &quot;CWL Jenkins Build bot&quot; &amp;&amp; \
@@ -85,7 +85,7 @@ venv cwl-venv
   <publishers/>
   <buildWrappers>
     <com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper/>
-    <org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper plugin="credentials-binding@1.16">
+    <org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper plugin="credentials-binding@1.17">
       <bindings>
         <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
           <credentialsId>jenkins_cwl_website</credentialsId>
