@@ -45,7 +45,7 @@
       <emailAddress>ttanjo@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.31">
-      <accessToken>{AQAAABAAAAAwwrRiAUdyqiHyqTE2+zkWGk0NA2mIetAD5ZHlYMhPAW0vqKZLrBqLanIuGSD6VtlpRj3g7TdJeUVNXBwWmF0J6Q==}</accessToken>
+      <accessToken>{AQAAABAAAAAwDtQ6aOlOllltm42x1tf7TH4Oo1WSQyG0664O6MGeudmYDZHsgPxXrUaZK8lFZ4W5oGQ4RlOa5VRCk3pz0ojJ1g==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
