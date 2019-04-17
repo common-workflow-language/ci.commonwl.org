@@ -5,7 +5,8 @@
 against the &lt;a href=&quot;https://github.com/common-workflow-language/common-workflow-language/blob/master/CONFORMANCE_TESTS.md#common-workflow-language-conformance-test-suite&quot;&gt;&#xd;
   CWL v1.0 conformance suite&lt;/a&gt;.&lt;/p&gt;&#xd;
 &lt;p&gt;&lt;a href=&apos;https://ci.commonwl.org/job/rabix-conformance&apos;&gt;&lt;img src=&apos;https://ci.commonwl.org/buildStatus/icon?job=rabix-conformance&apos;&gt;&lt;/a&gt;&lt;/p&gt;&#xd;
-</description>
+&#xd;
+Disabled as the Rabix Executor open source project is no longer maintained: https://github.com/rabix/bunny#support-notice</description>
   <keepDependencies>false</keepDependencies>
   <properties>
     <jenkins.model.BuildDiscarderProperty>
@@ -16,19 +17,19 @@ against the &lt;a href=&quot;https://github.com/common-workflow-language/common-
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
-    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.20.0">
-      <doNotScan>false</doNotScan>
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.22.0">
+      <doNotScan>true</doNotScan>
     </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.3">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.4">
       <projectUrl>https://github.com/rabix/bunny/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
-    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.29">
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.30">
       <autoRebuild>false</autoRebuild>
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.3">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -46,7 +47,7 @@ against the &lt;a href=&quot;https://github.com/common-workflow-language/common-
   </scm>
   <assignedNode>linux</assignedNode>
   <canRoam>false</canRoam>
-  <disabled>false</disabled>
+  <disabled>true</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
@@ -102,13 +103,13 @@ set -e</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.26.1">
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.27">
       <testResults>**/result.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <healthScaleFactor>1.0</healthScaleFactor>
       <allowEmptyResults>false</allowEmptyResults>
     </hudson.tasks.junit.JUnitResultArchiver>
-    <hudson.tasks.Mailer plugin="mailer@1.22">
+    <hudson.tasks.Mailer plugin="mailer@1.23">
       <recipients>kaushik.ghose@sbgenomics.com</recipients>
       <dontNotifyEveryUnstableBuild>false</dontNotifyEveryUnstableBuild>
       <sendToIndividuals>false</sendToIndividuals>
