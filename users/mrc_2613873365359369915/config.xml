@@ -239,7 +239,7 @@
       <seed>c47aaeddfc5a6a58</seed>
     </jenkins.security.seed.UserSeedProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.32">
-      <accessToken>{AQAAABAAAAAwBgWhJQwtLa4dXGnAnIf+FOyLFwuQO+/XPRd6gIBXX6EoH1TIQ0BDNB8Kx/enjfjyc3LoSPZ5E9WsGclsNBXUeQ==}</accessToken>
+      <accessToken>{AQAAABAAAAAwZ9Y1A6VJbanhc5I3O1ZIXRUQZ1v9Fc74pBzgvawOpEZUHXhsA6iPBCLUYp84FVtjuRrouzIj/hSQ0LCpDYmDJg==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
