@@ -9,7 +9,7 @@
         <tokenList/>
       </tokenStore>
     </jenkins.security.ApiTokenProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.1.19">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.2.0">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.model.MyViewsProperty>
@@ -130,7 +130,7 @@
       <seed>90fc46c3c29fb794</seed>
     </jenkins.security.seed.UserSeedProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.32">
-      <accessToken>{AQAAABAAAAAwrGXGvmR/+YhqEjbk8uVsHp/TqcKRN5feEgWbbd4F77gDgDbpbFA/lC5rUyjaNqb+sCHScPnA1lWWystEfk49Wg==}</accessToken>
+      <accessToken>{AQAAABAAAAAwd+FKWeWHup//XRA1b2tZug7SY0ExqwlC/d8C3Y3FYe7mDH0aR6fz9UKGvC6UKMac1QsQd1JYaNlA30+TxXS33g==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
