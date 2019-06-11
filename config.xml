@@ -3,6 +3,7 @@
   <disabledAdministrativeMonitors>
     <string>jenkins.security.s2m.MasterKillSwitchWarning</string>
     <string>GitHubHookRegisterProblemMonitor</string>
+    <string>jenkins.security.QueueItemAuthenticatorMonitor</string>
   </disabledAdministrativeMonitors>
   <version>2.176.1</version>
   <installStateName>RESTART</installStateName>
