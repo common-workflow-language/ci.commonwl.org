@@ -4,7 +4,7 @@
     <string>jenkins.security.s2m.MasterKillSwitchWarning</string>
     <string>GitHubHookRegisterProblemMonitor</string>
   </disabledAdministrativeMonitors>
-  <version>2.164.3</version>
+  <version>2.176.1</version>
   <installStateName>RESTART</installStateName>
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
