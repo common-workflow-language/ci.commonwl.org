@@ -13,6 +13,7 @@ against the &lt;a href=&quot;https://github.com/common-workflow-language/common-
 </description>
   <keepDependencies>false</keepDependencies>
   <properties>
+    <hudson.plugins.jira.JiraProjectProperty plugin="jira@3.0.7"/>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
@@ -21,19 +22,19 @@ against the &lt;a href=&quot;https://github.com/common-workflow-language/common-
         <artifactNumToKeep>-1</artifactNumToKeep>
       </strategy>
     </jenkins.model.BuildDiscarderProperty>
-    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.20.0">
+    <com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty plugin="build-failure-analyzer@1.22.0">
       <doNotScan>false</doNotScan>
     </com.sonyericsson.jenkins.plugins.bfa.model.ScannerJobProperty>
-    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.2">
+    <com.coravy.hudson.plugins.github.GithubProjectProperty plugin="github@1.29.4">
       <projectUrl>https://github.com/curoverse/arvados/</projectUrl>
       <displayName></displayName>
     </com.coravy.hudson.plugins.github.GithubProjectProperty>
-    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.28">
+    <com.sonyericsson.rebuild.RebuildSettings plugin="rebuild@1.31">
       <autoRebuild>false</autoRebuild>
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.9.1">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.10.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -49,13 +50,13 @@ against the &lt;a href=&quot;https://github.com/common-workflow-language/common-
     <submoduleCfg class="list"/>
     <extensions/>
   </scm>
-  <assignedNode>linux</assignedNode>
+  <assignedNode>linux &amp;&amp; !master</assignedNode>
   <canRoam>false</canRoam>
   <disabled>false</disabled>
   <blockBuildWhenDownstreamBuilding>false</blockBuildWhenDownstreamBuilding>
   <blockBuildWhenUpstreamBuilding>false</blockBuildWhenUpstreamBuilding>
   <triggers>
-    <org.jenkinsci.plugins.registry.notification.DockerHubTrigger plugin="dockerhub-notification@2.2.1">
+    <org.jenkinsci.plugins.registry.notification.DockerHubTrigger plugin="dockerhub-notification@2.4.0">
       <spec></spec>
       <options class="vector">
         <org.jenkinsci.plugins.registry.notification.opt.impl.TriggerOnSpecifiedImageNames>
@@ -105,7 +106,7 @@ test -s junit.xml</command>
     </hudson.tasks.Shell>
   </builders>
   <publishers>
-    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.24">
+    <hudson.tasks.junit.JUnitResultArchiver plugin="junit@1.28">
       <testResults>junit.xml</testResults>
       <keepLongStdio>false</keepLongStdio>
       <healthScaleFactor>1.0</healthScaleFactor>
