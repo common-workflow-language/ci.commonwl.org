@@ -41,11 +41,11 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>true</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.32">
-      <accessToken>{AQAAABAAAAAwesg/E5LrjcRE35jqVuMFYqDlK801YBb8HVL68eWLNonKJ5jZWhDn5DztxDDRuGOVCrc+JnavSswKMKlv47udNg==}</accessToken>
-    </org.jenkinsci.plugins.GithubAccessTokenProperty>
     <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.23">
       <emailAddress>theegymber@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
+    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.32">
+      <accessToken>{AQAAABAAAAAwY3lktuLUsy530nVsMcLUtj4EEGhyzAX+YZrrzdVhR5COJV7z46B37m8QFMC8nrbISJqy74iwTIzoc8RF2rC01A==}</accessToken>
+    </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
