@@ -337,9 +337,6 @@
   <primaryView>CWL conformance tests</primaryView>
   <slaveAgentPort>0</slaveAgentPort>
   <label>linux</label>
-  <crumbIssuer class="hudson.security.csrf.DefaultCrumbIssuer">
-    <excludeClientIPFromCrumb>false</excludeClientIPFromCrumb>
-  </crumbIssuer>
   <nodeProperties/>
   <globalNodeProperties>
     <hudson.slaves.EnvironmentVariablesNodeProperty>
