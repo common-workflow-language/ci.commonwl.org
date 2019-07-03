@@ -128,5 +128,8 @@ test -s junit.xml</command>
         <hudson.plugins.build__timeout.operations.AbortOperation/>
       </operationList>
     </hudson.plugins.build__timeout.BuildTimeoutWrapper>
+    <hudson.plugins.ansicolor.AnsiColorBuildWrapper plugin="ansicolor@0.6.2">
+      <colorMapName>xterm</colorMapName>
+    </hudson.plugins.ansicolor.AnsiColorBuildWrapper>
   </buildWrappers>
 </project>
