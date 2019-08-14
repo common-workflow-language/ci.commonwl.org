@@ -83,9 +83,9 @@
     <hudson.tasks.Shell>
       <command>venv() {
         if ! test -d $1 ; then
-                virtualenv -p python3.6 &quot;$1&quot;
+                pyenv virtualenv 3.6.9 &quot;$1&quot;
         fi
-        . $1/bin/activate
+        pyenv activate $1
 }
 export AIRFLOW_GPL_UNIDECODE=true
 venv cwltool-venv3
