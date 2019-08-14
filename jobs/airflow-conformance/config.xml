@@ -82,7 +82,7 @@
   <builders>
     <hudson.tasks.Shell>
       <command>venv() {
-        if ! test -d $1 ; then
+        if ! test -d $(pyenv root)/versions/$1 ; then
                 pyenv virtualenv 3.6.9 &quot;$1&quot;
         fi
         pyenv activate $1
