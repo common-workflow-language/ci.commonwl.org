@@ -87,6 +87,9 @@
         fi
         pyenv activate $1
 }
+export PATH=&quot;/var/lib/jenkins/.pyenv/bin:$PATH&quot;
+eval &quot;$(pyenv init -)&quot;
+eval &quot;$(pyenv virtualenv-init -)&quot;
 export AIRFLOW_GPL_UNIDECODE=true
 venv cwltool-venv3
 (. cwltool-venv3/bin/activate &amp;&amp; PIP_DOWNLOAD_CACHE=/var/lib/jenkins/pypi-cache/ pip3 install -U setuptools wheel pip)
