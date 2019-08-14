@@ -81,7 +81,7 @@
   <concurrentBuild>false</concurrentBuild>
   <builders>
     <hudson.tasks.Shell>
-      <command>export PATH=&quot;/var/lib/jenkins/.pyenv/bin:$PATH&quot;
+      <command>export PATH=&quot;${HOME}/.pyenv/bin:$PATH&quot;
 eval &quot;$(pyenv init -)&quot;
 eval &quot;$(pyenv virtualenv-init -)&quot;
 venv() {
