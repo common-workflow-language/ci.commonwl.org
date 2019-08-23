@@ -331,6 +331,7 @@
         <string>cwlexec</string>
         <string>cwltool-conformance</string>
         <string>galaxy-conformance</string>
+        <string>test</string>
         <string>toil-conformance</string>
         <string>xenon-cwl-runner-conformance</string>
         <string>yacle</string>
