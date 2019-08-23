@@ -327,6 +327,7 @@
         <string>airflow-conformance</string>
         <string>arvados-conformance</string>
         <string>AWE</string>
+        <string>AWE-test</string>
         <string>cromwell</string>
         <string>cwlexec</string>
         <string>cwltool-conformance</string>
