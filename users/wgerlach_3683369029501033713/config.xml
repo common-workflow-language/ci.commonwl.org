@@ -29,7 +29,7 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
       <data class="concurrent-hash-map">
         <entry>
-          <string>AWE</string>
+          <string>AWE_delete_me</string>
           <boolean>true</boolean>
         </entry>
       </data>

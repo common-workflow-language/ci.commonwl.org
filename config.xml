@@ -326,8 +326,8 @@
         <comparator class="hudson.util.CaseInsensitiveComparator"/>
         <string>airflow-conformance</string>
         <string>arvados-conformance</string>
-        <string>AWE</string>
         <string>AWE-test</string>
+        <string>AWE_delete_me</string>
         <string>cromwell</string>
         <string>cwlexec</string>
         <string>cwltool-conformance</string>
