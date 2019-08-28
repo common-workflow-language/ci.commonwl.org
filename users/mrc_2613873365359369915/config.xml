@@ -9,7 +9,7 @@
         <tokenList/>
       </tokenStore>
     </jenkins.security.ApiTokenProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.2.1">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.3.0">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -239,7 +239,7 @@
       <seed>c47aaeddfc5a6a58</seed>
     </jenkins.security.seed.UserSeedProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.33">
-      <accessToken>{AQAAABAAAAAwR/bVOAlSMlHzduWFXRaPc4v14C+O4vcrsVwkd2r42mRUMGWvOwsRIPYiuGDQd9jlnyivjqplFU7Y4YO8GCnmfg==}</accessToken>
+      <accessToken>{AQAAABAAAAAwGrcyG6GTY8z6h5xdpRuRQu3k5PVWAwMqWnh+vNXAEb/RPlSATsRArdy4ZAMuObETGkZDSfLgPsy3RKUXz4701g==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
