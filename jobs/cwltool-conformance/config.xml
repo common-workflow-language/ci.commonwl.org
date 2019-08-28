@@ -6,7 +6,7 @@
 &lt;a href=&quot;https://github.com/common-workflow-language/cwltool&quot;&gt;https://github.com/common-workflow-language/cwltool&lt;/a&gt;</description>
   <keepDependencies>false</keepDependencies>
   <properties>
-    <hudson.plugins.jira.JiraProjectProperty plugin="jira@3.0.8"/>
+    <hudson.plugins.jira.JiraProjectProperty plugin="jira@3.0.9"/>
     <jenkins.model.BuildDiscarderProperty>
       <strategy class="hudson.tasks.LogRotator">
         <daysToKeep>-1</daysToKeep>
@@ -27,7 +27,7 @@
       <rebuildDisabled>false</rebuildDisabled>
     </com.sonyericsson.rebuild.RebuildSettings>
   </properties>
-  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.11.0">
+  <scm class="hudson.plugins.git.GitSCM" plugin="git@3.12.0">
     <configVersion>2</configVersion>
     <userRemoteConfigs>
       <hudson.plugins.git.UserRemoteConfig>
@@ -53,7 +53,7 @@
   <triggers>
     <jenkins.triggers.ReverseBuildTrigger>
       <spec></spec>
-      <upstreamProjects>schema_salad_release, </upstreamProjects>
+      <upstreamProjects>schema_salad_release,</upstreamProjects>
       <threshold>
         <name>SUCCESS</name>
         <ordinal>0</ordinal>
@@ -127,7 +127,10 @@
     </hudson.tasks.junit.JUnitResultArchiver>
   </publishers>
   <buildWrappers>
-    <com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper/>
+    <com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
+      <varPasswordPairs/>
+      <varMaskRegexes/>
+    </com.michelin.cio.hudson.plugins.maskpasswords.MaskPasswordsBuildWrapper>
     <org.jenkinsci.plugins.credentialsbinding.impl.SecretBuildWrapper plugin="credentials-binding@1.20">
       <bindings>
         <org.jenkinsci.plugins.credentialsbinding.impl.StringBinding>
