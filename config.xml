@@ -5,7 +5,7 @@
     <string>GitHubHookRegisterProblemMonitor</string>
     <string>jenkins.security.QueueItemAuthenticatorMonitor</string>
   </disabledAdministrativeMonitors>
-  <version>2.176.2</version>
+  <version>2.176.3</version>
   <installStateName>RESTART</installStateName>
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
@@ -280,7 +280,7 @@
   <projectNamingStrategy class="jenkins.model.ProjectNamingStrategy$DefaultProjectNamingStrategy"/>
   <workspaceDir>${ITEM_ROOTDIR}/workspace</workspaceDir>
   <buildsDir>${ITEM_ROOTDIR}/builds</buildsDir>
-  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter" plugin="antisamy-markup-formatter@1.6">
+  <markupFormatter class="hudson.markup.RawHtmlMarkupFormatter">
     <disableSyntaxHighlighting>false</disableSyntaxHighlighting>
   </markupFormatter>
   <jdks>
@@ -290,7 +290,7 @@
       <properties>
         <hudson.tools.InstallSourceProperty>
           <installers>
-            <hudson.tools.JDKInstaller plugin="jdk-tool@1.3">
+            <hudson.tools.JDKInstaller>
               <id>jdk-8u121-oth-JPR</id>
               <acceptLicense>true</acceptLicense>
             </hudson.tools.JDKInstaller>
