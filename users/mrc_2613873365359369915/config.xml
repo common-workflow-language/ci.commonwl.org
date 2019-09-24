@@ -54,7 +54,7 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.27">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.28">
       <emailAddress>michael.crusoe@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.2">
@@ -239,7 +239,7 @@
       <seed>c47aaeddfc5a6a58</seed>
     </jenkins.security.seed.UserSeedProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.33">
-      <accessToken>{AQAAABAAAAAwlZxAwacvnJ5Od1hQe0BbOoVtGxgGoTSXd7DrO2DI6RukKzbejpd9qDfAsKYJZbQyLMPlV8zrabe55nIACcMjEQ==}</accessToken>
+      <accessToken>{AQAAABAAAAAw3YEp4OcjTM4Pr8BifcuLNcuQCrkQZtHOIO0ZAKKW9bRghDdIfSX89yzVarKrm+Pt6qn6h8XLaNqz57Vbm+zv1Q==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
