@@ -9,7 +9,7 @@
         <tokenList/>
       </tokenStore>
     </jenkins.security.ApiTokenProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.2.0">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.3.0">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.model.MyViewsProperty>
@@ -29,10 +29,10 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.23">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.28">
       <emailAddress>stain@apache.org</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
-    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.1">
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.2">
       <providerId>default</providerId>
     </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
     <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.4">
@@ -61,8 +61,8 @@
     <jenkins.security.seed.UserSeedProperty>
       <seed>b5656c2d20d0b591</seed>
     </jenkins.security.seed.UserSeedProperty>
-    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.32">
-      <accessToken>{AQAAABAAAAAwh8hAuma+d7ogAkzDA88E2f3CLYIRFG7v9E6YRwJyjHp8wGz1mnYdxcB/PlIoPhbvbcyaEe+YKueH6tD92yW/Zg==}</accessToken>
+    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.33">
+      <accessToken>{AQAAABAAAAAwo3u4Ip5US2h5RPICW3DvdFy+OZbpIxMm5ppL21Co7EzYg0+L0zvx1Yor5IeHDNnBU5yH+wBjgI6ncNGUHw/zew==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
