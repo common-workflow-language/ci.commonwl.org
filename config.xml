@@ -367,6 +367,7 @@
         <string>cromwell</string>
         <string>cwlexec</string>
         <string>cwltool-conformance</string>
+        <string>fred</string>
         <string>galaxy-conformance</string>
         <string>toil-conformance</string>
         <string>xenon-cwl-runner-conformance</string>
