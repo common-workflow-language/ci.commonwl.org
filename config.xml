@@ -14,6 +14,7 @@
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:common-workflow-language*Owners</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:geoffjentry</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:jmchilton</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:longr</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:michael-kotliar</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:mr-c</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Create:tom-tan</permission>
@@ -22,6 +23,7 @@
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:common-workflow-language*Owners</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:geoffjentry</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:jmchilton</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:longr</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:michael-kotliar</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:mr-c</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Delete:tom-tan</permission>
@@ -30,6 +32,7 @@
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:common-workflow-language*Owners</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:geoffjentry</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:jmchilton</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:longr</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:michael-kotliar</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:mr-c</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.ManageDomains:tom-tan</permission>
@@ -38,6 +41,7 @@
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:common-workflow-language*Owners</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:geoffjentry</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:jmchilton</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:longr</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:michael-kotliar</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:mr-c</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.Update:tom-tan</permission>
@@ -46,6 +50,7 @@
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:common-workflow-language*Owners</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:geoffjentry</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:jmchilton</permission>
+    <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:longr</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:michael-kotliar</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:mr-c</permission>
     <permission>com.cloudbees.plugins.credentials.CredentialsProvider.View:tom-tan</permission>
@@ -55,6 +60,7 @@
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:common-workflow-language*Owners</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:geoffjentry</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:jmchilton</permission>
+    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:longr</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:michael-kotliar</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:mr-c</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.RemoveCause:tom-tan</permission>
@@ -64,6 +70,7 @@
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:common-workflow-language*Owners</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:geoffjentry</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:jmchilton</permission>
+    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:longr</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:michael-kotliar</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:mr-c</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.UpdateCauses:tom-tan</permission>
@@ -74,6 +81,7 @@
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:common-workflow-language*Owners</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:geoffjentry</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:jmchilton</permission>
+    <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:longr</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:michael-kotliar</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:mr-c</permission>
     <permission>com.sonyericsson.jenkins.plugins.bfa.PluginImpl.ViewCauses:tom-tan</permission>
@@ -82,42 +90,49 @@
     <permission>hudson.model.Computer.Build:common-workflow-language*Owners</permission>
     <permission>hudson.model.Computer.Build:geoffjentry</permission>
     <permission>hudson.model.Computer.Build:jmchilton</permission>
+    <permission>hudson.model.Computer.Build:longr</permission>
     <permission>hudson.model.Computer.Build:michael-kotliar</permission>
     <permission>hudson.model.Computer.Build:mr-c</permission>
     <permission>hudson.model.Computer.Build:tom-tan</permission>
     <permission>hudson.model.Computer.Configure:common-workflow-language*Owners</permission>
     <permission>hudson.model.Computer.Configure:geoffjentry</permission>
     <permission>hudson.model.Computer.Configure:jmchilton</permission>
+    <permission>hudson.model.Computer.Configure:longr</permission>
     <permission>hudson.model.Computer.Configure:michael-kotliar</permission>
     <permission>hudson.model.Computer.Configure:mr-c</permission>
     <permission>hudson.model.Computer.Configure:tom-tan</permission>
     <permission>hudson.model.Computer.Connect:common-workflow-language*Owners</permission>
     <permission>hudson.model.Computer.Connect:geoffjentry</permission>
     <permission>hudson.model.Computer.Connect:jmchilton</permission>
+    <permission>hudson.model.Computer.Connect:longr</permission>
     <permission>hudson.model.Computer.Connect:michael-kotliar</permission>
     <permission>hudson.model.Computer.Connect:mr-c</permission>
     <permission>hudson.model.Computer.Connect:tom-tan</permission>
     <permission>hudson.model.Computer.Create:common-workflow-language*Owners</permission>
     <permission>hudson.model.Computer.Create:geoffjentry</permission>
     <permission>hudson.model.Computer.Create:jmchilton</permission>
+    <permission>hudson.model.Computer.Create:longr</permission>
     <permission>hudson.model.Computer.Create:michael-kotliar</permission>
     <permission>hudson.model.Computer.Create:mr-c</permission>
     <permission>hudson.model.Computer.Create:tom-tan</permission>
     <permission>hudson.model.Computer.Delete:common-workflow-language*Owners</permission>
     <permission>hudson.model.Computer.Delete:geoffjentry</permission>
     <permission>hudson.model.Computer.Delete:jmchilton</permission>
+    <permission>hudson.model.Computer.Delete:longr</permission>
     <permission>hudson.model.Computer.Delete:michael-kotliar</permission>
     <permission>hudson.model.Computer.Delete:mr-c</permission>
     <permission>hudson.model.Computer.Delete:tom-tan</permission>
     <permission>hudson.model.Computer.Disconnect:common-workflow-language*Owners</permission>
     <permission>hudson.model.Computer.Disconnect:geoffjentry</permission>
     <permission>hudson.model.Computer.Disconnect:jmchilton</permission>
+    <permission>hudson.model.Computer.Disconnect:longr</permission>
     <permission>hudson.model.Computer.Disconnect:michael-kotliar</permission>
     <permission>hudson.model.Computer.Disconnect:mr-c</permission>
     <permission>hudson.model.Computer.Disconnect:tom-tan</permission>
     <permission>hudson.model.Hudson.Administer:common-workflow-language*Owners</permission>
     <permission>hudson.model.Hudson.Administer:geoffjentry</permission>
     <permission>hudson.model.Hudson.Administer:jmchilton</permission>
+    <permission>hudson.model.Hudson.Administer:longr</permission>
     <permission>hudson.model.Hudson.Administer:mr-c</permission>
     <permission>hudson.model.Hudson.Administer:tom-tan</permission>
     <permission>hudson.model.Hudson.Read:anonymous</permission>
@@ -125,6 +140,7 @@
     <permission>hudson.model.Hudson.Read:common-workflow-language*Owners</permission>
     <permission>hudson.model.Hudson.Read:geoffjentry</permission>
     <permission>hudson.model.Hudson.Read:jmchilton</permission>
+    <permission>hudson.model.Hudson.Read:longr</permission>
     <permission>hudson.model.Hudson.Read:michael-kotliar</permission>
     <permission>hudson.model.Hudson.Read:mr-c</permission>
     <permission>hudson.model.Hudson.Read:tom-tan</permission>
@@ -134,6 +150,7 @@
     <permission>hudson.model.Item.Build:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Build:geoffjentry</permission>
     <permission>hudson.model.Item.Build:jmchilton</permission>
+    <permission>hudson.model.Item.Build:longr</permission>
     <permission>hudson.model.Item.Build:michael-kotliar</permission>
     <permission>hudson.model.Item.Build:mr-c</permission>
     <permission>hudson.model.Item.Build:tom-tan</permission>
@@ -143,6 +160,7 @@
     <permission>hudson.model.Item.Cancel:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Cancel:geoffjentry</permission>
     <permission>hudson.model.Item.Cancel:jmchilton</permission>
+    <permission>hudson.model.Item.Cancel:longr</permission>
     <permission>hudson.model.Item.Cancel:michael-kotliar</permission>
     <permission>hudson.model.Item.Cancel:mr-c</permission>
     <permission>hudson.model.Item.Cancel:tom-tan</permission>
@@ -151,6 +169,7 @@
     <permission>hudson.model.Item.Configure:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Configure:geoffjentry</permission>
     <permission>hudson.model.Item.Configure:jmchilton</permission>
+    <permission>hudson.model.Item.Configure:longr</permission>
     <permission>hudson.model.Item.Configure:michael-kotliar</permission>
     <permission>hudson.model.Item.Configure:mr-c</permission>
     <permission>hudson.model.Item.Configure:tom-tan</permission>
@@ -159,6 +178,7 @@
     <permission>hudson.model.Item.Create:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Create:geoffjentry</permission>
     <permission>hudson.model.Item.Create:jmchilton</permission>
+    <permission>hudson.model.Item.Create:longr</permission>
     <permission>hudson.model.Item.Create:michael-kotliar</permission>
     <permission>hudson.model.Item.Create:mr-c</permission>
     <permission>hudson.model.Item.Create:tom-tan</permission>
@@ -167,6 +187,7 @@
     <permission>hudson.model.Item.Delete:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Delete:geoffjentry</permission>
     <permission>hudson.model.Item.Delete:jmchilton</permission>
+    <permission>hudson.model.Item.Delete:longr</permission>
     <permission>hudson.model.Item.Delete:michael-kotliar</permission>
     <permission>hudson.model.Item.Delete:mr-c</permission>
     <permission>hudson.model.Item.Delete:tom-tan</permission>
@@ -177,6 +198,7 @@
     <permission>hudson.model.Item.Discover:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Discover:geoffjentry</permission>
     <permission>hudson.model.Item.Discover:jmchilton</permission>
+    <permission>hudson.model.Item.Discover:longr</permission>
     <permission>hudson.model.Item.Discover:michael-kotliar</permission>
     <permission>hudson.model.Item.Discover:mr-c</permission>
     <permission>hudson.model.Item.Discover:tom-tan</permission>
@@ -185,6 +207,7 @@
     <permission>hudson.model.Item.Move:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Move:geoffjentry</permission>
     <permission>hudson.model.Item.Move:jmchilton</permission>
+    <permission>hudson.model.Item.Move:longr</permission>
     <permission>hudson.model.Item.Move:michael-kotliar</permission>
     <permission>hudson.model.Item.Move:mr-c</permission>
     <permission>hudson.model.Item.Move:tom-tan</permission>
@@ -195,6 +218,7 @@
     <permission>hudson.model.Item.Read:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Read:geoffjentry</permission>
     <permission>hudson.model.Item.Read:jmchilton</permission>
+    <permission>hudson.model.Item.Read:longr</permission>
     <permission>hudson.model.Item.Read:michael-kotliar</permission>
     <permission>hudson.model.Item.Read:mr-c</permission>
     <permission>hudson.model.Item.Read:tom-tan</permission>
@@ -205,6 +229,7 @@
     <permission>hudson.model.Item.ViewStatus:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.ViewStatus:geoffjentry</permission>
     <permission>hudson.model.Item.ViewStatus:jmchilton</permission>
+    <permission>hudson.model.Item.ViewStatus:longr</permission>
     <permission>hudson.model.Item.ViewStatus:michael-kotliar</permission>
     <permission>hudson.model.Item.ViewStatus:mr-c</permission>
     <permission>hudson.model.Item.ViewStatus:tom-tan</permission>
@@ -214,6 +239,7 @@
     <permission>hudson.model.Item.Workspace:common-workflow-language*Owners</permission>
     <permission>hudson.model.Item.Workspace:geoffjentry</permission>
     <permission>hudson.model.Item.Workspace:jmchilton</permission>
+    <permission>hudson.model.Item.Workspace:longr</permission>
     <permission>hudson.model.Item.Workspace:michael-kotliar</permission>
     <permission>hudson.model.Item.Workspace:mr-c</permission>
     <permission>hudson.model.Item.Workspace:tom-tan</permission>
@@ -222,6 +248,7 @@
     <permission>hudson.model.Run.Delete:common-workflow-language*Owners</permission>
     <permission>hudson.model.Run.Delete:geoffjentry</permission>
     <permission>hudson.model.Run.Delete:jmchilton</permission>
+    <permission>hudson.model.Run.Delete:longr</permission>
     <permission>hudson.model.Run.Delete:michael-kotliar</permission>
     <permission>hudson.model.Run.Delete:mr-c</permission>
     <permission>hudson.model.Run.Delete:tom-tan</permission>
@@ -230,6 +257,7 @@
     <permission>hudson.model.Run.Replay:common-workflow-language*Owners</permission>
     <permission>hudson.model.Run.Replay:geoffjentry</permission>
     <permission>hudson.model.Run.Replay:jmchilton</permission>
+    <permission>hudson.model.Run.Replay:longr</permission>
     <permission>hudson.model.Run.Replay:michael-kotliar</permission>
     <permission>hudson.model.Run.Replay:mr-c</permission>
     <permission>hudson.model.Run.Replay:tom-tan</permission>
@@ -238,6 +266,7 @@
     <permission>hudson.model.Run.Update:common-workflow-language*Owners</permission>
     <permission>hudson.model.Run.Update:geoffjentry</permission>
     <permission>hudson.model.Run.Update:jmchilton</permission>
+    <permission>hudson.model.Run.Update:longr</permission>
     <permission>hudson.model.Run.Update:michael-kotliar</permission>
     <permission>hudson.model.Run.Update:mr-c</permission>
     <permission>hudson.model.Run.Update:tom-tan</permission>
@@ -247,6 +276,7 @@
     <permission>hudson.model.View.Configure:common-workflow-language*Owners</permission>
     <permission>hudson.model.View.Configure:geoffjentry</permission>
     <permission>hudson.model.View.Configure:jmchilton</permission>
+    <permission>hudson.model.View.Configure:longr</permission>
     <permission>hudson.model.View.Configure:michael-kotliar</permission>
     <permission>hudson.model.View.Configure:mr-c</permission>
     <permission>hudson.model.View.Configure:tom-tan</permission>
@@ -256,6 +286,7 @@
     <permission>hudson.model.View.Create:common-workflow-language*Owners</permission>
     <permission>hudson.model.View.Create:geoffjentry</permission>
     <permission>hudson.model.View.Create:jmchilton</permission>
+    <permission>hudson.model.View.Create:longr</permission>
     <permission>hudson.model.View.Create:michael-kotliar</permission>
     <permission>hudson.model.View.Create:mr-c</permission>
     <permission>hudson.model.View.Create:tom-tan</permission>
@@ -265,6 +296,7 @@
     <permission>hudson.model.View.Delete:common-workflow-language*Owners</permission>
     <permission>hudson.model.View.Delete:geoffjentry</permission>
     <permission>hudson.model.View.Delete:jmchilton</permission>
+    <permission>hudson.model.View.Delete:longr</permission>
     <permission>hudson.model.View.Delete:michael-kotliar</permission>
     <permission>hudson.model.View.Delete:mr-c</permission>
     <permission>hudson.model.View.Delete:tom-tan</permission>
@@ -275,6 +307,7 @@
     <permission>hudson.model.View.Read:common-workflow-language*Owners</permission>
     <permission>hudson.model.View.Read:geoffjentry</permission>
     <permission>hudson.model.View.Read:jmchilton</permission>
+    <permission>hudson.model.View.Read:longr</permission>
     <permission>hudson.model.View.Read:michael-kotliar</permission>
     <permission>hudson.model.View.Read:mr-c</permission>
     <permission>hudson.model.View.Read:tom-tan</permission>
@@ -283,6 +316,7 @@
     <permission>hudson.scm.SCM.Tag:common-workflow-language*Owners</permission>
     <permission>hudson.scm.SCM.Tag:geoffjentry</permission>
     <permission>hudson.scm.SCM.Tag:jmchilton</permission>
+    <permission>hudson.scm.SCM.Tag:longr</permission>
     <permission>hudson.scm.SCM.Tag:michael-kotliar</permission>
     <permission>hudson.scm.SCM.Tag:mr-c</permission>
     <permission>hudson.scm.SCM.Tag:tom-tan</permission>
@@ -291,6 +325,7 @@
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:common-workflow-language*Owners</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:geoffjentry</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:jmchilton</permission>
+    <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:longr</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:michael-kotliar</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:mr-c</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Reserve:tom-tan</permission>
@@ -299,6 +334,7 @@
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock:common-workflow-language*Owners</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock:geoffjentry</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock:jmchilton</permission>
+    <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock:longr</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock:michael-kotliar</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock:mr-c</permission>
     <permission>org.jenkins.plugins.lockableresources.LockableResourcesManager.Unlock:tom-tan</permission>
