@@ -27,12 +27,7 @@
       <emailAddress>wgerlach@mcs.anl.gov</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
-      <data class="concurrent-hash-map">
-        <entry>
-          <string>AWE_delete_me</string>
-          <boolean>true</boolean>
-        </entry>
-      </data>
+      <data class="concurrent-hash-map"/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
     <hudson.model.MyViewsProperty>
       <primaryViewName></primaryViewName>
