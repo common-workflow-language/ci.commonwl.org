@@ -9,7 +9,7 @@
         <tokenList/>
       </tokenStore>
     </jenkins.security.ApiTokenProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.2.0">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.3.0">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.model.MyViewsProperty>
@@ -29,10 +29,10 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.23">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.29">
       <emailAddress>tetron@interreality.org</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
-    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.1">
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.2">
       <providerId>default</providerId>
     </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
     <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.4">
@@ -129,8 +129,8 @@
     <jenkins.security.seed.UserSeedProperty>
       <seed>90fc46c3c29fb794</seed>
     </jenkins.security.seed.UserSeedProperty>
-    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.32">
-      <accessToken>{AQAAABAAAAAwHoL3qRRuJ0YxXl/OkRzcYc4PyN1jkS33/HSZt7nwjLd5JaV7sbcZw6Hrn6Pr7RNqXkGxQ51QqBTqlbBv1TwZeg==}</accessToken>
+    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.33">
+      <accessToken>{AQAAABAAAAAwxBDWdJJ1T/XjImfh7T/zfl75Rkw0+WPQgYLxR+mbA3lJZVDR6Ctw8XkN4yCo71VR5qyHZO+PqbSO8J1Ty6v3vQ==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
