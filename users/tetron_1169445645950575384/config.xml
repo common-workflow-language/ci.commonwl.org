@@ -41,10 +41,6 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
       <data class="concurrent-hash-map">
         <entry>
-          <string>cwltool/PR-792</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>cwltool/pathmap-any</string>
           <boolean>true</boolean>
         </entry>
@@ -53,27 +49,7 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>cwltool/PR-800</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>cwltool/mem-efficiency</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-966</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-988</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-967</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-968</string>
           <boolean>true</boolean>
         </entry>
         <entry>
@@ -81,47 +57,11 @@
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>cwltool/PR-1035</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>cwltool/workflowstep-hook</string>
           <boolean>true</boolean>
         </entry>
         <entry>
-          <string>cwltool/PR-864</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
           <string>cwltool/bump-yaml</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-974</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-986</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-1047</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-1008</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-1019</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-805</string>
-          <boolean>true</boolean>
-        </entry>
-        <entry>
-          <string>cwltool/PR-949</string>
           <boolean>true</boolean>
         </entry>
       </data>
