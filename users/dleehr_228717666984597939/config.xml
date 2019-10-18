@@ -9,7 +9,7 @@
         <tokenList/>
       </tokenStore>
     </jenkins.security.ApiTokenProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.2.0">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.3.0">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash"/>
     </com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty>
     <hudson.model.MyViewsProperty>
@@ -29,7 +29,7 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.23">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.29">
       <emailAddress>dan.leehr@duke.edu</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <io.jenkins.blueocean.autofavorite.user.FavoritingUserProperty plugin="blueocean-autofavorite@1.2.4">
@@ -38,14 +38,14 @@
     <hudson.plugins.favorite.user.FavoriteUserProperty plugin="favorite@2.3.2">
       <data class="concurrent-hash-map"/>
     </hudson.plugins.favorite.user.FavoriteUserProperty>
-    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.1">
+    <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.2">
       <providerId>default</providerId>
     </org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty>
     <jenkins.security.seed.UserSeedProperty>
       <seed>7f0d146015997b27</seed>
     </jenkins.security.seed.UserSeedProperty>
-    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.32">
-      <accessToken>{AQAAABAAAAAw9Jzxh4dm4L/wlM+l5QgEfO2+MINmKxIG+ymAwf5jh6V6QDTyJlEp1vreVEYJDychcs2sjFwz2BPKyc0TLl1qwQ==}</accessToken>
+    <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.33">
+      <accessToken>{AQAAABAAAAAwpHHXV3Zp91onVdPR8wwrjRSL5lCP3aIhRgrntoSa0sgkao2e6yV7qz6trs61GretqPEMS2GPKRo3Xd//PE1q8Q==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
