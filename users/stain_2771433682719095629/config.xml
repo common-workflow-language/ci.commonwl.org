@@ -29,7 +29,7 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.28">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.29">
       <emailAddress>stain@apache.org</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.2">
@@ -62,7 +62,7 @@
       <seed>b5656c2d20d0b591</seed>
     </jenkins.security.seed.UserSeedProperty>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.33">
-      <accessToken>{AQAAABAAAAAwo3u4Ip5US2h5RPICW3DvdFy+OZbpIxMm5ppL21Co7EzYg0+L0zvx1Yor5IeHDNnBU5yH+wBjgI6ncNGUHw/zew==}</accessToken>
+      <accessToken>{AQAAABAAAAAwsM2t41f1lg5Pa9FOQB8eaojWY3IQzMl0hEB3mJbbPckJFC/bUxmgCN/B30Uqk4JY+crJoXGRLecGzZZ3EGioGw==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
