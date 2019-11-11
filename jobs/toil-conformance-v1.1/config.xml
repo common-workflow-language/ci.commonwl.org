@@ -77,7 +77,7 @@ venv() {
 }
 START_DIR=$(pwd)
 docker volume ls -qf dangling=true | grep -v metadata.db | xargs -r docker volume rm || true
-cloneorpull common-workflow-language https://github.com/common-workflow-language/common-workflow-language.git
+cloneorpull common-workflow-language https://github.com/common-workflow-language/cwl-v1.1.git
 venv toil-venv
 . toil-venv/bin/activate
 set -x
