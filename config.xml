@@ -405,6 +405,7 @@
         <string>cwltool-conformance</string>
         <string>galaxy-conformance</string>
         <string>toil-conformance</string>
+        <string>toil-conformance-v1.1</string>
         <string>xenon-cwl-runner-conformance</string>
         <string>yacle</string>
       </jobNames>
