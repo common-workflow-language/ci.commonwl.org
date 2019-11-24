@@ -182,6 +182,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/jenkinsfile_win10</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/PR-884</string>
           <boolean>true</boolean>
         </entry>
