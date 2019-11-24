@@ -49,6 +49,10 @@
           <boolean>true</boolean>
         </entry>
         <entry>
+          <string>cwltool/output-destination</string>
+          <boolean>true</boolean>
+        </entry>
+        <entry>
           <string>cwltool/mem-efficiency</string>
           <boolean>true</boolean>
         </entry>
