@@ -5,7 +5,7 @@
     <string>GitHubHookRegisterProblemMonitor</string>
     <string>jenkins.security.QueueItemAuthenticatorMonitor</string>
   </disabledAdministrativeMonitors>
-  <version>2.190.3</version>
+  <version>2.204.1</version>
   <installStateName>RESTART</installStateName>
   <numExecutors>2</numExecutors>
   <mode>NORMAL</mode>
