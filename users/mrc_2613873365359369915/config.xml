@@ -9,7 +9,7 @@
         <tokenList/>
       </tokenStore>
     </jenkins.security.ApiTokenProperty>
-    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.3.0">
+    <com.cloudbees.plugins.credentials.UserCredentialsProvider_-UserCredentialsProperty plugin="credentials@2.3.1">
       <domainCredentialsMap class="hudson.util.CopyOnWriteMap$Hash">
         <entry>
           <com.cloudbees.plugins.credentials.domains.Domain>
@@ -54,7 +54,7 @@
     <hudson.search.UserSearchProperty>
       <insensitiveSearch>false</insensitiveSearch>
     </hudson.search.UserSearchProperty>
-    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.29">
+    <hudson.tasks.Mailer_-UserProperty plugin="mailer@1.30">
       <emailAddress>michael.crusoe@gmail.com</emailAddress>
     </hudson.tasks.Mailer_-UserProperty>
     <org.jenkinsci.plugins.displayurlapi.user.PreferredProviderUserProperty plugin="display-url-api@2.3.2">
@@ -244,7 +244,7 @@
     </jenkins.security.seed.UserSeedProperty>
     <hudson.model.TimeZoneProperty/>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.33">
-      <accessToken>{AQAAABAAAAAwj7ATw3x//2fTbJVJ18aG5m1YXsP16TO2gCNWtaKs6MD39vK82ADhfSORdQaCJPeeqr0JT0fIYG+1+frgKhHBtg==}</accessToken>
+      <accessToken>{AQAAABAAAAAwUPC5a6Tg8jGUg10J10j9I8im+RAc7OUrb4Xctpz8suK8Vkv27hTXHAvorcA/QjjHBvff1/kEfmIl7XVaFxJmfw==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
