@@ -244,7 +244,7 @@
     </jenkins.security.seed.UserSeedProperty>
     <hudson.model.TimeZoneProperty/>
     <org.jenkinsci.plugins.GithubAccessTokenProperty plugin="github-oauth@0.33">
-      <accessToken>{AQAAABAAAAAwUPC5a6Tg8jGUg10J10j9I8im+RAc7OUrb4Xctpz8suK8Vkv27hTXHAvorcA/QjjHBvff1/kEfmIl7XVaFxJmfw==}</accessToken>
+      <accessToken>{AQAAABAAAAAwFU6Y57xGOhAy03sGRKOrT5KJmp9EV1VqWikXH9naWq677HZzVA5vTbh/7AzagF24ApHjz29NV69puVgWA5iM/w==}</accessToken>
     </org.jenkinsci.plugins.GithubAccessTokenProperty>
   </properties>
 </user>
